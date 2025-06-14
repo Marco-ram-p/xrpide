@@ -1,1 +1,1403 @@
-const _0x3c8de9=_0xb095;(function(_0x3ade14,_0x1651ef){const _0x3ad989=_0xb095,_0x4a3212=_0x3ade14();while(!![]){try{const _0x1049a2=parseInt(_0x3ad989(0xf9))/0x1+-parseInt(_0x3ad989(0xb3))/0x2*(-parseInt(_0x3ad989(0xce))/0x3)+parseInt(_0x3ad989(0xe5))/0x4+parseInt(_0x3ad989(0x153))/0x5*(-parseInt(_0x3ad989(0xd9))/0x6)+-parseInt(_0x3ad989(0x107))/0x7+-parseInt(_0x3ad989(0x115))/0x8+-parseInt(_0x3ad989(0x150))/0x9;if(_0x1049a2===_0x1651ef)break;else _0x4a3212['push'](_0x4a3212['shift']());}catch(_0x4db5fb){_0x4a3212['push'](_0x4a3212['shift']());}}}(_0x48a4,0x50f94));const workspace=Blockly[_0x3c8de9(0x79)](_0x3c8de9(0x13b),{'toolbox':document[_0x3c8de9(0x122)](_0x3c8de9(0x95)),'scrollbars':!![],'horizontalLayout':![],'toolboxPosition':'start','zoom':{'controls':!![],'wheel':!![],'startScale':0x1,'maxScale':0x3,'minScale':0.3,'scaleSpeed':1.2,'pinch':!![]}});var libraries=[{'name':'XRPLib','description':_0x3c8de9(0x164),'versions':[_0x3c8de9(0xff)],'status':_0x3c8de9(0x185),'installedVersion':_0x3c8de9(0xff)},{'name':'Fusalmo\x20gamepad\x20wifi','description':_0x3c8de9(0xf1),'versions':['1.0.0'],'status':_0x3c8de9(0x185),'installedVersion':_0x3c8de9(0x105)},{'name':_0x3c8de9(0x157),'description':_0x3c8de9(0x166),'versions':[_0x3c8de9(0x105)],'status':_0x3c8de9(0x185),'installedVersion':_0x3c8de9(0x105)}];const reservedNames=[_0x3c8de9(0xfb),_0x3c8de9(0x10d),_0x3c8de9(0x136),_0x3c8de9(0x10c),_0x3c8de9(0xf7)],requiredFiles={},TOTAL_MEMORY=0x800;var usedMemory=0x0;let selectedDevice=null;const mockDevices=[{'id':0x1,'name':'Pico\x20#1\x20(COM3)'},{'id':0x2,'name':_0x3c8de9(0x173)},{'id':0x3,'name':_0x3c8de9(0x13f)}];let contextMenu=null,isConnected=![],isUploading=![],editor;function toggleView(_0x489f35){const _0x79ced5=_0x3c8de9,_0x227753=document[_0x79ced5(0x122)]('blocklyDiv'),_0x40fda3=document['getElementById']('codeOutput');if(_0x489f35===_0x79ced5(0x74))_0x227753[_0x79ced5(0xa7)][_0x79ced5(0x91)]='block',_0x40fda3[_0x79ced5(0xa7)][_0x79ced5(0x91)]=_0x79ced5(0x8c);else{if(!document[_0x79ced5(0x17a)](_0x79ced5(0xc1))){const _0x4f34c5=document[_0x79ced5(0x116)](_0x79ced5(0x171));_0x4f34c5[_0x79ced5(0x12a)]='copy-btn',_0x4f34c5[_0x79ced5(0x16d)]='Copiar\x20código',_0x4f34c5['onclick']=copyCodeToClipboard,_0x40fda3[_0x79ced5(0x10e)](_0x4f34c5);}editor=ace['edit'](_0x79ced5(0xab)),editor[_0x79ced5(0x7f)](_0x79ced5(0x117)),editor[_0x79ced5(0x16c)]()['setMode'](_0x79ced5(0x69)),editor[_0x79ced5(0x16e)](!![]),editor[_0x79ced5(0xa5)]({'fontSize':_0x79ced5(0x133),'showPrintMargin':![],'highlightActiveLine':!![],'showGutter':!![],'highlightSelectedWord':!![],'showLineNumbers':!![],'displayIndentGuides':!![],'enableLiveAutocompletion':!![],'enableSnippets':!![],'enableBasicAutocompletion':!![]}),editor[_0x79ced5(0x143)][_0x79ced5(0xa7)]['fontFamily']='\x27Source\x20Code\x20Pro\x27,\x20\x27Consolas\x27,\x20monospace';const _0x482a76=document[_0x79ced5(0x116)](_0x79ced5(0xa7));_0x482a76['textContent']=_0x79ced5(0x125),document[_0x79ced5(0x159)]['appendChild'](_0x482a76),_0x227753[_0x79ced5(0xa7)][_0x79ced5(0x91)]='none',_0x40fda3[_0x79ced5(0xa7)][_0x79ced5(0x91)]='block',showCode();}}function showCode(){const _0xd2fe8a=_0x3c8de9,_0x589e65=Blockly[_0xd2fe8a(0x183)][_0xd2fe8a(0x130)](workspace);editor&&(editor['setValue'](_0x589e65),editor['clearSelection']());}function updateUIState(){const _0x30dd95=_0x3c8de9,_0xa8047d=isUploading,_0xfd8236=isConnected,_0x4f95d5=[document[_0x30dd95(0x122)]('save-robot-btn'),document[_0x30dd95(0x122)](_0x30dd95(0xd7)),document[_0x30dd95(0x122)](_0x30dd95(0x12b))];_0x4f95d5[_0x30dd95(0x19a)](_0xe9d1ae=>{const _0x41c19e=_0x30dd95;_0xe9d1ae&&(_0xe9d1ae['id']===_0x41c19e(0xd7)||_0xe9d1ae['id']==='update-libraries-btn'?_0xe9d1ae['classList'][_0x41c19e(0x172)]('disabled',_0xa8047d):_0xe9d1ae[_0x41c19e(0x7b)][_0x41c19e(0x172)](_0x41c19e(0x9c),!_0xfd8236||_0xa8047d));});const _0x420bb7=document['getElementById']('fileList');_0x420bb7&&_0x420bb7[_0x30dd95(0x7b)][_0x30dd95(0x172)]('disabled',_0xa8047d);}function toggleUIForUpload(_0x5307eb){const _0x23b455=_0x3c8de9,_0x283fa0=document['getElementById'](_0x23b455(0x175)),_0x255512=document[_0x23b455(0x122)](_0x23b455(0x17f)),_0x5aba22=[_0x283fa0];_0x5aba22[_0x23b455(0x19a)](_0x39d7de=>{const _0xba97cb=_0x23b455;if(_0x39d7de)_0x39d7de[_0xba97cb(0x7b)][_0xba97cb(0x172)](_0xba97cb(0x9c),_0x5307eb);}),_0x255512&&_0x255512[_0x23b455(0x7b)]['toggle'](_0x23b455(0x9c),_0x5307eb);}async function uploadToDevice(){const _0x520d80=_0x3c8de9,_0x3a4eb8=document[_0x520d80(0x122)]('fileName')[_0x520d80(0x188)];if(!_0x3a4eb8){logToTerminal(_0x520d80(0xd3)),alert(_0x520d80(0x101));return;}if(reservedNames['includes'](_0x3a4eb8)){logToTerminal('Error:\x20Este\x20nombre\x20está\x20reservado.\x20Por\x20favor,\x20elige\x20otro\x20nombre.');return;}const _0xb9916d=document[_0x520d80(0x17a)](_0x520d80(0x126));if(isUploading){isUploading=![],logToTerminal('Deteniendo\x20el\x20programa...'),updateUIState(),_0xb9916d['textContent']=_0x520d80(0x145),_0xb9916d['classList'][_0x520d80(0x119)]('uploading'),hideLoadingOverlay(),detener();return;}isUploading=!![],updateUIState(),_0xb9916d[_0x520d80(0x16d)]=_0x520d80(0xa2),_0xb9916d[_0x520d80(0x7b)][_0x520d80(0x152)](_0x520d80(0xc4));const _0x57d918=Blockly[_0x520d80(0x183)][_0x520d80(0x130)](workspace);showLoadingOverlay();try{logToTerminal(_0x520d80(0x14c)),await ejecutar();if(!isUploading){logToTerminal(_0x520d80(0x165));return;}console['log'](_0x57d918),logToTerminal(_0x520d80(0x155)),hideLoadingOverlay(),refreshFiles();}catch(_0x515137){logToTerminal(_0x520d80(0xaf)+_0x515137['message']),isUploading=![],updateUIState(),_0xb9916d['textContent']=_0x520d80(0x145),_0xb9916d[_0x520d80(0x7b)][_0x520d80(0x119)](_0x520d80(0xc4)),hideLoadingOverlay();}}function showDeviceSelectionModal(_0x24b98f='uploadToDevice'){const _0x529a15=_0x3c8de9,_0x2fbcb5=document[_0x529a15(0x17a)](_0x529a15(0x6d)),_0x3a5e66=document[_0x529a15(0x122)](_0x529a15(0xd5));_0x3a5e66[_0x529a15(0xeb)]='',_0x3a5e66[_0x529a15(0x18e)](_0x529a15(0x147),_0x24b98f),mockDevices[_0x529a15(0x19a)](_0x671883=>{const _0x1ee626=_0x529a15,_0x37532a=document['createElement'](_0x1ee626(0xfc));_0x37532a[_0x1ee626(0x12a)]=_0x1ee626(0xcb),_0x37532a[_0x1ee626(0x16d)]=_0x671883[_0x1ee626(0xd8)],_0x37532a['onclick']=()=>selectDevice(_0x671883,_0x37532a),_0x3a5e66[_0x1ee626(0x10e)](_0x37532a);}),_0x2fbcb5[_0x529a15(0xa7)][_0x529a15(0x91)]=_0x529a15(0x17b);}function selectDevice(_0x2b6c5f,_0x42581a){const _0xc7e7b=_0x3c8de9;document['querySelectorAll'](_0xc7e7b(0xa8))[_0xc7e7b(0x19a)](_0x124d76=>_0x124d76[_0xc7e7b(0x7b)][_0xc7e7b(0x119)](_0xc7e7b(0x194))),_0x42581a[_0xc7e7b(0x7b)][_0xc7e7b(0x152)]('selected'),selectedDevice=_0x2b6c5f;}function cancelDeviceSelection(){const _0x506d4b=_0x3c8de9,_0x212320=document[_0x506d4b(0x17a)]('.device-selection-modal');_0x212320[_0x506d4b(0xa7)][_0x506d4b(0x91)]='none',selectedDevice=null;}async function confirmDeviceSelection(){const _0xbac278=_0x3c8de9;if(!selectedDevice){logToTerminal(_0xbac278(0xbf));return;}const _0x2cfc28=document['querySelector']('.device-selection-modal');_0x2cfc28[_0xbac278(0xa7)][_0xbac278(0x91)]=_0xbac278(0x8c);const _0x46197b=document[_0xbac278(0x17a)](_0xbac278(0x84)),_0x45b24b=_0x46197b?_0x46197b[_0xbac278(0x7d)][_0xbac278(0x11c)]:null;if(_0x45b24b==='uploadToDevice'){const _0x3bd295=Blockly[_0xbac278(0x183)][_0xbac278(0x130)](workspace);showLoadingOverlay(),logToTerminal('Subiendo\x20al\x20dispositivo\x20'+selectedDevice[_0xbac278(0xd8)]+_0xbac278(0x140));try{await new Promise(_0x23e178=>setTimeout(_0x23e178,0x7d0)),console[_0xbac278(0xe1)](_0x3bd295),logToTerminal(_0xbac278(0x110)),hideLoadingOverlay(),refreshFiles();}catch(_0xa57aa7){logToTerminal('Error\x20al\x20cargar\x20el\x20archivo:\x20'+_0xa57aa7[_0xbac278(0xbb)]),hideLoadingOverlay();}}else{if(_0x45b24b==='installAllLibraries')await installAllLibraries();else{if(_0x45b24b===_0xbac278(0xef))await installUsedLibraries();else{if(_0x45b24b===_0xbac278(0xfa)){showLoadingOverlay(),logToTerminal(_0xbac278(0x10a));try{const _0x756e5f=Blockly[_0xbac278(0xf0)][_0xbac278(0xe6)](workspace),_0x5b5c3f=Blockly[_0xbac278(0xf0)][_0xbac278(0x8e)](_0x756e5f);console[_0xbac278(0xe1)](_0xbac278(0x167),_0x5b5c3f),logToTerminal(_0xbac278(0xdc));}catch(_0x39f5a8){logToTerminal(_0xbac278(0xba)+_0x39f5a8[_0xbac278(0xbb)]);}finally{hideLoadingOverlay();}}}}}selectedDevice=null;}function refreshFiles(){const _0x18b1fd=_0x3c8de9,_0x16f1fd=document[_0x18b1fd(0x122)]('fileList');_0x16f1fd[_0x18b1fd(0xeb)]='';if(!isConnected){document['getElementById']('fileList')[_0x18b1fd(0x7b)]['add'](_0x18b1fd(0xe0)),document[_0x18b1fd(0x122)](_0x18b1fd(0xdd))[_0x18b1fd(0x75)][_0x18b1fd(0xa7)]['opacity']=_0x18b1fd(0x81),document['getElementById'](_0x18b1fd(0x94))[_0x18b1fd(0xa7)][_0x18b1fd(0x96)]='0.5',document[_0x18b1fd(0x122)](_0x18b1fd(0x94))[_0x18b1fd(0x16d)]=_0x18b1fd(0x16b),document[_0x18b1fd(0x122)]('memoryFill')[_0x18b1fd(0xa7)][_0x18b1fd(0x182)]='0%';return;}else document[_0x18b1fd(0x122)](_0x18b1fd(0x17f))[_0x18b1fd(0x7b)][_0x18b1fd(0x119)](_0x18b1fd(0xe0)),document[_0x18b1fd(0x122)](_0x18b1fd(0xdd))[_0x18b1fd(0x75)][_0x18b1fd(0xa7)][_0x18b1fd(0x96)]='1',document['getElementById'](_0x18b1fd(0x94))[_0x18b1fd(0xa7)]['opacity']='1';Object[_0x18b1fd(0x8a)](requiredFiles)[_0x18b1fd(0x19a)](_0x1a7d2d=>{const _0x237e60=_0x18b1fd,_0x50c8b3=document[_0x237e60(0x116)](_0x237e60(0xfc));_0x50c8b3[_0x237e60(0x12a)]=_0x237e60(0x9b),_0x50c8b3[_0x237e60(0xeb)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span>'+_0x1a7d2d+_0x237e60(0x114)+_0x1a7d2d+'\x27)\x22>&times;</span>\x0a\x20\x20\x20\x20\x20\x20',_0x50c8b3[_0x237e60(0xf3)](_0x237e60(0xfd),_0xd2ccca=>showContextMenu(_0xd2ccca,_0x1a7d2d)),_0x50c8b3[_0x237e60(0xf3)]('dblclick',()=>openFile(_0x1a7d2d)),_0x16f1fd[_0x237e60(0x10e)](_0x50c8b3);});}function deleteFile(_0x400d26){const _0x3e08be=_0x3c8de9;if(isUploading){logToTerminal(_0x3e08be(0xed)),alert('No\x20se\x20puede\x20eliminar\x20un\x20archivo\x20mientras\x20un\x20programa\x20está\x20en\x20ejecución.');return;}if(contextMenu)contextMenu['style'][_0x3e08be(0x91)]='none';if(reservedNames[_0x3e08be(0xaa)](_0x400d26)){alert(_0x3e08be(0x121)),logToTerminal(_0x3e08be(0x90));return;}confirm(_0x3e08be(0xa0)+_0x400d26+'?')&&(console[_0x3e08be(0xe1)]('Eliminando\x20'+_0x400d26+_0x3e08be(0x140)),refreshFiles());}function openFile(_0x2d0c82){const _0x16a62b=_0x3c8de9;if(isUploading){logToTerminal(_0x16a62b(0xcd)),alert(_0x16a62b(0x18d));return;}if(contextMenu)contextMenu[_0x16a62b(0xa7)]['display']=_0x16a62b(0x8c);logToTerminal('Abriendo\x20archivo:\x20'+_0x2d0c82+'\x20(funcionalidad\x20no\x20implementada)');}function clearTerminal(){const _0x2cd457=_0x3c8de9,_0x5585ee=document[_0x2cd457(0x122)](_0x2cd457(0x160));while(_0x5585ee['firstChild']){_0x5585ee[_0x2cd457(0x120)](_0x5585ee[_0x2cd457(0x13a)]);}}function logToTerminal(_0xf055a7){const _0x62a744=_0x3c8de9,_0x4af56d=document[_0x62a744(0x122)](_0x62a744(0x160)),_0x1b8291=new Date()[_0x62a744(0x131)](),_0x387e39=document[_0x62a744(0x116)](_0x62a744(0xfc));_0x387e39[_0x62a744(0x16d)]=_0x62a744(0x176)+_0x1b8291+']\x20'+_0xf055a7,_0x4af56d[_0x62a744(0x10e)](_0x387e39);while(_0x4af56d['children'][_0x62a744(0x17c)]>0x190){_0x4af56d[_0x62a744(0x120)](_0x4af56d[_0x62a744(0x13a)]);}_0x4af56d[_0x62a744(0xb6)]=_0x4af56d[_0x62a744(0xb2)];}function initializeTerminal(){const _0x5c8df2=_0x3c8de9;clearTerminal();const _0x18468a=document[_0x5c8df2(0x116)]('div');_0x18468a[_0x5c8df2(0x16d)]=_0x5c8df2(0xb5),document[_0x5c8df2(0x122)]('terminal')['appendChild'](_0x18468a),logToTerminal(_0x5c8df2(0x6c));}function newBlockCode(){const _0x5522bf=_0x3c8de9;confirm(_0x5522bf(0x72))&&(workspace[_0x5522bf(0x124)](),localStorage[_0x5522bf(0x19b)](_0x5522bf(0x86)),localStorage[_0x5522bf(0x19b)]('programName'),document['getElementById'](_0x5522bf(0x1a0))[_0x5522bf(0x188)]=_0x5522bf(0x195),logToTerminal(_0x5522bf(0x15b)));}function loadExample(_0x3fe470){const _0x1336f9=_0x3c8de9;if(isUploading){logToTerminal(_0x1336f9(0x99)),alert('No\x20se\x20puede\x20cargar\x20un\x20ejemplo\x20mientras\x20un\x20programa\x20está\x20en\x20ejecución.');return;}if(confirm('¿Desea\x20cargar\x20el\x20ejemplo?\x20Se\x20perderán\x20los\x20cambios\x20no\x20guardados.')){let _0x54702d='';switch(_0x3fe470){case _0x1336f9(0xe3):_0x54702d='<xml\x20xmlns=\x22https://developers.google.com/blockly/xml\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22pestolink_start\x22\x20id=\x22ElwN{H?Z22)^9JS%1sy2\x22\x20x=\x22114\x22\x20y=\x225\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22text\x22\x20id=\x22nJ5aKyJlmk+}DQ./0r0:\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22TEXT\x22>MiRobot</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22controls_whileUntil\x22\x20id=\x22t-uq_o5?h?t7Kp_c)2}h\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22MODE\x22>WHILE</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22BOOL\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22logic_boolean\x22\x20id=\x22ws(/c.-BzCJ7aE:8xTJQ\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22BOOL\x22>TRUE</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22DO\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22controls_if\x22\x20id=\x22u/b$ZkKcKO8.)Y1A,rw?\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22IF0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22pl_conected\x22\x20id=\x22W$c-##L/fK_c0_SgRF`:\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22DO0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22comentario\x22\x20id=\x22V%TIojW!61s*uyi`yt5u\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NAME\x22>Controlar\x20el\x20xrp\x20con\x20el\x20joystick</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22controls_if\x22\x20id=\x222/{|nKThe[yi/}E,iM0N\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<mutation\x20else=\x221\x22></mutation>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22IF0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22logic_compare\x22\x20id=\x22tQN!Ew}F`z7pTkSJNZ3Z\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22OP\x22>GTE</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22A\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22joy2\x22\x20id=\x22k]yy$4]rCF{1+zs7a^4v\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22B\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22math_number\x22\x20id=\x22%Ityhw9@^jnOQJ]P;J@6\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22DO0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22avanzar_giro\x22\x20id=\x22o8lyFty@9b_V1r|SK5J/\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22vel\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22G~Mee@S(#k}`E{|GR{bh\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22joy2\x22\x20id=\x22eXK3YAO?*!TG]!eHU|2H\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22dir\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22bqC?FM]Zdbscw5!980?X\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22math_arithmetic\x22\x20id=\x22Uf6NH5AdK}F#5KNWKMkV\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22OP\x22>MULTIPLY</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22A\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22V|X7C_8K)v5Wo)d:O=B0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22joy1\x22\x20id=\x22CFVhvE`+11yenRc@!q-1\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22B\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22%SDSQU`%|JZJ-*E]a);n\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>-1</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22ELSE\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22avanzar_giro\x22\x20id=\x22aQWRgxb`@2c5WOcapIvp\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22vel\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22G~Mee@S(#k}`E{|GR{bh\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22joy2\x22\x20id=\x22aZ4c6;GVj22G!z0.^[,p\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22dir\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22bqC?FM]Zdbscw5!980?X\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22joy1\x22\x20id=\x22ME[fj{|5Hj^U4R#1n*.x\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22controls_if\x22\x20id=\x22.VTK[*LG2b/|b#|pf{`b\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<mutation\x20else=\x221\x22></mutation>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22IF0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22B0\x22\x20id=\x22H*omVs/$DToEiJwA80mO\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22DO0\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22comentario\x22\x20id=\x22K|Zp%2Lyh9Gd3HiTJ4mr\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NAME\x22>Que\x20hacer\x20cuando\x20se\x20presiona\x20el\x20botón\x200\x20</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22ELSE\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22comentario\x22\x20id=\x22AnWFGEnOq1$!q4wuNB,E\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NAME\x22>Que\x20hacer\x20cuando\x20se\x20suelta\x20el\x20botón\x200\x20</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22mostrar_link\x22\x20id=\x229G1b-NKYF,e{@{5yG4kc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22valor\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22Voltaje\x22\x20id=\x228sFh/@wfZjd3BN0@Ta}C\x22></block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</xml>';break;case _0x1336f9(0x134):_0x54702d='<xml\x20xmlns=\x22https://developers.google.com/blockly/xml\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22wifi_confi\x22\x20id=\x22n^?/,Zv]bAcAuwKj}H=(\x22\x20x=\x2256\x22\x20y=\x225\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22name\x22>XRP_Server</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22pass\x22>12345678</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22dvs\x22>1</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22controls_whileUntil\x22\x20id=\x22#a1QUKBr8:DxPzpo2LnX\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22MODE\x22>WHILE</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22BOOL\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22logic_boolean\x22\x20id=\x22AKNTont%gGqtH9??y3sc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22BOOL\x22>TRUE</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22DO\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22leer\x22\x20id=\x2293JcgQGkPlt$.tFt%S(T\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22SqrrS!;LR4QH3I*nslV^\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>up</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>P</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x22Uyez1}O5_[PvW?}m3fcO\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22rd9sbj3yKWngIr-5z|nu\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22ApVv@4e-4-0kfg|)xjQ*\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22JP,|h/JP#~W1+6uIH{^D\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>up</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>R</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x22CQs~Ie,d6f(-T6|$jPvE\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22FZ6,glYvDmTI}9E1Om:g\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22nzcITP;ML8Sev{Tq!B$L\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22uWbqshM%PW2F!6-3pNRV\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>left</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>P</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x22zQ.@gMt5,n}Tj.-6b6g~\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22IXv=4UCE{9vHUX8FZ5bL\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>-0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22fN]EviCmJ(Fndw._V$Q4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22xO3+ml+1spXdlOWG!1$r\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>left</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>R</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x226ZzV8o$8W3fs*yfPT,~^\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22/lZ,3{]!`e%XUN$(8?E=\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22U~fiS*7Z@}ju2B@g.2Zl\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22V}{886c1*VG{+@YTrk5S\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>right</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>P</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x22GEWVW.|g8`VkO$$AA=Fz\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22J=Id#gf59rowBesQ)PK2\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22Ex,kw-RAo)5Vg|JNhc}j\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>-0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22/^vC@%m(i01),.vN5MFj\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>right</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>R</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x22K}P=[ki3_}!pxGdcS~;$\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22p:Ors{v:(!F[928%yiQ|\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22Igr0miB^|fs.euMv~,Bx\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>0</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22hace\x22\x20id=\x22Eu/I8wG0JhD0w+}$5!NO\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22btn\x22>down</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22action\x22>P</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<statement\x20name=\x22NAME\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<block\x20type=\x22set_effort\x22\x20id=\x22t^kIT2N[{9qUMid+an@V\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22izq\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22LnXNc`y!?gj]dcjLX?$6\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>-0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<value\x20name=\x22der\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<shadow\x20type=\x22math_number\x22\x20id=\x22`lcfedo,t-h|Y}f?pr4b\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<field\x20name=\x22NUM\x22>-0.5</field>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</shadow>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</value>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</statement>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</next>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</block>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</xml>';break;default:logToTerminal(_0x1336f9(0x18a));return;}workspace[_0x1336f9(0x124)]();const _0x29b882=new DOMParser(),_0x24894a=_0x29b882[_0x1336f9(0xd6)](_0x54702d,_0x1336f9(0xae));Blockly[_0x1336f9(0xf0)][_0x1336f9(0x162)](_0x24894a[_0x1336f9(0xc0)],workspace),document[_0x1336f9(0x122)](_0x1336f9(0x1a0))[_0x1336f9(0x188)]='ejemplo_'+_0x3fe470,logToTerminal(_0x1336f9(0x174)+_0x3fe470+_0x1336f9(0xc5)),localStorage[_0x1336f9(0xa1)](_0x1336f9(0x86),_0x54702d),localStorage[_0x1336f9(0xa1)](_0x1336f9(0xc9),_0x1336f9(0x71)+_0x3fe470);}}function newPythonCode(){const _0x465af9=_0x3c8de9;logToTerminal(_0x465af9(0x180));}function openFromPC(){const _0x2fb53d=_0x3c8de9,_0x215000=document[_0x2fb53d(0x116)](_0x2fb53d(0x9a));_0x215000[_0x2fb53d(0xc8)]=_0x2fb53d(0x12f),_0x215000[_0x2fb53d(0xa3)]=_0x2fb53d(0x17d),_0x215000['onchange']=_0x2d8851=>{const _0x2bb4bf=_0x2fb53d,_0x157784=_0x2d8851[_0x2bb4bf(0x161)][_0x2bb4bf(0x70)][0x0];if(!_0x157784)return;const _0x17b7f6=new FileReader();_0x17b7f6[_0x2bb4bf(0xd0)]=_0x26e0e4=>{const _0x564761=_0x2bb4bf;try{workspace[_0x564761(0x124)]();const _0x15a05b=_0x26e0e4[_0x564761(0x161)][_0x564761(0x14f)],_0x55146e=new DOMParser(),_0x34d373=_0x55146e[_0x564761(0xd6)](_0x15a05b,_0x564761(0xae));Blockly['Xml'][_0x564761(0x162)](_0x34d373[_0x564761(0xc0)],workspace);const _0x486c0b=_0x157784[_0x564761(0xd8)]['replace']('.Fblocks','');document['getElementById'](_0x564761(0x1a0))[_0x564761(0x188)]=_0x486c0b,logToTerminal('Archivo\x20'+_0x157784[_0x564761(0xd8)]+_0x564761(0xe8));}catch(_0x36d22b){console[_0x564761(0x100)](_0x564761(0x67),_0x36d22b),logToTerminal('Error\x20al\x20cargar\x20el\x20archivo:\x20Formato\x20inválido'),alert(_0x564761(0x88)),workspace[_0x564761(0x124)]();}},_0x17b7f6[_0x2bb4bf(0xa4)](_0x157784);},_0x215000[_0x2fb53d(0xd1)]();}function saveToPC(){const _0x56e23f=_0x3c8de9,_0x34bf66=Blockly[_0x56e23f(0xf0)]['workspaceToDom'](workspace),_0x16f06f=Blockly[_0x56e23f(0xf0)]['domToPrettyText'](_0x34bf66),_0x4231da=document['getElementById']('fileName')[_0x56e23f(0x188)]||_0x56e23f(0xcf),_0x26e66a=new Blob([_0x16f06f],{'type':_0x56e23f(0x118)}),_0x45355f=document[_0x56e23f(0x116)]('a');_0x45355f[_0x56e23f(0x9e)]=_0x4231da+_0x56e23f(0x17d),_0x45355f[_0x56e23f(0x8f)]=window['URL'][_0x56e23f(0x18c)](_0x26e66a),_0x45355f[_0x56e23f(0xd1)](),logToTerminal(_0x56e23f(0xee));}function saveAndClose(){const _0x325192=_0x3c8de9;logToTerminal(_0x325192(0x178));}function closeWithoutSaving(){const _0x37375f=_0x3c8de9;logToTerminal(_0x37375f(0x98));}async function installAllLibraries(){const _0x25d399=_0x3c8de9;showLoadingOverlay(),logToTerminal(_0x25d399(0x106));try{await new Promise(_0x3cba5b=>setTimeout(_0x3cba5b,0x7d0)),logToTerminal(_0x25d399(0x128));}catch(_0x320c88){logToTerminal('Error\x20al\x20instalar\x20las\x20librerías:\x20'+_0x320c88[_0x25d399(0xbb)]);}finally{hideLoadingOverlay();}}async function installUsedLibraries(){const _0x3b396f=_0x3c8de9;showLoadingOverlay(),logToTerminal(_0x3b396f(0x102));try{await new Promise(_0x102138=>setTimeout(_0x102138,0x7d0)),logToTerminal(_0x3b396f(0x11f));}catch(_0x212025){logToTerminal(_0x3b396f(0x196)+_0x212025[_0x3b396f(0xbb)]);}finally{hideLoadingOverlay();}}async function reinstallLibrary(_0x171805){const _0x1c2b40=_0x3c8de9,_0x496f59=document['getElementById'](_0x1c2b40(0xdf)+_0x171805),_0x3e2590=_0x496f59['value'];showLoadingOverlay(),logToTerminal(_0x1c2b40(0x168)+_0x171805+'\x20v'+_0x3e2590+_0x1c2b40(0x140));try{await new Promise(_0x550c22=>setTimeout(_0x550c22,0x5dc)),logToTerminal('Biblioteca\x20'+_0x171805+'\x20v'+_0x3e2590+_0x1c2b40(0xde)),loadLibraries();}catch(_0x17b3ed){logToTerminal(_0x1c2b40(0x6b)+_0x171805+':\x20'+_0x17b3ed['message']);}finally{hideLoadingOverlay();}}function showContextMenu(_0x2b9520,_0xc46370){const _0x35158c=_0x3c8de9;_0x2b9520[_0x35158c(0x7a)](),contextMenu&&document[_0x35158c(0x12e)][_0x35158c(0x120)](contextMenu),contextMenu=document[_0x35158c(0x116)](_0x35158c(0xfc)),contextMenu[_0x35158c(0x12a)]=_0x35158c(0x144),contextMenu[_0x35158c(0xeb)]='\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22context-menu-item\x22\x20onclick=\x22openFile(\x27'+_0xc46370+_0x35158c(0xe4)+_0xc46370+'\x27)\x22>Renombrar</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22context-menu-item\x22\x20onclick=\x22deleteFile(\x27'+_0xc46370+_0x35158c(0x103),contextMenu['style'][_0x35158c(0xb0)]=_0x2b9520[_0x35158c(0xb1)]+'px',contextMenu[_0x35158c(0xa7)][_0x35158c(0xdb)]=_0x2b9520['pageY']+'px',contextMenu[_0x35158c(0xa7)]['display']=_0x35158c(0xe9),document[_0x35158c(0x12e)][_0x35158c(0x10e)](contextMenu);}document[_0x3c8de9(0xf3)]('click',_0x37d9a5=>{const _0x16705e=_0x3c8de9;contextMenu&&!contextMenu[_0x16705e(0x18b)](_0x37d9a5['target'])&&(contextMenu['style'][_0x16705e(0x91)]=_0x16705e(0x8c));});function renameFile(_0x3db971){const _0x41c0e1=_0x3c8de9,_0x5e2cdd=prompt(_0x41c0e1(0x19d),_0x3db971);_0x5e2cdd&&_0x5e2cdd!==_0x3db971&&(/main/i[_0x41c0e1(0x197)](_0x5e2cdd)&&(alert('No\x20se\x20permite\x20usar\x20\x22main\x22\x20en\x20el\x20nombre\x20del\x20archivo'),logToTerminal('Error:\x20No\x20se\x20permite\x20usar\x20\x22main\x22\x20en\x20el\x20nombre\x20del\x20programa')),logToTerminal('Renombrando\x20'+_0x3db971+_0x41c0e1(0x6e)+_0x5e2cdd),refreshFiles());if(contextMenu)contextMenu[_0x41c0e1(0xa7)][_0x41c0e1(0x91)]=_0x41c0e1(0x8c);}function toggleUSBConnection(){const _0x51f636=_0x3c8de9,_0x583da3=document[_0x51f636(0x122)]('connectUSBButton'),_0x474e43=document['getElementById'](_0x51f636(0x10f)),_0x3936a1=document[_0x51f636(0x17a)](_0x51f636(0x126));_0x583da3[_0x51f636(0x7b)][_0x51f636(0x18b)](_0x51f636(0x13e))?(_0x583da3['classList'][_0x51f636(0x119)](_0x51f636(0x13e)),_0x583da3[_0x51f636(0x16d)]=_0x51f636(0xec),_0x474e43[_0x51f636(0x9c)]=![],_0x474e43[_0x51f636(0xa7)][_0x51f636(0x96)]='1',isConnected=![],_0x3936a1[_0x51f636(0x7b)][_0x51f636(0x152)](_0x51f636(0x9c)),_0x3936a1[_0x51f636(0x9c)]=!![],isUploading&&(isUploading=![],_0x3936a1[_0x51f636(0x16d)]='Iniciar\x20programa',_0x3936a1[_0x51f636(0x7b)][_0x51f636(0x119)](_0x51f636(0xc4))),refreshFiles()):(_0x583da3[_0x51f636(0x7b)][_0x51f636(0x152)](_0x51f636(0x13e)),_0x583da3[_0x51f636(0x16d)]=_0x51f636(0x12c),_0x474e43[_0x51f636(0x9c)]=!![],_0x474e43[_0x51f636(0xa7)][_0x51f636(0x96)]='0.5',isConnected=!![],_0x3936a1[_0x51f636(0x7b)][_0x51f636(0x119)](_0x51f636(0x9c)),_0x3936a1[_0x51f636(0x9c)]=![],refreshFiles()),updateUIState();}function toggleBTConnection(){const _0x53ad3a=_0x3c8de9,_0x20fb11=document['getElementById'](_0x53ad3a(0x10f)),_0xcc025d=document[_0x53ad3a(0x122)](_0x53ad3a(0xc3)),_0x104c97=document[_0x53ad3a(0x17a)](_0x53ad3a(0x126));_0x20fb11[_0x53ad3a(0x7b)][_0x53ad3a(0x18b)](_0x53ad3a(0x13e))?(_0x20fb11[_0x53ad3a(0x7b)][_0x53ad3a(0x119)]('disconnected'),_0x20fb11[_0x53ad3a(0x16d)]='Conectar\x20por\x20Bluetooth',_0xcc025d['disabled']=![],_0xcc025d[_0x53ad3a(0xa7)]['opacity']='1',isConnected=![],_0x104c97[_0x53ad3a(0x7b)][_0x53ad3a(0x152)](_0x53ad3a(0x9c)),_0x104c97[_0x53ad3a(0x9c)]=!![],isUploading&&(isUploading=![],_0x104c97[_0x53ad3a(0x16d)]=_0x53ad3a(0x145),_0x104c97[_0x53ad3a(0x7b)]['remove'](_0x53ad3a(0xc4))),refreshFiles()):(_0x20fb11['classList']['add']('disconnected'),_0x20fb11[_0x53ad3a(0x16d)]=_0x53ad3a(0x156),_0xcc025d[_0x53ad3a(0x9c)]=!![],_0xcc025d[_0x53ad3a(0xa7)]['opacity']=_0x53ad3a(0x81),isConnected=!![],_0x104c97[_0x53ad3a(0x7b)][_0x53ad3a(0x119)]('disabled'),_0x104c97[_0x53ad3a(0x9c)]=![],refreshFiles()),updateUIState();}function formatCode(){const _0x41d1a6=_0x3c8de9;logToTerminal(_0x41d1a6(0x8b));}function showKeyboardShortcuts(){const _0x139578=_0x3c8de9;logToTerminal(_0x139578(0x113));}function showSettings(){const _0x1e2ac3=_0x3c8de9;logToTerminal(_0x1e2ac3(0x87));}function closeVirtualGamepad(){const _0x1c351e=_0x3c8de9;document[_0x1c351e(0x17a)](_0x1c351e(0x15f))[_0x1c351e(0xa7)][_0x1c351e(0x91)]=_0x1c351e(0x8c),logToTerminal('Gamepad\x20virtual\x20cerrado');}function toggleFullscreen(){const _0x27866f=_0x3c8de9,_0x48789b=document[_0x27866f(0x17a)](_0x27866f(0x15f));_0x48789b[_0x27866f(0x7b)][_0x27866f(0x172)](_0x27866f(0x111));const _0x47d6f3=document[_0x27866f(0x17a)](_0x27866f(0x13d));_0x47d6f3[_0x27866f(0x16d)]=_0x48789b['classList'][_0x27866f(0x18b)](_0x27866f(0x111))?'⮌':'⛶',_0x48789b[_0x27866f(0x7b)][_0x27866f(0x18b)]('fullscreen')?logToTerminal(_0x27866f(0x11d)):logToTerminal(_0x27866f(0x179));}function toggleTheme(){const _0x32353d=_0x3c8de9,_0x46807c=document['querySelector']('.gamepad-modal\x20.modal-content');_0x46807c['classList'][_0x32353d(0x172)]('light-theme');const _0x459b39=document[_0x32353d(0x17a)](_0x32353d(0x14e)),_0x4f37a0=document[_0x32353d(0x17a)](_0x32353d(0x85));_0x4f37a0[_0x32353d(0x7b)][_0x32353d(0x172)](_0x32353d(0xa9)),_0x46807c[_0x32353d(0x7b)][_0x32353d(0x18b)]('light-theme')?logToTerminal('Gamepad\x20virtual:\x20Modo\x20claro\x20activado'):logToTerminal(_0x32353d(0x198));}function openVirtualGamepad(){const _0x441270=_0x3c8de9,_0x51735c=document[_0x441270(0x122)]('connectBTButton'),_0x3700fd=document[_0x441270(0x122)](_0x441270(0xc3));if(!_0x51735c['classList'][_0x441270(0x18b)](_0x441270(0x13e))&&!_0x3700fd[_0x441270(0x7b)][_0x441270(0x18b)](_0x441270(0x13e))){logToTerminal(_0x441270(0x7e)),alert(_0x441270(0x14a));return;}document[_0x441270(0x17a)](_0x441270(0x15f))[_0x441270(0xa7)][_0x441270(0x91)]=_0x441270(0x17b),logToTerminal(_0x441270(0xcc));}function openKeyboardControl(){const _0x176917=_0x3c8de9,_0x228560=document[_0x176917(0x122)](_0x176917(0x10f)),_0x76f28c=document['getElementById'](_0x176917(0xc3));if(!_0x228560[_0x176917(0x7b)][_0x176917(0x18b)](_0x176917(0x13e))&&!_0x76f28c[_0x176917(0x7b)][_0x176917(0x18b)](_0x176917(0x13e))){logToTerminal(_0x176917(0x192)),alert(_0x176917(0x9f));return;}document['querySelector'](_0x176917(0x132))[_0x176917(0xa7)][_0x176917(0x91)]=_0x176917(0x17b),logToTerminal(_0x176917(0xad)),startKeyboardListener();}function toggleKeyboardFullscreen(){const _0x44cfe2=_0x3c8de9,_0x34798e=document[_0x44cfe2(0x17a)](_0x44cfe2(0x132));_0x34798e['classList'][_0x44cfe2(0x172)](_0x44cfe2(0x111));const _0x381ac8=document[_0x44cfe2(0x17a)]('.keyboard-modal\x20.fullscreen-btn');_0x381ac8['textContent']=_0x34798e[_0x44cfe2(0x7b)][_0x44cfe2(0x18b)](_0x44cfe2(0x111))?'⮌':'⛶',_0x34798e[_0x44cfe2(0x7b)]['contains'](_0x44cfe2(0x111))?logToTerminal(_0x44cfe2(0x78)):logToTerminal(_0x44cfe2(0xbd));}function saveToRobot(){const _0xcfed88=_0x3c8de9;if(isUploading){logToTerminal(_0xcfed88(0xe2)),alert(_0xcfed88(0x82));return;}if(!isConnected){logToTerminal(_0xcfed88(0xb8)),alert(_0xcfed88(0x123));return;}showLoadingOverlay(),logToTerminal(_0xcfed88(0x10a));try{const _0x1d7799=Blockly[_0xcfed88(0xf0)]['workspaceToDom'](workspace),_0x2c5f83=Blockly[_0xcfed88(0xf0)][_0xcfed88(0x8e)](_0x1d7799);console[_0xcfed88(0xe1)](_0xcfed88(0x167),_0x2c5f83),logToTerminal(_0xcfed88(0xdc));}catch(_0x5c4681){logToTerminal('Error\x20al\x20guardar\x20en\x20el\x20robot:\x20'+_0x5c4681[_0xcfed88(0xbb)]);}finally{hideLoadingOverlay();}}document[_0x3c8de9(0xf3)](_0x3c8de9(0xbc),()=>{const _0x420bdb=_0x3c8de9,_0x332a0e=document['querySelector'](_0x420bdb(0x126)),_0x38210b=document[_0x420bdb(0x122)](_0x420bdb(0x1a0));_0x332a0e[_0x420bdb(0x7b)][_0x420bdb(0x152)]('disabled'),_0x332a0e[_0x420bdb(0x9c)]=!![],_0x38210b['addEventListener']('input',_0x1df576=>{const _0x12b1c3=_0x420bdb;let _0x3c748f=_0x1df576[_0x12b1c3(0x161)][_0x12b1c3(0x188)]['replace'](/[^a-zA-Z0-9_]/g,'');_0x3c748f=_0x3c748f['slice'](0x0,0xa),_0x3c748f=_0x3c748f[_0x12b1c3(0x19c)](/main/i,''),_0x1df576[_0x12b1c3(0x161)][_0x12b1c3(0x188)]=_0x3c748f,/main/i[_0x12b1c3(0x197)](_0x1df576['target']['value'])&&logToTerminal(_0x12b1c3(0xf5)),localStorage[_0x12b1c3(0xa1)](_0x12b1c3(0xc9),_0x3c748f);});const _0x51ea85=localStorage[_0x420bdb(0x189)]('workspaceXml');if(_0x51ea85)try{const _0x197eeb=new DOMParser(),_0x324c78=_0x197eeb[_0x420bdb(0xd6)](_0x51ea85,_0x420bdb(0xae));Blockly['Xml'][_0x420bdb(0x162)](_0x324c78[_0x420bdb(0xc0)],workspace),logToTerminal(_0x420bdb(0xbe));}catch(_0x3e7175){console['error']('Error\x20loading\x20saved\x20workspace:',_0x3e7175),logToTerminal(_0x420bdb(0x6f));}const _0xa7d8e8=localStorage[_0x420bdb(0x189)]('programName');_0xa7d8e8&&(_0x38210b['value']=_0xa7d8e8),workspace[_0x420bdb(0x97)](()=>{const _0x285dfa=_0x420bdb,_0x18301c=Blockly['Xml']['workspaceToDom'](workspace),_0x4af376=Blockly[_0x285dfa(0xf0)][_0x285dfa(0x8e)](_0x18301c);localStorage[_0x285dfa(0xa1)](_0x285dfa(0x86),_0x4af376);}),refreshFiles(),initializeTerminal(),updateUIState();});function _0xb095(_0x19a119,_0x40f349){const _0x48a4a2=_0x48a4();return _0xb095=function(_0xb095f7,_0x3d2c86){_0xb095f7=_0xb095f7-0x67;let _0x46abaa=_0x48a4a2[_0xb095f7];return _0x46abaa;},_0xb095(_0x19a119,_0x40f349);}function closeRobotConfig(){const _0x439426=_0x3c8de9;document[_0x439426(0x17a)](_0x439426(0x163))[_0x439426(0xa7)][_0x439426(0x91)]='none',logToTerminal('Configuración\x20del\x20robot\x20cancelada');}async function saveRobotConfig(){const _0x4cd674=_0x3c8de9,_0x5db98a=document['querySelector'](_0x4cd674(0x8d))[_0x4cd674(0x188)];closeRobotConfig(),showLoadingOverlay(),logToTerminal(_0x4cd674(0x17e));try{await new Promise(_0x4cc363=>setTimeout(_0x4cc363,0x5dc));let _0x16e9c6;switch(_0x5db98a){case _0x4cd674(0x7c):_0x16e9c6='2';break;case'button':_0x16e9c6='1';break;case'pc':_0x16e9c6='0';break;}console[_0x4cd674(0xe1)](_0x16e9c6),await guardar_confi(_0x16e9c6);let _0x787630=document[_0x4cd674(0x17a)](_0x4cd674(0x8d));_0x787630?alert(_0x4cd674(0x169)+_0x787630[_0x4cd674(0x188)]):alert('Ninguna\x20opción\x20está\x20seleccionada.'),logToTerminal(_0x4cd674(0x92)+_0x16e9c6),closeRobotConfig();}catch(_0x34085c){logToTerminal(_0x4cd674(0x129)+_0x34085c[_0x4cd674(0xbb)]);}finally{hideLoadingOverlay();}}function toggleBluetooth(_0x15fa4f){const _0x2ff189=_0x3c8de9,_0x528aef=document[_0x2ff189(0x122)](_0x2ff189(0xac));_0x528aef[_0x2ff189(0x9c)]=!_0x15fa4f,_0x15fa4f?logToTerminal(_0x2ff189(0x187)):logToTerminal(_0x2ff189(0x15d));}function updateBluetoothName(_0x4f3f9a){const _0x14d942=_0x3c8de9;_0x4f3f9a[_0x14d942(0x186)]()&&logToTerminal('Actualizando\x20nombre\x20Bluetooth\x20a:\x20'+_0x4f3f9a);}function closeLibraryModal(){const _0x232d8a=_0x3c8de9;document[_0x232d8a(0x17a)](_0x232d8a(0xf2))['style'][_0x232d8a(0x91)]=_0x232d8a(0x8c);}function loadLibraries(){const _0x1e5a96=_0x3c8de9,_0x55a76e=document[_0x1e5a96(0x17a)](_0x1e5a96(0xc7));_0x55a76e['innerHTML']='',libraries[_0x1e5a96(0x19a)](_0xf2827a=>{const _0x5e6b24=_0x1e5a96,_0x1185e6=document[_0x5e6b24(0x116)](_0x5e6b24(0xfc));_0x1185e6[_0x5e6b24(0x12a)]=_0x5e6b24(0x177);const _0x40eb9a=_0xf2827a[_0x5e6b24(0x170)][0x0];let _0x8e3739='Última\x20versión:\x20v'+_0x40eb9a;_0xf2827a[_0x5e6b24(0x142)]&&(_0x8e3739=_0x5e6b24(0x151)+_0xf2827a[_0x5e6b24(0x142)]+_0x5e6b24(0xc6)+_0x40eb9a);let _0x23c4d9='';if(_0xf2827a[_0x5e6b24(0x108)]===_0x5e6b24(0x193)){const _0x5a50cc=_0xf2827a[_0x5e6b24(0x170)][_0x5e6b24(0x68)](_0x3eaa1a=>'<option\x20value=\x22'+_0x3eaa1a+_0x5e6b24(0xd4)+_0x3eaa1a+_0x5e6b24(0x16a))[_0x5e6b24(0x89)]('');_0x23c4d9=_0x5e6b24(0x77)+_0xf2827a[_0x5e6b24(0xd8)]+'\x22>'+_0x5a50cc+_0x5e6b24(0x109)+_0xf2827a[_0x5e6b24(0xd8)]+_0x5e6b24(0x19e);}else{if(_0xf2827a[_0x5e6b24(0x108)]==='outdated'){const _0x101616=_0xf2827a[_0x5e6b24(0x170)][_0x5e6b24(0x68)](_0x81972a=>_0x5e6b24(0x137)+_0x81972a+'\x22\x20'+(_0x81972a===_0xf2827a[_0x5e6b24(0x142)]?'selected':'')+'>v'+_0x81972a+_0x5e6b24(0x16a))['join']('');_0x23c4d9=_0x5e6b24(0x77)+_0xf2827a[_0x5e6b24(0xd8)]+'\x22>'+_0x101616+_0x5e6b24(0x138)+_0xf2827a[_0x5e6b24(0xd8)]+_0x5e6b24(0x14d)+_0xf2827a[_0x5e6b24(0xd8)]+'\x27)\x22>Reinstalar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22library-btn\x20remove-btn\x22\x20onclick=\x22removeLibrary(\x27'+_0xf2827a['name']+_0x5e6b24(0x190);}else{const _0x46d1=_0xf2827a['versions']['map'](_0x3fb8de=>_0x5e6b24(0x137)+_0x3fb8de+'\x22\x20'+(_0x3fb8de===_0xf2827a['installedVersion']?_0x5e6b24(0x194):'')+'>v'+_0x3fb8de+_0x5e6b24(0x16a))['join']('');_0x23c4d9=_0x5e6b24(0x77)+_0xf2827a[_0x5e6b24(0xd8)]+'\x22>'+_0x46d1+_0x5e6b24(0x135)+_0xf2827a['name']+_0x5e6b24(0xb7)+_0xf2827a['name']+_0x5e6b24(0x190);}}_0x1185e6[_0x5e6b24(0xeb)]=_0x5e6b24(0xf8)+_0xf2827a[_0x5e6b24(0xd8)]+_0x5e6b24(0xfe)+_0xf2827a[_0x5e6b24(0x13c)]+_0x5e6b24(0xe7)+_0x8e3739+_0x5e6b24(0xf4)+_0x23c4d9+_0x5e6b24(0xb9),_0x55a76e[_0x5e6b24(0x10e)](_0x1185e6);});}async function updateLibrary(_0x34279c){const _0x59465a=_0x3c8de9,_0x39ee0c=document[_0x59465a(0x122)]('version-select-'+_0x34279c),_0x32e7b9=_0x39ee0c['value'];showLoadingOverlay(),logToTerminal('Actualizando\x20biblioteca\x20'+_0x34279c+_0x59465a(0x12d)+_0x32e7b9+_0x59465a(0x140));try{await new Promise(_0x357efc=>setTimeout(_0x357efc,0x5dc)),logToTerminal(_0x59465a(0x11e)+_0x34279c+_0x59465a(0x11b)+_0x32e7b9+_0x59465a(0x127)),loadLibraries();}catch(_0x7d694d){logToTerminal(_0x59465a(0x158)+_0x34279c+':\x20'+_0x7d694d['message']);}finally{hideLoadingOverlay();}}async function removeLibrary(_0x4f0ebb){const _0x475c1b=_0x3c8de9;if(confirm(_0x475c1b(0x1a1)+_0x4f0ebb+'?')){showLoadingOverlay(),logToTerminal(_0x475c1b(0x73)+_0x4f0ebb+_0x475c1b(0x140));try{await new Promise(_0x3b0c34=>setTimeout(_0x3b0c34,0x5dc)),logToTerminal(_0x475c1b(0x11e)+_0x4f0ebb+_0x475c1b(0x146)),loadLibraries();}catch(_0x36da8b){logToTerminal('Error\x20al\x20eliminar\x20la\x20biblioteca\x20'+_0x4f0ebb+':\x20'+_0x36da8b[_0x475c1b(0xbb)]);}finally{hideLoadingOverlay();}}}function showLoadingOverlay(){const _0x57de7c=_0x3c8de9,_0x43f941=document[_0x57de7c(0x17a)](_0x57de7c(0x191));_0x43f941[_0x57de7c(0xa7)][_0x57de7c(0x91)]=_0x57de7c(0x17b);}function hideLoadingOverlay(){const _0x3a1d78=_0x3c8de9,_0x370998=document[_0x3a1d78(0x17a)](_0x3a1d78(0x191));_0x370998[_0x3a1d78(0xa7)][_0x3a1d78(0x91)]='none';}function showHowToUpload(){const _0x94fb52=_0x3c8de9;document[_0x94fb52(0x17a)]('.help-modal')['style']['display']='flex',logToTerminal('Mostrando\x20ayuda\x20de\x20cómo\x20grabar\x20programa');}function closeHelpModal(){const _0x316d1e=_0x3c8de9;document['querySelector']('.help-modal')[_0x316d1e(0xa7)]['display']='none';}function copyCodeToClipboard(){const _0x4a8752=_0x3c8de9,_0x261d96=editor[_0x4a8752(0x15e)]();navigator[_0x4a8752(0x104)][_0x4a8752(0x149)](_0x261d96)[_0x4a8752(0xda)](()=>{const _0x5baf77=_0x4a8752,_0x2cf892=document['querySelector']('.copy-btn'),_0x4b1e59=_0x2cf892[_0x5baf77(0x16d)];_0x2cf892[_0x5baf77(0x16d)]=_0x5baf77(0xa6),setTimeout(()=>{const _0x564c76=_0x5baf77;_0x2cf892[_0x564c76(0x16d)]=_0x4b1e59;},0x7d0),logToTerminal(_0x5baf77(0x16f));})[_0x4a8752(0xca)](_0x18eef1=>{const _0x3dfa6e=_0x4a8752;console['error'](_0x3dfa6e(0x184),_0x18eef1),logToTerminal(_0x3dfa6e(0x154));});}function closeKeyboardModal(){const _0x3059e4=_0x3c8de9;document['querySelector'](_0x3059e4(0x132))[_0x3059e4(0xa7)]['display']=_0x3059e4(0x8c),logToTerminal('Control\x20por\x20teclado\x20cerrado'),stopKeyboardListener();}let keyboardListenerActive=![],pressedKeys=new Set();function startKeyboardListener(){const _0x3a0e92=_0x3c8de9;keyboardListenerActive=!![],document[_0x3a0e92(0xf3)](_0x3a0e92(0xf6),handleKeyPress),document['addEventListener'](_0x3a0e92(0x18f),handleKeyRelease);}function stopKeyboardListener(){const _0x3e83a4=_0x3c8de9;keyboardListenerActive=![],document['removeEventListener'](_0x3e83a4(0xf6),handleKeyPress),document[_0x3e83a4(0x139)](_0x3e83a4(0x18f),handleKeyRelease),pressedKeys[_0x3e83a4(0x124)]();}function handleKeyPress(_0x1e13cf){const _0x59c670=_0x3c8de9;if(!keyboardListenerActive)return;if(pressedKeys[_0x59c670(0x19f)](_0x1e13cf[_0x59c670(0xd2)]))return;pressedKeys[_0x59c670(0x152)](_0x1e13cf[_0x59c670(0xd2)]);const _0x1ce419=document['querySelector']('.key-info'),_0x27d6e2=document[_0x59c670(0x17a)](_0x59c670(0x15a)),_0x4b95c9=document[_0x59c670(0x17a)]('.key-code\x20.key-value');_0x1ce419[_0x59c670(0x16d)]=_0x1e13cf[_0x59c670(0x83)],_0x27d6e2[_0x59c670(0x16d)]=_0x1e13cf['key'],_0x4b95c9[_0x59c670(0x16d)]=_0x1e13cf['keyCode'],_0x1ce419[_0x59c670(0x7b)][_0x59c670(0x119)]('pressed-key'),void _0x1ce419[_0x59c670(0x199)],_0x1ce419[_0x59c670(0x7b)][_0x59c670(0x152)]('pressed-key'),logToTerminal(_0x59c670(0x148)+_0x1e13cf[_0x59c670(0x83)]+'\x20(código:\x20'+_0x1e13cf[_0x59c670(0x10b)]+')');}function handleKeyRelease(_0x323e90){const _0x47fc31=_0x3c8de9;pressedKeys[_0x47fc31(0xc2)](_0x323e90['code']),logToTerminal('Tecla\x20soltada:\x20'+_0x323e90['key']+_0x47fc31(0x76)+_0x323e90['keyCode']+')');const _0x1c66ff=document[_0x47fc31(0x17a)]('.key-info');_0x1c66ff[_0x47fc31(0x16d)]=_0x47fc31(0x15c);const _0x12f0b0=document[_0x47fc31(0x17a)](_0x47fc31(0x15a)),_0x3adba3=document['querySelector'](_0x47fc31(0x93));_0x12f0b0[_0x47fc31(0x16d)]=_0x47fc31(0xea),_0x3adba3['textContent']='-';}function _0x48a4(){const _0x393b1f=['join','keys','Formateando\x20código...','none','input[name=\x22startup\x22]:checked','domToPrettyText','href','Error:\x20No\x20se\x20pueden\x20eliminar\x20archivos\x20del\x20sistema','display','Configuración\x20guardada:\x20Método\x20de\x20arranque\x20-\x20','.key-code\x20.key-value','memoryText','toolbox','opacity','addChangeListener','Cerrando\x20sin\x20guardar...','Error:\x20No\x20se\x20puede\x20cargar\x20un\x20ejemplo\x20mientras\x20un\x20programa\x20está\x20en\x20ejecución.','input','file-item','disabled','ServiceWorker\x20registration\x20successful\x20with\x20scope:\x20','download','Debe\x20conectarse\x20por\x20USB\x20o\x20Bluetooth\x20primero\x20para\x20usar\x20el\x20control\x20por\x20teclado','¿Está\x20seguro\x20de\x20eliminar\x20','setItem','Detener','accept','readAsText','setOptions','¡Copiado!','style','.device-item','light-theme','includes','codeOutput','btName','Control\x20por\x20teclado\x20abierto','text/xml','Error\x20al\x20cargar\x20el\x20archivo:\x20','left','pageX','scrollHeight','2JVelSr','register','>\x20Terminal\x20lista\x20para\x20mostrar\x20mensajes...','scrollTop','\x27)\x22>Reinstalar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22library-btn\x20remove-btn\x22\x20onclick=\x22removeLibrary(\x27','Error:\x20Debe\x20conectarse\x20a\x20un\x20dispositivo\x20primero','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','Error\x20al\x20guardar\x20en\x20el\x20robot:\x20','message','DOMContentLoaded','Control\x20por\x20teclado\x20en\x20modo\x20ventana','Programa\x20anterior\x20restaurado','Error:\x20Por\x20favor\x20seleccione\x20un\x20dispositivo','documentElement','.copy-btn','delete','connectUSBButton','uploading','\x22\x20cargado\x20exitosamente','\x20|\x20Última:\x20v','.library-list','type','programName','catch','device-item','Gamepad\x20virtual\x20abierto','Error:\x20No\x20se\x20puede\x20abrir\x20un\x20archivo\x20mientras\x20el\x20programa\x20está\x20en\x20ejecución.','1439745sjNFqd','Programa','onload','click','code','Error:\x20Por\x20favor,\x20ingresa\x20un\x20nombre\x20para\x20el\x20archivo','\x22>v','deviceList','parseFromString','config-robot-btn','name','1584624ilzEha','then','top','Programa\x20guardado\x20exitosamente\x20en\x20el\x20robot','memoryFill','\x20reinstalada\x20exitosamente','version-select-','hideOnDisconnected','log','Error:\x20No\x20se\x20puede\x20guardar\x20en\x20el\x20robot\x20mientras\x20un\x20programa\x20está\x20en\x20ejecución.','btpl','\x27)\x22>Abrir</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22context-menu-item\x22\x20onclick=\x22renameFile(\x27','2169580BfrjtQ','workspaceToDom','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22library-version-info\x22>','\x20cargado\x20exitosamente','block','Ninguna','innerHTML','Conectar\x20por\x20USB','Error:\x20No\x20se\x20puede\x20eliminar\x20un\x20archivo\x20mientras\x20un\x20programa\x20está\x20en\x20ejecución.','Guardando\x20archivo\x20en\x20PC...','installUsedLibraries','Xml','El\x20xrp\x20crea\x20una\x20red\x20wifi\x20para\x20que\x20al\x20escribir\x20una\x20ip\x20(por\x20defecto\x20192.168.4.1)\x20en\x20el\x20navegador\x20se\x20genere\x20un\x20gamepad\x20virtual\x20comunicado\x20por\x20esa\x20red\x20en\x20el\x20canal\x201.\x20Es\x20nesesario\x20apagar\x20datos\x20moviles\x20para\x20que\x20funcione\x20en\x20un\x20dispositivo\x20movil','.library-modal','addEventListener','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22library-actions\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Error:\x20No\x20se\x20permite\x20usar\x20\x22main\x22\x20en\x20el\x20nombre\x20del\x20programa','keydown','wifi.py','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22library-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22library-name\x22>','463727jJNNiI','saveToRobot','boot.py','div','contextmenu','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22library-description\x22>','_Beta06','error','Por\x20favor,\x20ingresa\x20un\x20nombre\x20para\x20el\x20archivo','Instalando\x20librerías\x20en\x20uso...','\x27)\x22>Borrar</div>\x0a\x20\x20\x20\x20','clipboard','1.0.0','Instalando\x20todas\x20las\x20librerías...','486094PJzVDU','status','</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22library-btn\x20install-btn\x22\x20onclick=\x22installLibrary(\x27','Guardando\x20programa\x20en\x20robot...','keyCode','config.py','main.py','appendChild','connectBTButton','Archivo\x20cargado\x20exitosamente','fullscreen','Error\x20al\x20habilitar\x20el\x20modo\x20sin\x20conexión.','Mostrando\x20atajos\x20de\x20teclado...','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22delete-btn\x22\x20onclick=\x22deleteFile(\x27','3938640WbBNbA','createElement','ace/theme/eclipse','text/plain','remove','La\x20aplicación\x20ahora\x20puede\x20funcionar\x20sin\x20conexión.','\x20actualizada\x20a\x20v','callingFunction','Gamepad\x20virtual\x20en\x20pantalla\x20completa','Biblioteca\x20','Librerías\x20en\x20uso\x20instaladas\x20exitosamente','removeChild','No\x20se\x20pueden\x20eliminar\x20archivos\x20del\x20sistema','getElementById','Debe\x20conectarse\x20a\x20un\x20dispositivo\x20primero','clear','\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_keyword\x20{\x20color:\x20#7F0055\x20!important;\x20font-weight:\x20bold;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_string\x20{\x20color:\x20#2A00FF\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_constant\x20{\x20color:\x20#5500AA\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_function\x20{\x20color:\x20#2A7AB0\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_comment\x20{\x20color:\x20#3F7F5F\x20!important;\x20font-style:\x20italic;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_numeric\x20{\x20color:\x20#5500AA\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_operator\x20{\x20color:\x20#000000\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_identifier\x20{\x20color:\x20#000000\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20{\x20background-color:\x20#FFFFFF\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_gutter\x20{\x20background:\x20#EEEEEE\x20!important;\x20color:\x20#333333\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_print-margin\x20{\x20background:\x20#EEEEEE\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_cursor\x20{\x20color:\x20#000000\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_marker-layer\x20.ace_selection\x20{\x20background:\x20#BAD6FD\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.ace-eclipse\x20.ace_marker-layer\x20.ace_bracket\x20{\x20border:\x201px\x20solid\x20#000000\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20','.button[onclick=\x22uploadToDevice()\x22]','\x20exitosamente','Todas\x20las\x20librerías\x20instaladas\x20exitosamente','Error\x20al\x20guardar\x20la\x20configuración:\x20','className','update-libraries-btn','Desconectar\x20USB','\x20a\x20v','body','file','workspaceToCode','toLocaleTimeString','.keyboard-modal','14px','wgpad','</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22library-btn\x20reinstall-btn\x22\x20onclick=\x22reinstallLibrary(\x27','lib.py','<option\x20value=\x22','</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22library-btn\x20update-btn\x22\x20onclick=\x22updateLibrary(\x27','removeEventListener','firstChild','blocklyDiv','description','.fullscreen-btn','disconnected','Pico\x20#3\x20(COM5)','...','serviceWorker','installedVersion','container','context-menu','Iniciar\x20programa','\x20eliminada\x20exitosamente','data-calling-function','Tecla\x20presionada:\x20','writeText','Debe\x20conectarse\x20por\x20USB\x20o\x20Bluetooth\x20primero\x20para\x20usar\x20el\x20gamepad\x20virtual','load','Subiendo\x20código\x20al\x20dispositivo...','\x27)\x22>Actualizar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22library-btn\x20reinstall-btn\x22\x20onclick=\x22reinstallLibrary(\x27','.theme-btn','result','579501iNRKtT','Instalado:\x20v','add','10BCWYwg','Error\x20al\x20copiar\x20el\x20código\x20al\x20portapapeles','Archivo\x20cargado\x20exitosamente.\x20El\x20programa\x20está\x20en\x20ejecución.','Desconectar\x20BT','Pestolink','Error\x20al\x20actualizar\x20la\x20biblioteca\x20','head','.last-key\x20.key-value','Iniciando\x20nuevo\x20código\x20de\x20bloques...','Presiona\x20cualquier\x20tecla...','Desactivando\x20Bluetooth...','getValue','.gamepad-modal','terminal','target','domToWorkspace','.robot-config-modal','Biblioteca\x20printcipal\x20par\x20el\x20control\x20de\x20motores\x20y\x20sensores\x20en\x20placa\x20XRP.','Ejecución\x20interrumpida\x20por\x20el\x20usuario.','Biblioteca\x20para\x20controlar\x20por\x20bluetooth\x20el\x20xrp\x20haciedo\x20uso\x20del\x20gamepad.\x20<a\x20href=\x22https://pestol.ink/\x22\x20target=\x22_blank\x22>https://pestol.ink/</a>','Saving\x20to\x20robot:','Reinstalando\x20biblioteca\x20','Opción\x20seleccionada:\x20','</option>','0\x20KB\x20/\x200\x20KB','getSession','textContent','setReadOnly','Código\x20copiado\x20al\x20portapapeles','versions','button','toggle','Pico\x20#2\x20(COM4)','Ejemplo\x20\x22','save-robot-btn','>\x20[','library-item','Guardando\x20y\x20cerrando...','Gamepad\x20virtual\x20en\x20modo\x20ventana','querySelector','flex','length','.Fblocks','Guardando\x20configuración\x20del\x20robot...','fileList','Iniciando\x20nuevo\x20código\x20MicroPython...','ServiceWorker\x20registration\x20failed:\x20','width','Python','Error\x20al\x20copiar\x20el\x20código:','updated','trim','Activando\x20Bluetooth...','value','getItem','Ejemplo\x20no\x20encontrado','contains','createObjectURL','No\x20se\x20puede\x20abrir\x20un\x20archivo\x20mientras\x20el\x20programa\x20está\x20en\x20ejecución.','setAttribute','keyup','\x27)\x22>Eliminar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','.loading-overlay','Error:\x20Debe\x20conectarse\x20por\x20USB\x20o\x20Bluetooth\x20primero\x20para\x20usar\x20el\x20control\x20por\x20teclado','not-installed','selected','Programa1','Error\x20al\x20instalar\x20las\x20librerías:\x20','test','Gamepad\x20virtual:\x20Modo\x20oscuro\x20activado','offsetWidth','forEach','removeItem','replace','Ingrese\x20nuevo\x20nombre:','\x27)\x22>Instalar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','has','fileName','¿Está\x20seguro\x20de\x20eliminar\x20la\x20biblioteca\x20','Error\x20al\x20cargar\x20el\x20archivo:','map','ace/mode/python','scope','Error\x20al\x20reinstalar\x20la\x20biblioteca\x20','Sistema\x20iniciado','.device-selection-modal','\x20a\x20','Error\x20al\x20cargar\x20el\x20programa\x20guardado','files','ejemplo_','¿Desea\x20crear\x20un\x20nuevo\x20código?\x20Se\x20perderán\x20los\x20cambios\x20no\x20guardados.','Eliminando\x20biblioteca\x20','blocks','parentElement','\x20(código:\x20-','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22version-select-','Control\x20por\x20teclado\x20en\x20pantalla\x20completa','inject','preventDefault','classList','auto','dataset','Error:\x20Debe\x20conectarse\x20por\x20USB\x20o\x20Bluetooth\x20primero\x20para\x20usar\x20el\x20gamepad\x20virtual','setTheme','./service-worker.js','0.5','No\x20se\x20puede\x20guardar\x20en\x20el\x20robot\x20mientras\x20un\x20programa\x20está\x20en\x20ejecución.','key','[data-calling-function]','.gamepad-display','workspaceXml','Abriendo\x20configuración...','Error\x20al\x20cargar\x20el\x20archivo:\x20El\x20archivo\x20no\x20tiene\x20el\x20formato\x20correcto\x20de\x20bloques'];_0x48a4=function(){return _0x393b1f;};return _0x48a4();}_0x3c8de9(0x141)in navigator&&window[_0x3c8de9(0xf3)](_0x3c8de9(0x14b),()=>{const _0xce0e21=_0x3c8de9;navigator[_0xce0e21(0x141)][_0xce0e21(0xb4)](_0xce0e21(0x80))['then'](_0x18a8c7=>{const _0x204712=_0xce0e21;console[_0x204712(0xe1)](_0x204712(0x9d),_0x18a8c7[_0x204712(0x6a)]),logToTerminal(_0x204712(0x11a));})[_0xce0e21(0xca)](_0x34d35f=>{const _0x2ad6b6=_0xce0e21;console['log'](_0x2ad6b6(0x181),_0x34d35f),logToTerminal(_0x2ad6b6(0x112));});});
+const workspace = Blockly.inject('blocklyDiv', {
+    toolbox: document.getElementById('toolbox'),
+    scrollbars: true,
+    horizontalLayout: false,
+    toolboxPosition: 'start',
+    zoom: {
+      controls: true,
+      wheel: true,
+      startScale: 1.0,
+      maxScale: 3,
+      minScale: 0.3,
+      scaleSpeed: 1.2,
+      pinch: true
+    }
+  });
+  var libraries = [
+        {
+            name: 'XRPLib',
+            description: 'Biblioteca printcipal par el control de motores y sensores en placa XRP.',
+            versions: ['_Beta06'],
+            status: 'updated',
+            installedVersion: '_Beta06'
+        },
+        {
+            name: 'Fusalmo gamepad wifi',
+            description: 'El xrp crea una red wifi para que al escribir una ip (por defecto 192.168.4.1) en el navegador se genere un gamepad virtual comunicado por esa red en el canal 1. Es nesesario apagar datos moviles para que funcione en un dispositivo movil',
+            versions: ['1.0.0'],
+            status: 'updated',
+            installedVersion: '1.0.0'
+        },
+        {
+            name: 'Pestolink',
+            description: 'Biblioteca para controlar por bluetooth el xrp haciedo uso del gamepad. <a href="https://pestol.ink/" target="_blank">https://pestol.ink/</a>',
+            versions: ['1.0.0'],
+            status: 'updated',
+            installedVersion: '1.0.0'
+        }
+        /*{
+            name: 'motor_driver',
+            description: 'Biblioteca para control de motores DC y paso a paso',
+            versions: ['1.2.0', '1.1.0', '1.0.0'],
+            status: 'updated',
+            installedVersion: '1.2.0'
+        },
+        {
+            name: 'sensor_utils',
+            description: 'Utilidades para sensores analógicos y digitales',
+            versions: ['2.1.0', '2.0.0', '1.9.5'],
+            status: 'outdated',
+            installedVersion: '1.9.5'
+        },
+        {
+            name: 'display_lib',
+            description: 'Control de pantallas LCD y OLED',
+            versions: ['1.0.0', '0.9.0'],
+            status: 'not-installed',
+            installedVersion: null
+        },
+        {
+            name: 'servo_control',
+            description: 'Control avanzado de servomotores',
+            versions: ['3.0.1', '3.0.0', '2.5.0'],
+            status: 'updated',
+            installedVersion: '3.0.1'
+        },
+        {
+            name: 'wifi_manager',
+            description: 'Gestor de conexiones WiFi',
+            versions: ['1.5.0'],
+            status: 'not-installed',
+            installedVersion: null
+        }*/
+    ];
+  const reservedNames = ['boot.py', 'main.py', 'lib.py', 'config.py', 'wifi.py'];
+  const requiredFiles = {};
+
+  const TOTAL_MEMORY = 2048;
+  var usedMemory = 0;
+  let selectedDevice = null;
+  const mockDevices = [{
+    id: 1,
+    name: "Pico #1 (COM3)"
+  }, {
+    id: 2,
+    name: "Pico #2 (COM4)"
+  }, {
+    id: 3,
+    name: "Pico #3 (COM5)"
+  }];
+  let contextMenu = null;
+  let isConnected = false;
+  let isUploading = false;
+  let editor;
+
+  function toggleView(view) {
+    const blocklyDiv = document.getElementById('blocklyDiv');
+    const codeOutput = document.getElementById('codeOutput');
+    if (view === 'blocks') {
+      blocklyDiv.style.display = 'block';
+      codeOutput.style.display = 'none';
+    } else {
+      if (!document.querySelector('.copy-btn')) {
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'copy-btn';
+        copyBtn.textContent = 'Copiar código';
+        copyBtn.onclick = copyCodeToClipboard;
+        codeOutput.appendChild(copyBtn);
+      }
+      editor = ace.edit("codeOutput");
+      editor.setTheme("ace/theme/eclipse");
+      editor.getSession().setMode("ace/mode/python");
+      editor.setReadOnly(true);
+      editor.setOptions({
+        fontSize: "14px",
+        showPrintMargin: false,
+        highlightActiveLine: true,
+        showGutter: true,
+        highlightSelectedWord: true,
+        showLineNumbers: true,
+        displayIndentGuides: true,
+        enableLiveAutocompletion: true,
+        enableSnippets: true,
+        enableBasicAutocompletion: true
+      });
+
+      editor.container.style.fontFamily = "'Source Code Pro', 'Consolas', monospace";
+      
+      const customStyle = document.createElement('style');
+      customStyle.textContent = `
+        .ace-eclipse .ace_keyword { color: #7F0055 !important; font-weight: bold; }
+        .ace-eclipse .ace_string { color: #2A00FF !important; }
+        .ace-eclipse .ace_constant { color: #5500AA !important; }
+        .ace-eclipse .ace_function { color: #2A7AB0 !important; }
+        .ace-eclipse .ace_comment { color: #3F7F5F !important; font-style: italic; }
+        .ace-eclipse .ace_numeric { color: #5500AA !important; }
+        .ace-eclipse .ace_operator { color: #000000 !important; }
+        .ace-eclipse .ace_identifier { color: #000000 !important; }
+        .ace-eclipse { background-color: #FFFFFF !important; }
+        .ace-eclipse .ace_gutter { background: #EEEEEE !important; color: #333333 !important; }
+        .ace-eclipse .ace_print-margin { background: #EEEEEE !important; }
+        .ace-eclipse .ace_cursor { color: #000000 !important; }
+        .ace-eclipse .ace_marker-layer .ace_selection { background: #BAD6FD !important; }
+        .ace-eclipse .ace_marker-layer .ace_bracket { border: 1px solid #000000 !important; }
+      `;
+      document.head.appendChild(customStyle);
+
+      blocklyDiv.style.display = 'none';
+      codeOutput.style.display = 'block';
+      showCode();
+    }
+  }
+
+  function showCode() {
+    const code = Blockly.Python.workspaceToCode(workspace);
+    if (editor) {
+      editor.setValue(code);
+      editor.clearSelection();
+    }
+  }
+
+  function updateUIState() {
+    const isRunning = isUploading;
+    const isDevConnected = isConnected;
+
+    // Menu items that depend on connection and running state
+    const dependentItems = [
+        document.getElementById('save-robot-btn'),
+        document.getElementById('config-robot-btn'),
+        document.getElementById('update-libraries-btn')
+    ];
+    dependentItems.forEach(item => {
+        if (item) {
+            if (item.id === 'config-robot-btn' || item.id === 'update-libraries-btn') {
+                item.classList.toggle('disabled', isRunning);
+            } else {
+                item.classList.toggle('disabled', !isDevConnected || isRunning);
+            }
+        }
+    });
+
+    // File list, depends only on running state
+    const fileList = document.getElementById('fileList');
+    if (fileList) {
+        fileList.classList.toggle('disabled', isRunning);
+    }
+  }
+
+  function toggleUIForUpload(isUploading) {
+    const saveRobotBtn = document.getElementById('save-robot-btn');
+    const fileList = document.getElementById('fileList');
+
+    const elements = [saveRobotBtn];
+
+    elements.forEach(el => {
+      if(el) el.classList.toggle('disabled', isUploading);
+    });
+
+    if (fileList) {
+        fileList.classList.toggle('disabled', isUploading);
+    }
+  }
+
+  async function uploadToDevice() {
+    const fileName = document.getElementById('fileName').value;
+    if (!fileName) {
+      logToTerminal('Error: Por favor, ingresa un nombre para el archivo');
+      alert('Por favor, ingresa un nombre para el archivo');
+      return;
+    }
+    if (reservedNames.includes(fileName)) {
+      logToTerminal('Error: Este nombre está reservado. Por favor, elige otro nombre.');
+      return;
+    }
+    const uploadBtn = document.querySelector('.button[onclick="uploadToDevice()"]');
+    if (isUploading) {
+      isUploading = false;
+      logToTerminal('Deteniendo el programa...');
+      
+      // Immediately reset UI to non-uploading state
+      updateUIState();
+      uploadBtn.textContent = 'Iniciar programa';
+      uploadBtn.classList.remove('uploading');
+      hideLoadingOverlay();
+      detener();
+      
+      return;
+    }
+
+    isUploading = true;
+    updateUIState();
+    uploadBtn.textContent = 'Detener';
+    uploadBtn.classList.add('uploading');
+    const code = Blockly.Python.workspaceToCode(workspace);
+    showLoadingOverlay();
+
+    try {
+      logToTerminal('Subiendo código al dispositivo...');
+      await ejecutar();
+      if (!isUploading) { // Check for cancellation that might have happened during the await
+        logToTerminal('Ejecución interrumpida por el usuario.');
+        // The UI reset is handled by the "stop" part of the function, which was already called.
+        // So we just need to exit.
+        return;
+      }
+
+      console.log(code);
+      logToTerminal('Archivo cargado exitosamente. El programa está en ejecución.');
+      hideLoadingOverlay();
+      refreshFiles();
+    } catch (error) {
+      logToTerminal('Error al cargar el archivo: ' + error.message);
+      // If an error occurs, reset the state.
+      isUploading = false;
+      updateUIState();
+      uploadBtn.textContent = 'Iniciar programa';
+      uploadBtn.classList.remove('uploading');
+      hideLoadingOverlay();
+    }
+  }
+
+  function showDeviceSelectionModal(callingFunction = 'uploadToDevice') {
+    const modal = document.querySelector('.device-selection-modal');
+    const deviceList = document.getElementById('deviceList');
+    deviceList.innerHTML = '';
+    deviceList.setAttribute('data-calling-function', callingFunction);
+    mockDevices.forEach(device => {
+      const deviceEl = document.createElement('div');
+      deviceEl.className = 'device-item';
+      deviceEl.textContent = device.name;
+      deviceEl.onclick = () => selectDevice(device, deviceEl);
+      deviceList.appendChild(deviceEl);
+    });
+    modal.style.display = 'flex';
+  }
+
+  function selectDevice(device, element) {
+    document.querySelectorAll('.device-item').forEach(el => el.classList.remove('selected'));
+    element.classList.add('selected');
+    selectedDevice = device;
+  }
+
+  function cancelDeviceSelection() {
+    const modal = document.querySelector('.device-selection-modal');
+    modal.style.display = 'none';
+    selectedDevice = null;
+  }
+
+  async function confirmDeviceSelection() {
+    if (!selectedDevice) {
+      logToTerminal('Error: Por favor seleccione un dispositivo');
+      return;
+    }
+    const modal = document.querySelector('.device-selection-modal');
+    modal.style.display = 'none';
+    const callingFunctionEl = document.querySelector('[data-calling-function]');
+    const callingFunction = callingFunctionEl ? callingFunctionEl.dataset.callingFunction : null;
+    if (callingFunction === 'uploadToDevice') {
+      const code = Blockly.Python.workspaceToCode(workspace);
+      showLoadingOverlay();
+      logToTerminal(`Subiendo al dispositivo ${selectedDevice.name}...`);
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        console.log(code);
+        logToTerminal('Archivo cargado exitosamente');
+        hideLoadingOverlay();
+        refreshFiles();
+      } catch (error) {
+        logToTerminal('Error al cargar el archivo: ' + error.message);
+        hideLoadingOverlay();
+      }
+    } else if (callingFunction === 'installAllLibraries') {
+      await installAllLibraries();
+    } else if (callingFunction === 'installUsedLibraries') {
+      await installUsedLibraries();
+    } else if (callingFunction === 'saveToRobot') {
+      showLoadingOverlay();
+      logToTerminal('Guardando programa en robot...');
+      try {
+          const xmlDom = Blockly.Xml.workspaceToDom(workspace);
+          const xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+          console.log("Saving to robot:", xmlText);
+          logToTerminal('Programa guardado exitosamente en el robot');
+      } catch (error) {
+          logToTerminal('Error al guardar en el robot: ' + error.message);
+      } finally {
+          hideLoadingOverlay();
+      }
+    }
+    selectedDevice = null;
+  }
+
+  function refreshFiles() {
+    const fileList = document.getElementById('fileList');
+    fileList.innerHTML = '';
+
+    if (!isConnected) {
+      document.getElementById('fileList').classList.add('hideOnDisconnected');
+      document.getElementById('memoryFill').parentElement.style.opacity = '0.5';
+      document.getElementById('memoryText').style.opacity = '0.5';
+      document.getElementById('memoryText').textContent = '0 KB / 0 KB';
+      document.getElementById('memoryFill').style.width = '0%';
+      return;
+    } else {
+      document.getElementById('fileList').classList.remove('hideOnDisconnected');
+      document.getElementById('memoryFill').parentElement.style.opacity = '1';
+      document.getElementById('memoryText').style.opacity = '1';
+    }
+
+
+    Object.keys(requiredFiles).forEach(file => {
+      const div = document.createElement('div');
+      div.className = 'file-item';
+      div.innerHTML = `
+        <span>${file}</span>
+        <span class="delete-btn" onclick="deleteFile('${file}')">&times;</span>
+      `;
+      div.addEventListener('contextmenu', e => showContextMenu(e, file));
+      div.addEventListener('dblclick', () => openFile(file));
+      fileList.appendChild(div);
+    });
+
+  }
+
+  function deleteFile(fileName) {
+    if (isUploading) {
+        logToTerminal('Error: No se puede eliminar un archivo mientras un programa está en ejecución.');
+        alert('No se puede eliminar un archivo mientras un programa está en ejecución.');
+        return;
+    }
+    if (contextMenu) contextMenu.style.display = 'none';
+    
+    if (reservedNames.includes(fileName)) {
+      alert('No se pueden eliminar archivos del sistema');
+      logToTerminal('Error: No se pueden eliminar archivos del sistema');
+      return;
+    }
+
+    if (confirm(`¿Está seguro de eliminar ${fileName}?`)) {
+      console.log(`Eliminando ${fileName}...`);
+      refreshFiles();
+    }
+  }
+
+  function openFile(fileName) {
+    if (isUploading) {
+      logToTerminal('Error: No se puede abrir un archivo mientras el programa está en ejecución.');
+      alert('No se puede abrir un archivo mientras el programa está en ejecución.');
+      return;
+    }
+    if (contextMenu) contextMenu.style.display = 'none';
+    logToTerminal(`Abriendo archivo: ${fileName} (funcionalidad no implementada)`);
+    // This is where you would load the file content into the workspace
+  }
+
+  function clearTerminal() {
+    const terminal = document.getElementById('terminal');
+    while(terminal.firstChild) {
+      terminal.removeChild(terminal.firstChild);
+    }
+  }
+
+  function logToTerminal(message) {
+    const terminal = document.getElementById('terminal');
+    const timestamp = new Date().toLocaleTimeString();
+    
+    // Create new message div
+    const msgDiv = document.createElement('div');
+    msgDiv.textContent = `> [${timestamp}] ${message}`;
+
+    // Add the new message
+    terminal.appendChild(msgDiv);
+
+    // Check number of lines and remove excess from top
+    while(terminal.children.length > 400) {
+      terminal.removeChild(terminal.firstChild);
+    }
+
+    // Scroll to bottom
+    terminal.scrollTop = terminal.scrollHeight;
+  }
+
+  function initializeTerminal() {
+    clearTerminal();
+    const msgDiv = document.createElement('div');
+    msgDiv.textContent = '> Terminal lista para mostrar mensajes...';
+    document.getElementById('terminal').appendChild(msgDiv);
+    logToTerminal('Sistema iniciado');
+  }
+
+  function newBlockCode() {
+    if (confirm('¿Desea crear un nuevo código? Se perderán los cambios no guardados.')) {
+      workspace.clear();
+      localStorage.removeItem('workspaceXml');
+      localStorage.removeItem('programName');
+      document.getElementById('fileName').value = 'Programa1';
+      logToTerminal('Iniciando nuevo código de bloques...');
+    }
+  }
+
+  function loadExample(exampleName) {
+    if (isUploading) {
+      logToTerminal('Error: No se puede cargar un ejemplo mientras un programa está en ejecución.');
+      alert('No se puede cargar un ejemplo mientras un programa está en ejecución.');
+      return;
+    }
+    if (confirm('¿Desea cargar el ejemplo? Se perderán los cambios no guardados.')) {
+        let exampleXml = '';
+        
+        switch(exampleName) {
+            case 'btpl':
+                exampleXml = `<xml xmlns="https://developers.google.com/blockly/xml">
+                  <block type="pestolink_start" id="ElwN{H?Z22)^9JS%1sy2" x="114" y="5">
+                    <value name="NAME">
+                      <shadow type="text" id="nJ5aKyJlmk+}DQ./0r0:">
+                        <field name="TEXT">MiRobot</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_whileUntil" id="t-uq_o5?h?t7Kp_c)2}h">
+                        <field name="MODE">WHILE</field>
+                        <value name="BOOL">
+                          <shadow type="logic_boolean" id="ws(/c.-BzCJ7aE:8xTJQ">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                        </value>
+                        <statement name="DO">
+                          <block type="controls_if" id="u/b$ZkKcKO8.)Y1A,rw?">
+                            <value name="IF0">
+                              <block type="pl_conected" id="W$c-##L/fK_c0_SgRF\`:"></block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="comentario" id="V%TIojW!61s*uyi\`yt5u">
+                                <field name="NAME">Controlar el xrp con el joystick</field>
+                                <next>
+                                  <block type="controls_if" id="2/{|nKThe[yi/}E,iM0N">
+                                    <mutation else="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="tQN!Ew}F\`z7pTkSJNZ3Z">
+                                        <field name="OP">GTE</field>
+                                        <value name="A">
+                                          <block type="joy2" id="k]yy$4]rCF{1+zs7a^4v"></block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="%Ityhw9@^jnOQJ]P;J@6">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="avanzar_giro" id="o8lyFty@9b_V1r|SK5J/">
+                                        <value name="vel">
+                                          <shadow type="math_number" id="G~Mee@S(#k}\`E{|GR{bh">
+                                            <field name="NUM">0.5</field>
+                                          </shadow>
+                                          <block type="joy2" id="eXK3YAO?*!TG]!eHU|2H"></block>
+                                        </value>
+                                        <value name="dir">
+                                          <shadow type="math_number" id="bqC?FM]Zdbscw5!980?X">
+                                            <field name="NUM">0.5</field>
+                                          </shadow>
+                                          <block type="math_arithmetic" id="Uf6NH5AdK}F#5KNWKMkV">
+                                            <field name="OP">MULTIPLY</field>
+                                            <value name="A">
+                                              <shadow type="math_number" id="V|X7C_8K)v5Wo)d:O=B0">
+                                                <field name="NUM">0</field>
+                                              </shadow>
+                                              <block type="joy1" id="CFVhvE\`+11yenRc@!q-1"></block>
+                                            </value>
+                                            <value name="B">
+                                              <shadow type="math_number" id="%SDSQU\`%|JZJ-*E]a);n">
+                                                <field name="NUM">-1</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <statement name="ELSE">
+                                      <block type="avanzar_giro" id="aQWRgxb\`@2c5WOcapIvp">
+                                        <value name="vel">
+                                          <shadow type="math_number" id="G~Mee@S(#k}\`E{|GR{bh">
+                                            <field name="NUM">0.5</field>
+                                          </shadow>
+                                          <block type="joy2" id="aZ4c6;GVj22G!z0.^[,p"></block>
+                                        </value>
+                                        <value name="dir">
+                                          <shadow type="math_number" id="bqC?FM]Zdbscw5!980?X">
+                                            <field name="NUM">0.5</field>
+                                          </shadow>
+                                          <block type="joy1" id="ME[fj{|5Hj^U4R#1n*.x"></block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="controls_if" id=".VTK[*LG2b/|b#|pf{\`b">
+                                        <mutation else="1"></mutation>
+                                        <value name="IF0">
+                                          <block type="B0" id="H*omVs/$DToEiJwA80mO"></block>
+                                        </value>
+                                        <statement name="DO0">
+                                          <block type="comentario" id="K|Zp%2Lyh9Gd3HiTJ4mr">
+                                            <field name="NAME">Que hacer cuando se presiona el botón 0 </field>
+                                          </block>
+                                        </statement>
+                                        <statement name="ELSE">
+                                          <block type="comentario" id="AnWFGEnOq1$!q4wuNB,E">
+                                            <field name="NAME">Que hacer cuando se suelta el botón 0 </field>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="mostrar_link" id="9G1b-NKYF,e{@{5yG4kc">
+                                            <value name="valor">
+                                              <block type="Voltaje" id="8sFh/@wfZjd3BN0@Ta}C"></block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </xml>`;
+                break;
+              case 'wgpad':
+                exampleXml = `<xml xmlns="https://developers.google.com/blockly/xml">
+                  <block type="wifi_confi" id="n^?/,Zv]bAcAuwKj}H=(" x="56" y="5">
+                    <field name="name">XRP_Server</field>
+                    <field name="pass">12345678</field>
+                    <field name="dvs">1</field>
+                    <next>
+                      <block type="controls_whileUntil" id="#a1QUKBr8:DxPzpo2LnX">
+                        <field name="MODE">WHILE</field>
+                        <value name="BOOL">
+                          <shadow type="logic_boolean" id="AKNTont%gGqtH9??y3sc">
+                            <field name="BOOL">TRUE</field>
+                          </shadow>
+                        </value>
+                        <statement name="DO">
+                          <block type="leer" id="93JcgQGkPlt$.tFt%S(T">
+                            <next>
+                              <block type="hace" id="SqrrS!;LR4QH3I*nslV^">
+                                <field name="btn">up</field>
+                                <field name="action">P</field>
+                                <statement name="NAME">
+                                  <block type="set_effort" id="Uyez1}O5_[PvW?}m3fcO">
+                                    <value name="izq">
+                                      <shadow type="math_number" id="rd9sbj3yKWngIr-5z|nu">
+                                        <field name="NUM">0.5</field>
+                                      </shadow>
+                                    </value>
+                                    <value name="der">
+                                      <shadow type="math_number" id="ApVv@4e-4-0kfg|)xjQ*">
+                                        <field name="NUM">0.5</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="hace" id="JP,|h/JP#~W1+6uIH{^D">
+                                    <field name="btn">up</field>
+                                    <field name="action">R</field>
+                                    <statement name="NAME">
+                                      <block type="set_effort" id="CQs~Ie,d6f(-T6|$jPvE">
+                                        <value name="izq">
+                                          <shadow type="math_number" id="FZ6,glYvDmTI}9E1Om:g">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                        <value name="der">
+                                          <shadow type="math_number" id="nzcITP;ML8Sev{Tq!B$L">
+                                            <field name="NUM">0</field>
+                                          </shadow>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="hace" id="uWbqshM%PW2F!6-3pNRV">
+                                        <field name="btn">left</field>
+                                        <field name="action">P</field>
+                                        <statement name="NAME">
+                                          <block type="set_effort" id="zQ.@gMt5,n}Tj.-6b6g~">
+                                            <value name="izq">
+                                              <shadow type="math_number" id="IXv=4UCE{9vHUX8FZ5bL">
+                                                <field name="NUM">-0.5</field>
+                                              </shadow>
+                                            </value>
+                                            <value name="der">
+                                              <shadow type="math_number" id="fN]EviCmJ(Fndw._V$Q4">
+                                                <field name="NUM">0.5</field>
+                                              </shadow>
+                                            </value>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="hace" id="xO3+ml+1spXdlOWG!1$r">
+                                            <field name="btn">left</field>
+                                            <field name="action">R</field>
+                                            <statement name="NAME">
+                                              <block type="set_effort" id="6ZzV8o$8W3fs*yfPT,~^">
+                                                <value name="izq">
+                                                  <shadow type="math_number" id="/lZ,3{]!\`e%XUN$(8?E=">
+                                                    <field name="NUM">0</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="der">
+                                                  <shadow type="math_number" id="U~fiS*7Z@}ju2B@g.2Zl">
+                                                    <field name="NUM">0</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="hace" id="V}{886c1*VG{+@YTrk5S">
+                                                <field name="btn">right</field>
+                                                <field name="action">P</field>
+                                                <statement name="NAME">
+                                                  <block type="set_effort" id="GEWVW.|g8\`VkO$$AA=Fz">
+                                                    <value name="izq">
+                                                      <shadow type="math_number" id="J=Id#gf59rowBesQ)PK2">
+                                                        <field name="NUM">0.5</field>
+                                                      </shadow>
+                                                    </value>
+                                                    <value name="der">
+                                                      <shadow type="math_number" id="Ex,kw-RAo)5Vg|JNhc}j">
+                                                        <field name="NUM">-0.5</field>
+                                                      </shadow>
+                                                    </value>
+                                                  </block>
+                                                </statement>
+                                                <next>
+                                                  <block type="hace" id="/^vC@%m(i01),.vN5MFj">
+                                                    <field name="btn">right</field>
+                                                    <field name="action">R</field>
+                                                    <statement name="NAME">
+                                                      <block type="set_effort" id="K}P=[ki3_}!pxGdcS~;$">
+                                                        <value name="izq">
+                                                          <shadow type="math_number" id="p:Ors{v:(!F[928%yiQ|">
+                                                            <field name="NUM">0</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <value name="der">
+                                                          <shadow type="math_number" id="Igr0miB^|fs.euMv~,Bx">
+                                                            <field name="NUM">0</field>
+                                                          </shadow>
+                                                        </value>
+                                                      </block>
+                                                    </statement>
+                                                    <next>
+                                                      <block type="hace" id="Eu/I8wG0JhD0w+}$5!NO">
+                                                        <field name="btn">down</field>
+                                                        <field name="action">P</field>
+                                                        <statement name="NAME">
+                                                          <block type="set_effort" id="t^kIT2N[{9qUMid+an@V">
+                                                            <value name="izq">
+                                                              <shadow type="math_number" id="LnXNc\`y!?gj]dcjLX?$6">
+                                                                <field name="NUM">-0.5</field>
+                                                              </shadow>
+                                                            </value>
+                                                            <value name="der">
+                                                              <shadow type="math_number" id="\`lcfedo,t-h|Y}f?pr4b">
+                                                                <field name="NUM">-0.5</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </xml>`
+              break;
+            // Add other examples here with their corresponding XML
+            default:
+                logToTerminal('Ejemplo no encontrado');
+                return;
+        }
+        
+        workspace.clear();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(exampleXml, 'text/xml');
+        Blockly.Xml.domToWorkspace(xmlDoc.documentElement, workspace);
+        
+        // Update filename to match example
+        document.getElementById('fileName').value = `ejemplo_${exampleName}`;
+        
+        logToTerminal(`Ejemplo "${exampleName}" cargado exitosamente`);
+        
+        // Save to localStorage
+        localStorage.setItem('workspaceXml', exampleXml);
+        localStorage.setItem('programName', `ejemplo_${exampleName}`);
+    }
+  }
+
+  function newPythonCode() {
+    logToTerminal('Iniciando nuevo código MicroPython...');
+  }
+
+  function openFromPC() {
+    // Create file input element
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.Fblocks';
+    
+    input.onchange = e => {
+      const file = e.target.files[0];
+      
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = e => {
+        try {
+          // Clear workspace
+          workspace.clear();
+          
+          // Load new blocks
+          const xml = e.target.result;
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xml, 'text/xml');
+          Blockly.Xml.domToWorkspace(xmlDoc.documentElement, workspace);
+          
+          // Update filename without extension
+          const newFileName = file.name.replace('.Fblocks', '');
+          document.getElementById('fileName').value = newFileName;
+          
+          logToTerminal(`Archivo ${file.name} cargado exitosamente`);
+        } catch(err) {
+          console.error('Error al cargar el archivo:', err);
+          logToTerminal('Error al cargar el archivo: Formato inválido');
+          alert('Error al cargar el archivo: El archivo no tiene el formato correcto de bloques');
+          workspace.clear();
+        }
+      };
+      reader.readAsText(file);
+    };
+    
+    input.click();
+  }
+
+  function saveToPC() {
+    // Get the workspace XML
+    const xmlDom = Blockly.Xml.workspaceToDom(workspace);
+    const xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+    
+    // Create file name based on current program name
+    const fileName = document.getElementById('fileName').value || 'Programa';
+    
+    // Create blob and download link
+    const blob = new Blob([xmlText], {type: 'text/plain'});
+    const a = document.createElement('a');
+    a.download = `${fileName}.Fblocks`;
+    a.href = window.URL.createObjectURL(blob);
+    a.click();
+    
+    logToTerminal('Guardando archivo en PC...');
+  }
+
+  function saveAndClose() {
+    logToTerminal('Guardando y cerrando...');
+  }
+
+  function closeWithoutSaving() {
+    logToTerminal('Cerrando sin guardar...');
+  }
+
+  async function installAllLibraries() {
+    showLoadingOverlay();
+    logToTerminal('Instalando todas las librerías...');
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      logToTerminal('Todas las librerías instaladas exitosamente');
+    } catch (error) {
+      logToTerminal('Error al instalar las librerías: ' + error.message);
+    } finally {
+      hideLoadingOverlay();
+    }
+  }
+
+  async function installUsedLibraries() {
+    showLoadingOverlay();
+    logToTerminal('Instalando librerías en uso...');
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      logToTerminal('Librerías en uso instaladas exitosamente');
+    } catch (error) {
+      logToTerminal('Error al instalar las librerías: ' + error.message);
+    } finally {
+      hideLoadingOverlay();
+    }
+  }
+
+  async function reinstallLibrary(name) {
+    const selectEl = document.getElementById(`version-select-${name}`);
+    const version = selectEl.value;
+    showLoadingOverlay();
+    logToTerminal(`Reinstalando biblioteca ${name} v${version}...`);
+    try {
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        logToTerminal(`Biblioteca ${name} v${version} reinstalada exitosamente`);
+        loadLibraries(); // Refresh the list
+    } catch (error) {
+        logToTerminal(`Error al reinstalar la biblioteca ${name}: ${error.message}`);
+    } finally {
+        hideLoadingOverlay();
+    }
+  }
+
+  function showContextMenu(e, fileName) {
+    e.preventDefault();
+    if (contextMenu) {
+      document.body.removeChild(contextMenu);
+    }
+    contextMenu = document.createElement('div');
+    contextMenu.className = 'context-menu';
+    contextMenu.innerHTML = `
+      <div class="context-menu-item" onclick="openFile('${fileName}')">Abrir</div>
+      <div class="context-menu-item" onclick="renameFile('${fileName}')">Renombrar</div>
+      <div class="context-menu-item" onclick="deleteFile('${fileName}')">Borrar</div>
+    `;
+    contextMenu.style.left = e.pageX + 'px';
+    contextMenu.style.top = e.pageY + 'px';
+    contextMenu.style.display = 'block';
+    document.body.appendChild(contextMenu);
+  }
+
+  document.addEventListener('click', e => {
+    if (contextMenu && !contextMenu.contains(e.target)) {
+      contextMenu.style.display = 'none';
+    }
+  });
+
+  function renameFile(fileName) {
+    const newName = prompt('Ingrese nuevo nombre:', fileName);
+    if (newName && newName !== fileName) {
+      if (/main/i.test(newName)) {
+        alert('No se permite usar "main" en el nombre del archivo');
+        logToTerminal('Error: No se permite usar "main" en el nombre del programa');  
+      }
+      logToTerminal(`Renombrando ${fileName} a ${newName}`);
+      refreshFiles();
+    }
+    if (contextMenu) contextMenu.style.display = 'none';
+  }
+
+  function toggleUSBConnection() {
+    const usbBtn = document.getElementById('connectUSBButton');
+    const btBtn = document.getElementById('connectBTButton');
+    const uploadBtn = document.querySelector('.button[onclick="uploadToDevice()"]');
+    
+    if (usbBtn.classList.contains('disconnected')) {
+      usbBtn.classList.remove('disconnected');
+      usbBtn.textContent = 'Conectar por USB';
+      btBtn.disabled = false;
+      btBtn.style.opacity = '1';
+      isConnected = false;
+      uploadBtn.classList.add('disabled');
+      uploadBtn.disabled = true;
+      if (isUploading) {
+        isUploading = false;
+        uploadBtn.textContent = 'Iniciar programa';
+        uploadBtn.classList.remove('uploading');
+      }
+      refreshFiles();
+    } else {
+      usbBtn.classList.add('disconnected');
+      usbBtn.textContent = 'Desconectar USB';
+      btBtn.disabled = true;
+      btBtn.style.opacity = '0.5';
+      isConnected = true;
+      uploadBtn.classList.remove('disabled');
+      uploadBtn.disabled = false;
+      refreshFiles();
+    }
+    updateUIState();
+  }
+
+  function toggleBTConnection() {
+    const btBtn = document.getElementById('connectBTButton');
+    const usbBtn = document.getElementById('connectUSBButton');
+    const uploadBtn = document.querySelector('.button[onclick="uploadToDevice()"]');
+    
+    if (btBtn.classList.contains('disconnected')) {
+      btBtn.classList.remove('disconnected');
+      btBtn.textContent = 'Conectar por Bluetooth';
+      usbBtn.disabled = false;
+      usbBtn.style.opacity = '1';
+      isConnected = false;
+      uploadBtn.classList.add('disabled');
+      uploadBtn.disabled = true;
+      if (isUploading) {
+        isUploading = false;
+        uploadBtn.textContent = 'Iniciar programa';
+        uploadBtn.classList.remove('uploading');
+      }
+      refreshFiles();
+    } else {
+      btBtn.classList.add('disconnected');
+      btBtn.textContent = 'Desconectar BT';
+      usbBtn.disabled = true;
+      usbBtn.style.opacity = '0.5';
+      isConnected = true;
+      uploadBtn.classList.remove('disabled');
+      uploadBtn.disabled = false;
+      refreshFiles();
+    }
+    updateUIState();
+  }
+
+  function formatCode() {
+    logToTerminal('Formateando código...');
+  }
+
+  function showKeyboardShortcuts() {
+    logToTerminal('Mostrando atajos de teclado...');
+  }
+
+  function showSettings() {
+    logToTerminal('Abriendo configuración...');
+  }
+
+  function closeVirtualGamepad() {
+    document.querySelector('.gamepad-modal').style.display = 'none';
+    logToTerminal('Gamepad virtual cerrado');
+  }
+
+  function toggleFullscreen() {
+    const modal = document.querySelector('.gamepad-modal');
+    modal.classList.toggle('fullscreen');
+    const btn = document.querySelector('.fullscreen-btn');
+    btn.textContent = modal.classList.contains('fullscreen') ? '⮌' : '⛶';
+    
+    if (modal.classList.contains('fullscreen')) {
+      logToTerminal('Gamepad virtual en pantalla completa');
+    } else {
+      logToTerminal('Gamepad virtual en modo ventana');
+    }
+  }
+
+  function toggleTheme() {
+    const modalContent = document.querySelector('.gamepad-modal .modal-content');
+    modalContent.classList.toggle('light-theme');
+    const themeBtn = document.querySelector('.theme-btn');
+    const display = document.querySelector('.gamepad-display');
+    display.classList.toggle('light-theme');
+    
+    if (modalContent.classList.contains('light-theme')) {
+      logToTerminal('Gamepad virtual: Modo claro activado');
+    } else {
+      logToTerminal('Gamepad virtual: Modo oscuro activado');
+    }
+  }
+
+  function openVirtualGamepad() {
+    const btBtn = document.getElementById('connectBTButton');
+    const usbBtn = document.getElementById('connectUSBButton');
+    
+    if (!btBtn.classList.contains('disconnected') && !usbBtn.classList.contains('disconnected')) {
+      logToTerminal('Error: Debe conectarse por USB o Bluetooth primero para usar el gamepad virtual');
+      alert('Debe conectarse por USB o Bluetooth primero para usar el gamepad virtual');
+      return;
+    }
+
+    document.querySelector('.gamepad-modal').style.display = 'flex';
+    logToTerminal('Gamepad virtual abierto');
+  }
+
+  function openKeyboardControl() {
+    const btBtn = document.getElementById('connectBTButton');
+    const usbBtn = document.getElementById('connectUSBButton');
+    
+    if (!btBtn.classList.contains('disconnected') && !usbBtn.classList.contains('disconnected')) {
+      logToTerminal('Error: Debe conectarse por USB o Bluetooth primero para usar el control por teclado');
+      alert('Debe conectarse por USB o Bluetooth primero para usar el control por teclado');
+      return;
+    }
+
+    document.querySelector('.keyboard-modal').style.display = 'flex';
+    logToTerminal('Control por teclado abierto'); 
+    startKeyboardListener();
+  }
+
+  function toggleKeyboardFullscreen() {
+    const modal = document.querySelector('.keyboard-modal');
+    modal.classList.toggle('fullscreen');
+    const btn = document.querySelector('.keyboard-modal .fullscreen-btn');
+    btn.textContent = modal.classList.contains('fullscreen') ? '⮌' : '⛶';
+    
+    if (modal.classList.contains('fullscreen')) {
+      logToTerminal('Control por teclado en pantalla completa');
+    } else {
+      logToTerminal('Control por teclado en modo ventana');
+    }
+  }
+
+  function saveToRobot() {
+    if (isUploading) {
+        logToTerminal('Error: No se puede guardar en el robot mientras un programa está en ejecución.');
+        alert('No se puede guardar en el robot mientras un programa está en ejecución.');
+        return;
+    }
+    if (!isConnected) {
+        logToTerminal('Error: Debe conectarse a un dispositivo primero');
+        alert('Debe conectarse a un dispositivo primero');
+        return;
+    }
+    showLoadingOverlay();
+    logToTerminal('Guardando programa en robot...');
+    try {
+        const xmlDom = Blockly.Xml.workspaceToDom(workspace);
+        const xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+        console.log("Saving to robot:", xmlText);
+        logToTerminal('Programa guardado exitosamente en el robot');
+    } catch (error) {
+        logToTerminal('Error al guardar en el robot: ' + error.message);
+    } finally {
+        hideLoadingOverlay();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const uploadBtn = document.querySelector('.button[onclick="uploadToDevice()"]');
+    const fileNameInput = document.getElementById('fileName');
+    
+    uploadBtn.classList.add('disabled');
+    uploadBtn.disabled = true;
+
+    fileNameInput.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/[^a-zA-Z0-9_]/g, '');
+      value = value.slice(0, 10);
+      value = value.replace(/main/i, '');
+      e.target.value = value;
+      
+      if (/main/i.test(e.target.value)) {
+        logToTerminal('Error: No se permite usar "main" en el nombre del programa');  
+      }
+      
+      localStorage.setItem('programName', value);
+    });
+
+    const savedWorkspace = localStorage.getItem('workspaceXml');
+    if (savedWorkspace) {
+      try {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(savedWorkspace, 'text/xml');
+        Blockly.Xml.domToWorkspace(xmlDoc.documentElement, workspace);
+        logToTerminal('Programa anterior restaurado');
+      } catch(err) {
+        console.error('Error loading saved workspace:', err);
+        logToTerminal('Error al cargar el programa guardado');
+      }
+    }
+
+    const savedName = localStorage.getItem('programName');
+    if (savedName) {
+      fileNameInput.value = savedName;
+    }
+
+    workspace.addChangeListener(() => {
+      const xmlDom = Blockly.Xml.workspaceToDom(workspace);
+      const xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+      localStorage.setItem('workspaceXml', xmlText);
+    });
+
+    refreshFiles();
+    initializeTerminal();
+    updateUIState();
+  });
+
+  function closeRobotConfig() {
+    document.querySelector('.robot-config-modal').style.display = 'none';
+    logToTerminal('Configuración del robot cancelada');
+  }
+
+  async function saveRobotConfig() {
+    const selectedMethod = document.querySelector('input[name="startup"]:checked').value;
+    //const btEnabled = document.getElementById('btEnabled').checked;
+    //const btNameInput = document.getElementById('btName');
+    //const btName = btNameInput.value.trim();
+
+    /*if (btEnabled && !btName) {
+      alert('El nombre del dispositivo Bluetooth no puede estar vacío si está activado.');
+      logToTerminal('Error al guardar: El nombre del dispositivo Bluetooth no puede estar vacío.');
+      btNameInput.focus();
+      return;
+    }*/
+    closeRobotConfig();
+    showLoadingOverlay();
+    logToTerminal('Guardando configuración del robot...');
+    
+    try {
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        let methodText;
+        switch(selectedMethod) {
+            case 'auto':
+                methodText = '2';
+                break;
+            case 'button':
+                methodText = '1';
+                break;
+            case 'pc':
+                methodText = '0';
+                break;
+        }
+        console.log(methodText);
+        await guardar_confi(methodText);
+        let seleccionado = document.querySelector('input[name="startup"]:checked');
+
+    if (seleccionado) {
+        alert("Opción seleccionada: " + seleccionado.value);
+    } else {
+        alert("Ninguna opción está seleccionada.");
+    }
+        
+        logToTerminal(`Configuración guardada: Método de arranque - ${methodText}`);
+        //logToTerminal(`Bluetooth ${btEnabled ? 'activado' : 'desactivado'}`);
+        //if(btEnabled) {
+        //    logToTerminal(`Nombre Bluetooth establecido: "${btName}"`);
+        //}
+        closeRobotConfig();
+    } catch (error) {
+        logToTerminal('Error al guardar la configuración: ' + error.message);
+    } finally {
+        hideLoadingOverlay();
+    }
+  }
+
+  function toggleBluetooth(enabled) {
+    const btNameInput = document.getElementById('btName');
+    btNameInput.disabled = !enabled;
+    if(enabled) {
+        logToTerminal('Activando Bluetooth...');
+    } else {
+        logToTerminal('Desactivando Bluetooth...');
+    }
+  }
+
+  function updateBluetoothName(name) {
+    if(name.trim()) {
+        logToTerminal(`Actualizando nombre Bluetooth a: ${name}`);
+    }
+  }
+
+
+  function closeLibraryModal() {
+    document.querySelector('.library-modal').style.display = 'none';
+  }
+
+  function loadLibraries() {
+
+    const libraryList = document.querySelector('.library-list');
+    libraryList.innerHTML = '';
+
+    libraries.forEach(lib => {
+        const item = document.createElement('div');
+        item.className = 'library-item';
+        const latestVersion = lib.versions[0];
+        
+        let versionInfo = `Última versión: v${latestVersion}`;
+        if (lib.installedVersion) {
+            versionInfo = `Instalado: v${lib.installedVersion} | Última: v${latestVersion}`;
+        }
+
+        let actionsHtml = '';
+
+        if (lib.status === 'not-installed') {
+            const options = lib.versions.map(v => `<option value="${v}">v${v}</option>`).join('');
+            actionsHtml = `
+                <select id="version-select-${lib.name}">${options}</select>
+                <button class="library-btn install-btn" onclick="installLibrary('${lib.name}')">Instalar</button>
+            `;
+        } else if (lib.status === 'outdated') {
+            const options = lib.versions.map(v => `<option value="${v}" ${v === lib.installedVersion ? 'selected' : ''}>v${v}</option>`).join('');
+            actionsHtml = `
+                <select id="version-select-${lib.name}">${options}</select>
+                <button class="library-btn update-btn" onclick="updateLibrary('${lib.name}')">Actualizar</button>
+                <button class="library-btn reinstall-btn" onclick="reinstallLibrary('${lib.name}')">Reinstalar</button>
+                <button class="library-btn remove-btn" onclick="removeLibrary('${lib.name}')">Eliminar</button>
+            `;
+        } else { // updated
+            const options = lib.versions.map(v => `<option value="${v}" ${v === lib.installedVersion ? 'selected' : ''}>v${v}</option>`).join('');
+             actionsHtml = `
+                <select id="version-select-${lib.name}">${options}</select>
+                <button class="library-btn reinstall-btn" onclick="reinstallLibrary('${lib.name}')">Reinstalar</button>
+                <button class="library-btn remove-btn" onclick="removeLibrary('${lib.name}')">Eliminar</button>
+            `;
+        }
+
+        item.innerHTML = `
+            <div class="library-info">
+                <div class="library-name">${lib.name}</div>
+                <div class="library-description">${lib.description}</div>
+                <div class="library-version-info">${versionInfo}</div>
+            </div>
+            <div class="library-actions">
+                ${actionsHtml}
+            </div>
+        `;
+        
+        libraryList.appendChild(item);
+    });
+  }
+
+
+  async function updateLibrary(name) {
+    const selectEl = document.getElementById(`version-select-${name}`);
+    const version = selectEl.value;
+    showLoadingOverlay();
+    logToTerminal(`Actualizando biblioteca ${name} a v${version}...`);
+    try {
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        logToTerminal(`Biblioteca ${name} actualizada a v${version} exitosamente`);
+        loadLibraries(); // Refresh the list
+    } catch (error) {
+        logToTerminal(`Error al actualizar la biblioteca ${name}: ${error.message}`);
+    } finally {
+        hideLoadingOverlay();
+    }
+  }
+
+  async function removeLibrary(name) {
+    if (confirm(`¿Está seguro de eliminar la biblioteca ${name}?`)) {
+        showLoadingOverlay();
+        logToTerminal(`Eliminando biblioteca ${name}...`);
+        try {
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            logToTerminal(`Biblioteca ${name} eliminada exitosamente`);
+            loadLibraries(); // Refresh the list
+        } catch (error) {
+            logToTerminal(`Error al eliminar la biblioteca ${name}: ${error.message}`);
+        } finally {
+            hideLoadingOverlay();
+        }
+    }
+  }
+
+
+  function showLoadingOverlay() {
+    const overlay = document.querySelector('.loading-overlay');
+    overlay.style.display = 'flex';
+  }
+
+  function hideLoadingOverlay() {
+    const overlay = document.querySelector('.loading-overlay');
+    overlay.style.display = 'none';
+  }
+
+  function showHowToUpload() {
+    document.querySelector('.help-modal').style.display = 'flex';
+    logToTerminal('Mostrando ayuda de cómo grabar programa');
+  }
+
+  function closeHelpModal() {
+    document.querySelector('.help-modal').style.display = 'none';
+  }
+
+  function copyCodeToClipboard() {
+    const code = editor.getValue();
+    navigator.clipboard.writeText(code).then(() => {
+      const copyBtn = document.querySelector('.copy-btn');
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = '¡Copiado!';
+      setTimeout(() => {
+        copyBtn.textContent = originalText;
+      }, 2000);
+      logToTerminal('Código copiado al portapapeles');
+    }).catch(err => {
+      console.error('Error al copiar el código:', err);
+      logToTerminal('Error al copiar el código al portapapeles');
+    });
+  }
+
+  function closeKeyboardModal() {
+    document.querySelector('.keyboard-modal').style.display = 'none';
+    logToTerminal('Control por teclado cerrado');
+    stopKeyboardListener();
+  }
+
+  let keyboardListenerActive = false;
+  let pressedKeys = new Set();
+
+  function startKeyboardListener() {
+    keyboardListenerActive = true;
+    document.addEventListener('keydown', handleKeyPress);
+    document.addEventListener('keyup', handleKeyRelease);
+  }
+
+  function stopKeyboardListener() {
+    keyboardListenerActive = false;
+    document.removeEventListener('keydown', handleKeyPress);
+    document.removeEventListener('keyup', handleKeyRelease);
+    pressedKeys.clear();
+  }
+
+  function handleKeyPress(e) {
+    if (!keyboardListenerActive) return;
+    
+    if (pressedKeys.has(e.code)) return;
+    
+    pressedKeys.add(e.code);
+    
+    const keyInfo = document.querySelector('.key-info');
+    const lastKey = document.querySelector('.last-key .key-value');
+    const keyCode = document.querySelector('.key-code .key-value');
+
+    keyInfo.textContent = e.key;
+    lastKey.textContent = e.key;
+    keyCode.textContent = e.keyCode;
+
+    keyInfo.classList.remove('pressed-key');
+    void keyInfo.offsetWidth; 
+    keyInfo.classList.add('pressed-key');
+
+    logToTerminal(`Tecla presionada: ${e.key} (código: ${e.keyCode})`);
+  }
+
+  function handleKeyRelease(e) {
+    pressedKeys.delete(e.code);
+    logToTerminal(`Tecla soltada: ${e.key} (código: -${e.keyCode})`);
+    
+    const keyInfo = document.querySelector('.key-info');
+    keyInfo.textContent = 'Presiona cualquier tecla...';
+    const lastKey = document.querySelector('.last-key .key-value');
+    const keyCode = document.querySelector('.key-code .key-value');
+    
+    lastKey.textContent = 'Ninguna';
+    keyCode.textContent = '-';
+  }
+
+  // Add Service Worker for offline functionality
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          logToTerminal('La aplicación ahora puede funcionar sin conexión.');
+        })
+        .catch(error => {
+          console.log('ServiceWorker registration failed: ', error);
+          logToTerminal('Error al habilitar el modo sin conexión.');
+        });
+    });
+  }
