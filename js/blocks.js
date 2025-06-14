@@ -1,1 +1,1242 @@
-const _0x393fe0=_0x37d5;(function(_0x1e5e48,_0x177e3b){const _0xe41f1f=_0x37d5,_0x59a66e=_0x1e5e48();while(!![]){try{const _0xcfa21f=parseInt(_0xe41f1f(0x179))/0x1+-parseInt(_0xe41f1f(0x21e))/0x2*(-parseInt(_0xe41f1f(0x221))/0x3)+-parseInt(_0xe41f1f(0x124))/0x4*(-parseInt(_0xe41f1f(0x205))/0x5)+parseInt(_0xe41f1f(0x17c))/0x6+parseInt(_0xe41f1f(0x1ef))/0x7*(-parseInt(_0xe41f1f(0x13a))/0x8)+parseInt(_0xe41f1f(0x1f2))/0x9+parseInt(_0xe41f1f(0x186))/0xa*(-parseInt(_0xe41f1f(0x214))/0xb);if(_0xcfa21f===_0x177e3b)break;else _0x59a66e['push'](_0x59a66e['shift']());}catch(_0x2f67f7){_0x59a66e['push'](_0x59a66e['shift']());}}}(_0xb60d,0x2c301));const servo_onboard={'init':function(){const _0x15e30d=_0x37d5;this[_0x15e30d(0x211)](_0x15e30d(0x187))[_0x15e30d(0x196)](_0x15e30d(0x188))[_0x15e30d(0x196)](new Blockly[(_0x15e30d(0x11e))]([['1','1'],['2','2']]),'servo'),this[_0x15e30d(0x15d)](_0x15e30d(0x14e))['setCheck'](_0x15e30d(0x1ec))[_0x15e30d(0x196)](_0x15e30d(0x13e)),this[_0x15e30d(0x193)](!![]),this[_0x15e30d(0x136)](!![],null),this[_0x15e30d(0x183)](!![],null),this[_0x15e30d(0x146)](_0x15e30d(0x150)),this[_0x15e30d(0x162)](''),this[_0x15e30d(0x1b7)](0x1e);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'servo_onboard':servo_onboard}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1ee)]=function(_0x1f64b5){const _0x5f6452=_0x393fe0,_0x1a66cc=_0x1f64b5['getFieldValue'](_0x5f6452(0x21d)),_0x2bb40c=Blockly[_0x5f6452(0x1fc)][_0x5f6452(0x1bc)](_0x1f64b5,_0x5f6452(0x14e),python['Order'][_0x5f6452(0x1d5)]);python[_0x5f6452(0x156)][_0x5f6452(0x1ff)](lib['servo'],0x1),python[_0x5f6452(0x156)][_0x5f6452(0x1ff)](_0x5f6452(0x21d)+_0x1a66cc+_0x5f6452(0x16d)+_0x1a66cc+')',0x2);const _0x571c87=_0x5f6452(0x21d)+_0x1a66cc+_0x5f6452(0x1e9)+_0x2bb40c+')\x0a';return _0x571c87;};const motor_var={'init':function(){const _0x4eb22f=_0x393fe0;this['appendDummyInput']('in')[_0x4eb22f(0x196)](_0x4eb22f(0x135))[_0x4eb22f(0x196)](new Blockly[(_0x4eb22f(0x11e))]([[_0x4eb22f(0x1f3),'1'],['Derecho','2'],['Motor\x203','3'],['Motor\x204','4']]),'num')['appendField'](_0x4eb22f(0x1ca))['appendField'](new Blockly[(_0x4eb22f(0x11e))]([[_0x4eb22f(0x1f6),_0x4eb22f(0x189)],['Posición','position'],[_0x4eb22f(0x217),_0x4eb22f(0x213)]]),_0x4eb22f(0x13f)),this[_0x4eb22f(0x1fd)](!![],null),this[_0x4eb22f(0x146)](_0x4eb22f(0x207)),this['setHelpUrl'](''),this['setColour'](0xf);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'motor_var':motor_var}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1c8)]=function(_0x556c51){const _0x32818f=_0x393fe0,_0x57911a=_0x556c51[_0x32818f(0x17f)]('num'),_0x52f828=_0x556c51[_0x32818f(0x17f)](_0x32818f(0x13f));python['pythonGenerator'][_0x32818f(0x1ff)](lib[_0x32818f(0x1c5)],0x1),python[_0x32818f(0x156)][_0x32818f(0x1ff)](_0x32818f(0x1c5)+_0x57911a+_0x32818f(0x197)+_0x57911a+')',0x2);const _0x49c536='motor'+_0x57911a+_0x32818f(0x1e2)+_0x52f828+'()';return[_0x49c536,python[_0x32818f(0x128)]['NONE']];};const motor_esfuerzo={'init':function(){const _0x16cfca=_0x393fe0;this[_0x16cfca(0x211)]('name')[_0x16cfca(0x196)](_0x16cfca(0x135))[_0x16cfca(0x196)](new Blockly['FieldDropdown']([[_0x16cfca(0x1f3),'1'],[_0x16cfca(0x172),'2'],[_0x16cfca(0x11b),'3'],[_0x16cfca(0x159),'4']]),_0x16cfca(0x1c5))['appendField'](_0x16cfca(0x204)),this[_0x16cfca(0x15d)](_0x16cfca(0x20e))['setCheck'](_0x16cfca(0x1ec)),this[_0x16cfca(0x193)](!![]),this[_0x16cfca(0x136)](!![],null),this[_0x16cfca(0x183)](!![],null),this[_0x16cfca(0x146)](''),this[_0x16cfca(0x162)](''),this[_0x16cfca(0x1b7)](0x1e);}};function _0x37d5(_0x40f448,_0x1d00dc){const _0xb60dca=_0xb60d();return _0x37d5=function(_0x37d5b9,_0xb17233){_0x37d5b9=_0x37d5b9-0x119;let _0x366ed1=_0xb60dca[_0x37d5b9];return _0x366ed1;},_0x37d5(_0x40f448,_0x1d00dc);}Blockly['common'][_0x393fe0(0x175)]({'motor_esfuerzo':motor_esfuerzo}),python['pythonGenerator'][_0x393fe0(0x1d2)][_0x393fe0(0x208)]=function(_0x274e9b){const _0x51a4ae=_0x393fe0,_0x47fb84=_0x274e9b['getFieldValue']('motor'),_0x135e97=Blockly[_0x51a4ae(0x1fc)][_0x51a4ae(0x1bc)](_0x274e9b,_0x51a4ae(0x20e),python['Order']['ATOMIC']);python[_0x51a4ae(0x156)][_0x51a4ae(0x1ff)](lib[_0x51a4ae(0x1c5)],0x1),python[_0x51a4ae(0x156)]['addImportWithPriority'](_0x51a4ae(0x1c5)+_0x47fb84+_0x51a4ae(0x197)+_0x47fb84+')',0x2);const _0x27c639=_0x51a4ae(0x1c5)+_0x47fb84+_0x51a4ae(0x152)+_0x135e97+')\x0a';return _0x27c639;};const motor_velocidad={'init':function(){const _0x1b89e7=_0x393fe0;this['appendDummyInput'](_0x1b89e7(0x200))[_0x1b89e7(0x196)]('Motor:')[_0x1b89e7(0x196)](new Blockly['FieldDropdown']([[_0x1b89e7(0x1f3),'1'],[_0x1b89e7(0x172),'2'],['Motor\x203','3'],[_0x1b89e7(0x159),'4']]),_0x1b89e7(0x1c5))[_0x1b89e7(0x196)](_0x1b89e7(0x1bf)),this[_0x1b89e7(0x15d)](_0x1b89e7(0x158))[_0x1b89e7(0x215)](_0x1b89e7(0x1ec)),this[_0x1b89e7(0x1b4)](_0x1b89e7(0x187))[_0x1b89e7(0x196)](_0x1b89e7(0x14c)),this[_0x1b89e7(0x193)](!![]),this[_0x1b89e7(0x136)](!![],null),this[_0x1b89e7(0x183)](!![],null),this[_0x1b89e7(0x146)](''),this[_0x1b89e7(0x162)](''),this[_0x1b89e7(0x1b7)](0x1e);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'motor_velocidad':motor_velocidad}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1af)]=function(_0x476047){const _0x4ee277=_0x393fe0,_0x4af46d=_0x476047['getFieldValue'](_0x4ee277(0x1c5)),_0x100934=Blockly['Python'][_0x4ee277(0x1bc)](_0x476047,'velocidad',python[_0x4ee277(0x128)][_0x4ee277(0x1d5)]);python[_0x4ee277(0x156)][_0x4ee277(0x1ff)](lib[_0x4ee277(0x1c5)],0x1),python['pythonGenerator']['addImportWithPriority']('motor'+_0x4af46d+_0x4ee277(0x197)+_0x4af46d+')',0x2);const _0x279ea0=_0x4ee277(0x1c5)+_0x4af46d+_0x4ee277(0x1cc)+_0x100934+')\x0a';return _0x279ea0;};const motor_reversa={'init':function(){const _0x1c931d=_0x393fe0;this['appendDummyInput'](_0x1c931d(0x187))[_0x1c931d(0x196)]('Motor:')[_0x1c931d(0x196)](new Blockly['FieldDropdown']([[_0x1c931d(0x1f3),'1'],[_0x1c931d(0x172),'2'],['Motor\x203','3'],[_0x1c931d(0x159),'4']]),'motor')[_0x1c931d(0x196)](_0x1c931d(0x1c2))[_0x1c931d(0x196)](new Blockly[(_0x1c931d(0x11e))]([[_0x1c931d(0x14a),_0x1c931d(0x19e)],[_0x1c931d(0x18e),'False']]),_0x1c931d(0x21c)),this[_0x1c931d(0x193)](!![]),this[_0x1c931d(0x136)](!![],null),this[_0x1c931d(0x183)](!![],null),this['setTooltip'](''),this[_0x1c931d(0x162)](''),this[_0x1c931d(0x1b7)](0x1e);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'motor_reversa':motor_reversa}),python['pythonGenerator']['forBlock']['motor_reversa']=function(_0x1a87c8){const _0x4dad06=_0x393fe0,_0x12c687=_0x1a87c8[_0x4dad06(0x17f)](_0x4dad06(0x1c5)),_0x2a7fe6=_0x1a87c8[_0x4dad06(0x17f)](_0x4dad06(0x21c));python[_0x4dad06(0x156)][_0x4dad06(0x1ff)](lib['motor'],0x1),python[_0x4dad06(0x156)]['addImportWithPriority'](_0x4dad06(0x1c5)+_0x12c687+'\x20=\x20EncodedMotor.get_default_encoded_motor('+_0x12c687+')',0x2);const _0x202485=_0x4dad06(0x1c5)+_0x12c687+_0x4dad06(0x1d0)+_0x2a7fe6+')\x0a';return _0x202485;};const reset_encoder={'init':function(){const _0x410b16=_0x393fe0;this[_0x410b16(0x1b4)](_0x410b16(0x187))[_0x410b16(0x196)](_0x410b16(0x11a))[_0x410b16(0x196)](new Blockly[(_0x410b16(0x11e))]([[_0x410b16(0x1f3),'1'],[_0x410b16(0x172),'2'],[_0x410b16(0x11b),'3'],['Motor\x204','4']]),_0x410b16(0x187))[_0x410b16(0x196)](_0x410b16(0x1b8)),this[_0x410b16(0x136)](!![],null),this[_0x410b16(0x183)](!![],null),this[_0x410b16(0x146)](''),this[_0x410b16(0x162)](''),this[_0x410b16(0x1b7)](0x1e);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'reset_encoder':reset_encoder}),python['pythonGenerator'][_0x393fe0(0x1d2)]['reset_encoder']=function(_0x1e46d1){const _0x3c4244=_0x393fe0,_0x1b8332=_0x1e46d1[_0x3c4244(0x17f)](_0x3c4244(0x187));python[_0x3c4244(0x156)][_0x3c4244(0x1ff)](lib[_0x3c4244(0x1c5)],0x1),python[_0x3c4244(0x156)][_0x3c4244(0x1ff)](_0x3c4244(0x1c5)+_0x1b8332+_0x3c4244(0x197)+_0x1b8332+')',0x2);const _0x4a1b16=_0x3c4244(0x1c5)+_0x1b8332+_0x3c4244(0x1c4);return _0x4a1b16;};const avanzar={'init':function(){const _0x4e3bc8=_0x393fe0;this[_0x4e3bc8(0x15d)](_0x4e3bc8(0x1c6))[_0x4e3bc8(0x215)](_0x4e3bc8(0x1ec))[_0x4e3bc8(0x196)]('Avanzar'),this[_0x4e3bc8(0x15d)](_0x4e3bc8(0x20e))[_0x4e3bc8(0x215)](_0x4e3bc8(0x1ec))[_0x4e3bc8(0x196)](_0x4e3bc8(0x1d6))['appendField'](_0x4e3bc8(0x204)),this[_0x4e3bc8(0x193)](!![]),this[_0x4e3bc8(0x136)](!![],null),this[_0x4e3bc8(0x183)](!![],null),this[_0x4e3bc8(0x146)](''),this[_0x4e3bc8(0x162)](''),this[_0x4e3bc8(0x1b7)](0xf);}};Blockly['common'][_0x393fe0(0x175)]({'avanzar':avanzar}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x133)]=function(_0x20ed66){const _0x3339e0=_0x393fe0,_0x386bd3=Blockly[_0x3339e0(0x1fc)][_0x3339e0(0x1bc)](_0x20ed66,'distancia',python[_0x3339e0(0x128)][_0x3339e0(0x1d5)]),_0x174bf2=Blockly[_0x3339e0(0x1fc)][_0x3339e0(0x1bc)](_0x20ed66,'esfuerzo',python['Order'][_0x3339e0(0x1d5)]);python[_0x3339e0(0x156)][_0x3339e0(0x1ff)](lib[_0x3339e0(0x133)],0x1),python['pythonGenerator'][_0x3339e0(0x1ff)](def['avanzar'],0x2);const _0x5d0dc8=_0x3339e0(0x165)+_0x386bd3+',\x20'+_0x174bf2+')\x0a';return _0x5d0dc8;};const girar={'init':function(){const _0x2cc5da=_0x393fe0;this[_0x2cc5da(0x15d)](_0x2cc5da(0x1cd))['setCheck'](_0x2cc5da(0x1ec))[_0x2cc5da(0x196)](_0x2cc5da(0x163)),this[_0x2cc5da(0x15d)](_0x2cc5da(0x20e))[_0x2cc5da(0x215)](_0x2cc5da(0x1ec))[_0x2cc5da(0x196)]('Grados\x20\x20\x20\x20\x20')['appendField'](_0x2cc5da(0x204)),this[_0x2cc5da(0x193)](!![]),this['setPreviousStatement'](!![],null),this[_0x2cc5da(0x183)](!![],null),this[_0x2cc5da(0x146)](''),this[_0x2cc5da(0x162)](''),this[_0x2cc5da(0x1b7)](0xf);}};Blockly['common'][_0x393fe0(0x175)]({'girar':girar}),python['pythonGenerator'][_0x393fe0(0x1d2)][_0x393fe0(0x138)]=function(_0x33a70c){const _0x22fcec=_0x393fe0,_0x82e2ea=Blockly['Python'][_0x22fcec(0x1bc)](_0x33a70c,_0x22fcec(0x1cd),python[_0x22fcec(0x128)][_0x22fcec(0x1d5)]),_0xbd184d=Blockly[_0x22fcec(0x1fc)][_0x22fcec(0x1bc)](_0x33a70c,_0x22fcec(0x20e),python[_0x22fcec(0x128)][_0x22fcec(0x1d5)]);python[_0x22fcec(0x156)]['addImportWithPriority'](lib[_0x22fcec(0x133)],0x1),python[_0x22fcec(0x156)]['addImportWithPriority'](def[_0x22fcec(0x133)],0x2);const _0x20a58c='differentialDrive.turn('+_0x82e2ea+',\x20'+_0xbd184d+')\x0a';return _0x20a58c;};const set_effort={'init':function(){const _0x486a32=_0x393fe0;this['appendValueInput'](_0x486a32(0x153))[_0x486a32(0x215)](_0x486a32(0x1ec))[_0x486a32(0x196)]('Establecer\x20esfuerzo')[_0x486a32(0x196)](_0x486a32(0x1e1)),this[_0x486a32(0x15d)](_0x486a32(0x1e5))[_0x486a32(0x215)](_0x486a32(0x1ec))['appendField'](_0x486a32(0x168)),this['setInputsInline'](!![]),this['setPreviousStatement'](!![],null),this[_0x486a32(0x183)](!![],null),this[_0x486a32(0x146)](''),this[_0x486a32(0x162)](''),this[_0x486a32(0x1b7)](0xf);}};Blockly['common'][_0x393fe0(0x175)]({'set_effort':set_effort}),python['pythonGenerator'][_0x393fe0(0x1d2)][_0x393fe0(0x185)]=function(_0x4aa5ee){const _0x3d63ba=_0x393fe0,_0x927ef8=Blockly[_0x3d63ba(0x1fc)][_0x3d63ba(0x1bc)](_0x4aa5ee,_0x3d63ba(0x153),python[_0x3d63ba(0x128)]['ATOMIC']),_0x1460dc=Blockly[_0x3d63ba(0x1fc)][_0x3d63ba(0x1bc)](_0x4aa5ee,_0x3d63ba(0x1e5),python[_0x3d63ba(0x128)][_0x3d63ba(0x1d5)]);python[_0x3d63ba(0x156)]['addImportWithPriority'](lib['avanzar'],0x1),python['pythonGenerator'][_0x3d63ba(0x1ff)](def[_0x3d63ba(0x133)],0x2);const _0x597619='differentialDrive.set_effort('+_0x927ef8+',\x20'+_0x1460dc+')\x0a';return _0x597619;};const set_speed={'init':function(){const _0x3c4ef4=_0x393fe0;this[_0x3c4ef4(0x15d)]('izq')[_0x3c4ef4(0x215)](_0x3c4ef4(0x1ec))[_0x3c4ef4(0x196)](_0x3c4ef4(0x1ac))[_0x3c4ef4(0x196)](_0x3c4ef4(0x1e1)),this[_0x3c4ef4(0x211)](_0x3c4ef4(0x187))[_0x3c4ef4(0x196)]('cm/s\x20\x20\x20'),this['appendValueInput'](_0x3c4ef4(0x1e5))[_0x3c4ef4(0x215)](_0x3c4ef4(0x1ec))[_0x3c4ef4(0x196)](_0x3c4ef4(0x168)),this[_0x3c4ef4(0x211)](_0x3c4ef4(0x187))[_0x3c4ef4(0x196)](_0x3c4ef4(0x11f)),this[_0x3c4ef4(0x193)](!![]),this['setPreviousStatement'](!![],null),this[_0x3c4ef4(0x183)](!![],null),this[_0x3c4ef4(0x146)](''),this['setHelpUrl'](''),this[_0x3c4ef4(0x1b7)](0xf);}};function _0xb60d(){const _0x4e8a6d=['differentialDrive.get_','differentialDrive.straight(','math','Devuelve\x20verdadero\x20si\x20PestoLink\x20tiene\x20una\x20conexión\x20activa','Derecho:','Nombre:\x20','Roll','differentialDrive.reset_encoder_position()\x0a','12345678','\x20=\x20Servo.get_default_servo(','roll','Esperar\x20a\x20botón\x20de\x20placa','tiempo','home','Derecho','Encoder','xrp_ws_stop_button','defineBlocks','\x20\x20time.sleep(0.01)\x0a','\x22,\x20','webserver.log_data(\x22','90660NkwDBw','Detener\x20motores','avanzar_giro','1943838UYfuQP','Mostrar\x20voltaje:\x20','Web\x20add\x20button\x20\x20Name:','getFieldValue','imu.get_','while\x20not\x20(','common','setNextStatement','Espera\x20a\x20que\x20el\x20botón\x20del\x20xrp\x20sea\x20presionado','set_effort','2137130PkWvdt','NAME','Servo:','speed','(ADC(Pin(\x27BOARD_VIN_MEASURE\x27)).read_u16())/(1024*64/14)','w_gamepad.start_server(\x27','wifi_gamepad','xrp_ws_add_button','Adelante','Valor\x20booleano\x20del\x20botón\x20ubicado\x20en\x20la\x20placa\x20del\x20xrp','wifi_confi','HOME','left','setInputsInline','set_speed','Web\x20left\x20button','appendField','\x20=\x20EncodedMotor.get_default_encoded_motor(','ORDER_ATOMIC','Escriba\x20aqui','sigue_linea','Web\x20log\x20data','webserver.registerStopButton(','Connects\x20the\x20XRP\x20web\x20server\x20to\x20an\x20existing\x20network','True','webserver.registerBackwardButton(','\x20\x20pass','Password:','Seguidor\x20de\x20lineas','ubicacion','reset_encoders','dvs','2.\x20Leer\x20mensaje','Regresa\x20el\x20valor\x20del\x20JoyStick\x20X','pin','Voltaje\x20de\x20bateria','webserver.registerForwardButton(','Presionar','Establecer\x20velocidad','appendStatementInput','pestolink.is_connected()','motor_velocidad','webserver.registerRightButton(','Esperar\x20hasta:\x20','leer','():\x0a','appendEndRowInput','Boolean','delay_seconds','setColour','Reiniciar\x20encoder','Start\x20web\x20server','Soltar','pestolink\x20=\x20PestoLinkAgent(','valueToCode','bloque','Giroscopio','Velocidad:','webserver.start_network(ssid=\x22','Connect\x20web\x20server','Dirección:\x20','Detiene\x20el\x20programa\x20por\x20la\x20cantidad\x20de\x20segundos\x20establecida.','.reset_encoder_position()\x0a','motor','distancia','\x27Solo\x20se\x20debe\x20usar\x20una\x20vez\x27.\x20Inicia\x20la\x20comunicación\x20bluetooth\x20con\x20el\x20nombre\x20indicado','motor_var','onboard','Variable:','\x0adef\x20','.set_speed(','grados','Yaw','siguelinea','._motor.flip_dir\x20=\x20(','xrp_ws_log_data','forBlock','yaw','pl_conected','ATOMIC','cm\x20\x20\x20\x20','regresa\x20true\x20si\x20el\x20boton\x20esta\x20presionado','mostrar_link','rangefinder.distance()','ARROW_LEFT','\x22)\x0awebserver.start_server()\x0a','Name:','if\x20w_gamepad.see_action(\x27/','Avanzar','distance','Web\x20right\x20button','\x20Izquierdo:','.get_','JoyStickX','Dispositivo:','der','xrp_ws_back_button','DATA','imu.reset_','.set_angle(','XRP_Server','pestolink_start','Number','ARROW_DOWN','servo_onboard','42XLCyJU','Teléfono','Acción:','449730UyKlzU','Izquierdo','):\x0a','esperar_hasta','Velocidad','RIGHT','Led_xrp','Botón:','Regresa\x20el\x20valor\x20del\x20JoyStick\x20Y','xrp_ws_forward_button','Python','setOutput','titulo','addImportWithPriority','name','pestolink.get_button(0)','pass','comentario','Esfuerzo:','130CwvEHx','giroscopio','Regresa\x20la\x20variable\x20elegida\x20para\x20el\x20motor\x20elegido.','motor_esfuerzo','Function:','statementToCode','action','vel','\x27,\x27','esfuerzo','TEXT','length','appendDummyInput','()\x0a','position_counts','22xCTXTv','setCheck','Giro:','Cuenta\x20de\x20enconder','differentialDrive.stop()\x0a','select','pestolink.get_axis(0)','getInputTargetBlock','direccion','servo','7996sFtXCp','Blocks','log_name','45ZHbEpA','Web\x20stop\x20button','Motor','Motor\x203','\x27):\x0a','func','FieldDropdown','cm/s\x20\x20\x20','Espera\x20hasta\x20que\x20se\x20cumpla\x20la\x20condición,\x20tiene\x20un\x20tiempo\x20de\x20espera\x200.01s\x20entre\x20cada\x20revisión\x20de\x20la\x20condición.\x20','right','time.sleep(','Comentario\x20sin\x20función\x20alguna','19456ZUJIiS','¿Esta\x20PestoLink\x20Conectado?','Segundos','pestolink.telemetryPrintBatteryVoltage(','Order','xrp_ws_connect_server','Pitch','Boton\x203\x20¿Esta\x20presionado?','board','Web\x20back\x20button','ARROW_RIGHT','FieldTextInput','valor','Boton\x200\x20¿Esta\x20presionado?','NONE','avanzar','down','Motor:','setPreviousStatement','Apagar','girar','Valor\x20booleano\x20del\x20sensor\x20sigue\x20líneas','56824BzdSct','String','differentialDrive.arcade(','pestolink.get_button(3)','Grados:','var','-1*pestolink.get_axis(1)','off','Muestra\x20la\x20distancia\x20medida\x20por\x20el\x20sensor\x20ultrasónico\x20conectado\x20al\x20xrp\x20','Nombre:','differentialDrive.set_speed(','joy1','setTooltip','1.\x20Esperar\x20hasta\x20recibir\x20mensaje','Espera\x20hasta\x20que\x20recibe\x20un\x20mensaje,\x20si\x20no\x20se\x20usa\x20no\x20se\x20actualizaran\x20los\x20mensajes','Web\x20forward\x20button','Reversa','JoyStickY','RPM','accion','val','SELECT','Mueve\x20un\x20servomotor\x20de\x20180°\x20a\x20la\x20posición\x20especificada','btn','.set_effort(','izq','webserver.connect_to_network(ssid=\x22','server_ssid','pythonGenerator','server','velocidad','Motor\x204','server_pwd','\x22,\x20password=\x22','Starts\x20a\x20web\x20server\x20from\x20the\x20XRP','appendValueInput','gyro','encoder','xrp_ws_right_button','joy2','setHelpUrl','Girar:'];_0xb60d=function(){return _0x4e8a6d;};return _0xb60d();}Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'set_speed':set_speed}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x194)]=function(_0x2e7ee1){const _0x2c090c=_0x393fe0,_0x21532d=Blockly[_0x2c090c(0x1fc)][_0x2c090c(0x1bc)](_0x2e7ee1,'izq',python['Order'][_0x2c090c(0x1d5)]),_0xfc33e8=Blockly[_0x2c090c(0x1fc)][_0x2c090c(0x1bc)](_0x2e7ee1,_0x2c090c(0x1e5),python[_0x2c090c(0x128)][_0x2c090c(0x1d5)]);python['pythonGenerator'][_0x2c090c(0x1ff)](lib['avanzar'],0x1),python['pythonGenerator'][_0x2c090c(0x1ff)](def['avanzar'],0x2);const _0x359f32=_0x2c090c(0x144)+_0x21532d+',\x20'+_0xfc33e8+')\x0a';return _0x359f32;};const avanzar_giro={'init':function(){const _0x3e8573=_0x393fe0;this[_0x3e8573(0x15d)](_0x3e8573(0x20c))[_0x3e8573(0x215)](_0x3e8573(0x1ec))[_0x3e8573(0x196)](_0x3e8573(0x1de))['appendField'](_0x3e8573(0x1bf)),this['appendValueInput']('dir')['setCheck']('Number')['appendField'](_0x3e8573(0x216)),this['setInputsInline'](!![]),this['setPreviousStatement'](!![],null),this[_0x3e8573(0x183)](!![],null),this['setTooltip']('Avanza\x20en\x20la\x20dirección\x20que\x20se\x20indique'),this[_0x3e8573(0x162)](''),this[_0x3e8573(0x1b7)](0xf);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'avanzar_giro':avanzar_giro}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x17b)]=function(_0x336883){const _0x9e9677=_0x393fe0;python[_0x9e9677(0x156)][_0x9e9677(0x1ff)](lib[_0x9e9677(0x133)],0x1),python[_0x9e9677(0x156)][_0x9e9677(0x1ff)](def[_0x9e9677(0x133)],0x2);const _0x442ccf=Blockly['Python'][_0x9e9677(0x1bc)](_0x336883,_0x9e9677(0x20c),python[_0x9e9677(0x128)][_0x9e9677(0x1d5)]),_0x5bae4d=Blockly['Python'][_0x9e9677(0x1bc)](_0x336883,'dir',python[_0x9e9677(0x128)][_0x9e9677(0x1d5)]),_0x4ab328=_0x9e9677(0x13c)+_0x442ccf+',\x20'+_0x5bae4d+')\x0a';return _0x4ab328;};const stop_motor={'init':function(){const _0x94f564=_0x393fe0;this[_0x94f564(0x211)]('NAME')['appendField'](_0x94f564(0x17a)),this[_0x94f564(0x136)](!![],null),this['setNextStatement'](!![],null),this[_0x94f564(0x146)](''),this[_0x94f564(0x162)](''),this[_0x94f564(0x1b7)](0xf);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'stop_motor':stop_motor}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['stop_motor']=function(){const _0x17ed41=_0x393fe0;python[_0x17ed41(0x156)]['addImportWithPriority'](lib[_0x17ed41(0x133)],0x1),python[_0x17ed41(0x156)][_0x17ed41(0x1ff)](def[_0x17ed41(0x133)],0x2);const _0x25bc10=_0x17ed41(0x218);return _0x25bc10;};const reset_encoders={'init':function(){const _0x3b1424=_0x393fe0;this[_0x3b1424(0x211)]('NAME')[_0x3b1424(0x196)]('Reiniciar\x20encoders'),this[_0x3b1424(0x136)](!![],null),this[_0x3b1424(0x183)](!![],null),this[_0x3b1424(0x146)](''),this[_0x3b1424(0x162)](''),this['setColour'](0xf);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'reset_encoders':reset_encoders}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1a4)]=function(){const _0x2ba877=_0x393fe0;python[_0x2ba877(0x156)][_0x2ba877(0x1ff)](lib['avanzar'],0x1),python[_0x2ba877(0x156)][_0x2ba877(0x1ff)](def[_0x2ba877(0x133)],0x2);const _0x4986f0=_0x2ba877(0x16b);return _0x4986f0;};const encoder={'init':function(){const _0x4acd43=_0x393fe0;this[_0x4acd43(0x211)](_0x4acd43(0x187))[_0x4acd43(0x196)](_0x4acd43(0x173))[_0x4acd43(0x196)](new Blockly[(_0x4acd43(0x11e))]([[_0x4acd43(0x1f3),_0x4acd43(0x192)],[_0x4acd43(0x172),_0x4acd43(0x121)]]),_0x4acd43(0x187)),this['setOutput'](!![],_0x4acd43(0x1ec)),this[_0x4acd43(0x146)](''),this[_0x4acd43(0x162)](''),this[_0x4acd43(0x1b7)](0xf);}};Blockly['common'][_0x393fe0(0x175)]({'encoder':encoder}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x15f)]=function(_0x3c19cc){const _0x3b710d=_0x393fe0,_0xb4f877=_0x3c19cc[_0x3b710d(0x17f)](_0x3b710d(0x187));python[_0x3b710d(0x156)]['addImportWithPriority'](lib[_0x3b710d(0x133)],0x1),python[_0x3b710d(0x156)][_0x3b710d(0x1ff)](def[_0x3b710d(0x133)],0x2);const _0x1576b2=_0x3b710d(0x164)+_0xb4f877+'_encoder_position()';return[_0x1576b2,python[_0x3b710d(0x128)][_0x3b710d(0x132)]];};var nextFunc=0x0;function getFuncName(){const _0x419adb=_0x393fe0;return nextFunc++,_0x419adb(0x11d)+nextFunc;}const xrp_ws_forward_button={'init':function(){const _0x2a21db=_0x393fe0;this[_0x2a21db(0x211)]()[_0x2a21db(0x196)](_0x2a21db(0x149)),this['appendStatementInput'](_0x2a21db(0x11d))['appendField'](_0x2a21db(0x209)),this[_0x2a21db(0x136)](!![],null),this['setNextStatement'](!![],null),this['setColour'](0xbe),this[_0x2a21db(0x146)](''),this[_0x2a21db(0x162)]('');}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'xrp_ws_forward_button':xrp_ws_forward_button}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1fb)]=function(_0x566005){const _0x105efa=_0x393fe0;var _0x4ff4a1=Blockly[_0x105efa(0x1fc)][_0x105efa(0x20a)](_0x566005,_0x105efa(0x11d)),_0x4d85b8=getFuncName(),_0x2c84b5=_0x105efa(0x1cb)+_0x4d85b8+'():\x0a'+_0x4ff4a1+'\x0a';return _0x2c84b5+=_0x105efa(0x1aa)+_0x4d85b8+')\x0a',python[_0x105efa(0x156)]['addImportWithPriority'](lib['server'],0x1),python['pythonGenerator'][_0x105efa(0x1ff)](def[_0x105efa(0x157)],0x2),_0x2c84b5;};const xrp_ws_back_button={'init':function(){const _0x475690=_0x393fe0;this['appendDummyInput']()['appendField'](_0x475690(0x12d)),this[_0x475690(0x1ad)](_0x475690(0x11d))[_0x475690(0x196)](_0x475690(0x209)),this[_0x475690(0x136)](!![],null),this[_0x475690(0x183)](!![],null),this[_0x475690(0x1b7)](0xbe),this[_0x475690(0x146)](''),this[_0x475690(0x162)]('');}};Blockly['common'][_0x393fe0(0x175)]({'xrp_ws_back_button':xrp_ws_back_button}),python['pythonGenerator']['forBlock'][_0x393fe0(0x1e6)]=function(_0x2c8d9b){const _0x42bd8d=_0x393fe0;var _0x4844db=Blockly[_0x42bd8d(0x1fc)][_0x42bd8d(0x20a)](_0x2c8d9b,'func'),_0x24bc1b=getFuncName(),_0x15d64c='\x0adef\x20'+_0x24bc1b+_0x42bd8d(0x1b3)+_0x4844db+'\x0a';return _0x15d64c+=_0x42bd8d(0x19f)+_0x24bc1b+')\x0a',python[_0x42bd8d(0x156)][_0x42bd8d(0x1ff)](lib[_0x42bd8d(0x157)],0x1),python[_0x42bd8d(0x156)]['addImportWithPriority'](def[_0x42bd8d(0x157)],0x2),_0x15d64c;};const xrp_ws_left_button={'init':function(){const _0x46489a=_0x393fe0;this['appendDummyInput']()['appendField'](_0x46489a(0x195)),this[_0x46489a(0x1ad)](_0x46489a(0x11d))[_0x46489a(0x196)](_0x46489a(0x209)),this[_0x46489a(0x136)](!![],null),this[_0x46489a(0x183)](!![],null),this[_0x46489a(0x1b7)](0xbe),this['setTooltip'](''),this[_0x46489a(0x162)]('');}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'xrp_ws_left_button':xrp_ws_left_button}),python[_0x393fe0(0x156)]['forBlock']['xrp_ws_left_button']=function(_0x16bca2){const _0x1f0194=_0x393fe0;var _0x427136=Blockly[_0x1f0194(0x1fc)][_0x1f0194(0x20a)](_0x16bca2,'func'),_0x484979=getFuncName(),_0x2ea9b6='\x0adef\x20'+_0x484979+_0x1f0194(0x1b3)+_0x427136+'\x0a';return _0x2ea9b6+='webserver.registerLeftButton('+_0x484979+')\x0a',python[_0x1f0194(0x156)]['addImportWithPriority'](lib['server'],0x1),python[_0x1f0194(0x156)]['addImportWithPriority'](def['server'],0x2),_0x2ea9b6;};const xrp_ws_right_button={'init':function(){const _0x14c000=_0x393fe0;this['appendDummyInput']()[_0x14c000(0x196)](_0x14c000(0x1e0)),this[_0x14c000(0x1ad)](_0x14c000(0x11d))['appendField']('Function:'),this[_0x14c000(0x136)](!![],null),this[_0x14c000(0x183)](!![],null),this[_0x14c000(0x1b7)](0xbe),this[_0x14c000(0x146)](''),this[_0x14c000(0x162)]('');}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'xrp_ws_right_button':xrp_ws_right_button}),python[_0x393fe0(0x156)]['forBlock'][_0x393fe0(0x160)]=function(_0x125fa0){const _0x467aaa=_0x393fe0;var _0x102ada=Blockly[_0x467aaa(0x1fc)][_0x467aaa(0x20a)](_0x125fa0,'func'),_0x50d564=getFuncName(),_0x1d3b0b='\x0adef\x20'+_0x50d564+_0x467aaa(0x1b3)+_0x102ada+'\x0a';return _0x1d3b0b+=_0x467aaa(0x1b0)+_0x50d564+')\x0a',python[_0x467aaa(0x156)][_0x467aaa(0x1ff)](lib[_0x467aaa(0x157)],0x1),python[_0x467aaa(0x156)][_0x467aaa(0x1ff)](def[_0x467aaa(0x157)],0x2),_0x1d3b0b;};const xrp_ws_stop_button={'init':function(){const _0x38b0f6=_0x393fe0;this[_0x38b0f6(0x211)]()[_0x38b0f6(0x196)](_0x38b0f6(0x119)),this['appendStatementInput'](_0x38b0f6(0x11d))['appendField'](_0x38b0f6(0x209)),this[_0x38b0f6(0x136)](!![],null),this['setNextStatement'](!![],null),this[_0x38b0f6(0x1b7)](0xbe),this[_0x38b0f6(0x146)](''),this[_0x38b0f6(0x162)]('');}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'xrp_ws_stop_button':xrp_ws_stop_button}),python['pythonGenerator']['forBlock'][_0x393fe0(0x174)]=function(_0xc0801d){const _0x4ec71e=_0x393fe0;var _0x27e094=Blockly[_0x4ec71e(0x1fc)][_0x4ec71e(0x20a)](_0xc0801d,'func'),_0x38f06b=getFuncName(),_0x10aba8='\x0adef\x20'+_0x38f06b+_0x4ec71e(0x1b3)+_0x27e094+'\x0a';return _0x10aba8+=_0x4ec71e(0x19c)+_0x38f06b+')\x0a',python[_0x4ec71e(0x156)][_0x4ec71e(0x1ff)](lib[_0x4ec71e(0x157)],0x1),python[_0x4ec71e(0x156)]['addImportWithPriority'](def['server'],0x2),_0x10aba8;};const xrp_ws_add_button={'init':function(){const _0x450cee=_0x393fe0;this[_0x450cee(0x211)]()[_0x450cee(0x196)](_0x450cee(0x17e))[_0x450cee(0x196)](new Blockly['FieldTextInput'](_0x450cee(0x200)),_0x450cee(0x20f)),this[_0x450cee(0x1ad)](_0x450cee(0x11d))[_0x450cee(0x196)]('Function:'),this[_0x450cee(0x136)](!![],null),this['setNextStatement'](!![],null),this[_0x450cee(0x1b7)](0xbe),this['setTooltip'](''),this[_0x450cee(0x162)]('');}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'xrp_ws_add_button':xrp_ws_add_button}),python[_0x393fe0(0x156)]['forBlock'][_0x393fe0(0x18d)]=function(_0x1f2031){const _0x4cc628=_0x393fe0;var _0x9fec42=_0x1f2031['getFieldValue']('TEXT'),_0x54abf3=Blockly[_0x4cc628(0x1fc)][_0x4cc628(0x20a)](_0x1f2031,_0x4cc628(0x11d)),_0x142aa4=getFuncName(),_0x5a2798=_0x4cc628(0x1cb)+_0x142aa4+_0x4cc628(0x1b3)+_0x54abf3+'\x0a';return _0x5a2798+='webserver.add_button(\x22'+_0x9fec42+_0x4cc628(0x177)+_0x142aa4+')\x0a',python['pythonGenerator'][_0x4cc628(0x1ff)](lib[_0x4cc628(0x157)],0x1),python['pythonGenerator'][_0x4cc628(0x1ff)](def[_0x4cc628(0x157)],0x2),_0x5a2798;};const xrp_ws_log_data={'init':function(){const _0x1845d4=_0x393fe0;this[_0x1845d4(0x211)]()[_0x1845d4(0x196)](_0x1845d4(0x19b)),this['appendValueInput']('log_name')[_0x1845d4(0x196)]('Label:')[_0x1845d4(0x215)](_0x1845d4(0x13b)),this[_0x1845d4(0x15d)](_0x1845d4(0x1e7))[_0x1845d4(0x196)]('Data:'),this[_0x1845d4(0x193)](![]),this['setPreviousStatement'](!![],null),this[_0x1845d4(0x183)](!![],null),this[_0x1845d4(0x1b7)](0xbe),this[_0x1845d4(0x146)](''),this[_0x1845d4(0x162)]('');}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'xrp_ws_log_data':xrp_ws_log_data}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1d1)]=function(_0x30bbaa){const _0x572e3a=_0x393fe0;data=Blockly[_0x572e3a(0x1fc)]['valueToCode'](_0x30bbaa,_0x572e3a(0x1e7),Blockly[_0x572e3a(0x1fc)][_0x572e3a(0x198)]);var _0x5d85b1=_0x30bbaa[_0x572e3a(0x21b)](_0x572e3a(0x220))[_0x572e3a(0x17f)](_0x572e3a(0x20f)),_0x4ea68f=_0x572e3a(0x178)+_0x5d85b1+_0x572e3a(0x177)+data+')\x0a';return python[_0x572e3a(0x156)][_0x572e3a(0x1ff)](lib[_0x572e3a(0x157)],0x1),python[_0x572e3a(0x156)][_0x572e3a(0x1ff)](def['server'],0x2),_0x4ea68f;};const xrp_ws_start_server={'init':function(){const _0x3bc246=_0x393fe0;this['appendDummyInput']()[_0x3bc246(0x196)](_0x3bc246(0x1b9)),this[_0x3bc246(0x15d)](_0x3bc246(0x155))['appendField'](_0x3bc246(0x1dc))[_0x3bc246(0x215)](_0x3bc246(0x13b)),this['appendValueInput']('server_pwd')['appendField'](_0x3bc246(0x1a1))[_0x3bc246(0x215)](_0x3bc246(0x13b)),this[_0x3bc246(0x193)](!![]),this[_0x3bc246(0x136)](!![],null),this[_0x3bc246(0x183)](!![],null),this[_0x3bc246(0x1b7)](0xbe),this['setTooltip'](_0x3bc246(0x15c)),this['setHelpUrl']('');}};Blockly['common'][_0x393fe0(0x175)]({'xrp_ws_start_server':xrp_ws_start_server}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['xrp_ws_start_server']=function(_0x4f606f){const _0x4d4ac6=_0x393fe0;var _0x4f111b=_0x4f606f['getInputTargetBlock'](_0x4d4ac6(0x155))[_0x4d4ac6(0x17f)](_0x4d4ac6(0x20f)),_0x22e2f5=_0x4f606f[_0x4d4ac6(0x21b)]('server_pwd')['getFieldValue'](_0x4d4ac6(0x20f)),_0x511e8b=_0x4d4ac6(0x1c0)+_0x4f111b+_0x4d4ac6(0x15b)+_0x22e2f5+_0x4d4ac6(0x1db);return python[_0x4d4ac6(0x156)][_0x4d4ac6(0x1ff)](lib[_0x4d4ac6(0x157)],0x1),python[_0x4d4ac6(0x156)]['addImportWithPriority'](def[_0x4d4ac6(0x157)],0x2),_0x511e8b;};const xrp_ws_connect_server={'init':function(){const _0x517652=_0x393fe0;this[_0x517652(0x211)]()[_0x517652(0x196)](_0x517652(0x1c1)),this[_0x517652(0x15d)](_0x517652(0x155))[_0x517652(0x196)](_0x517652(0x1dc))['setCheck'](_0x517652(0x13b)),this[_0x517652(0x15d)](_0x517652(0x15a))[_0x517652(0x196)](_0x517652(0x1a1))[_0x517652(0x215)]('String'),this[_0x517652(0x193)](!![]),this[_0x517652(0x136)](!![],null),this[_0x517652(0x183)](!![],null),this['setColour'](0xbe),this[_0x517652(0x146)](_0x517652(0x19d)),this[_0x517652(0x162)]('');}};Blockly['common']['defineBlocks']({'xrp_ws_connect_server':xrp_ws_connect_server}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x129)]=function(_0x1deb99){const _0x2565b0=_0x393fe0;var _0x5e9ff7=_0x1deb99[_0x2565b0(0x21b)](_0x2565b0(0x155))['getFieldValue'](_0x2565b0(0x20f)),_0x3e057d=_0x1deb99[_0x2565b0(0x21b)](_0x2565b0(0x15a))['getFieldValue'](_0x2565b0(0x20f)),_0xa4cbb=_0x2565b0(0x154)+_0x5e9ff7+_0x2565b0(0x15b)+_0x3e057d+_0x2565b0(0x1db);return python['pythonGenerator'][_0x2565b0(0x1ff)](lib[_0x2565b0(0x157)],0x1),python[_0x2565b0(0x156)][_0x2565b0(0x1ff)](def[_0x2565b0(0x157)],0x2),_0xa4cbb;};const Led_xrp={'init':function(){const _0x18e0ac=_0x393fe0;this[_0x18e0ac(0x211)]('value')['appendField']('Led\x20en\x20placa')[_0x18e0ac(0x196)](new Blockly[(_0x18e0ac(0x11e))]([['Encender','on'],[_0x18e0ac(0x137),_0x18e0ac(0x141)]]),_0x18e0ac(0x187)),this[_0x18e0ac(0x136)](!![],null),this['setNextStatement'](!![],null),this[_0x18e0ac(0x146)]('Maneja\x20el\x20led\x20incorporado\x20en\x20la\x20placa\x20del\x20xrp'),this[_0x18e0ac(0x162)](''),this[_0x18e0ac(0x1b7)](0xa5);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'Led_xrp':Led_xrp}),python[_0x393fe0(0x156)]['forBlock'][_0x393fe0(0x1f8)]=function(_0x34cf3b){const _0x2d67bf=_0x393fe0;python[_0x2d67bf(0x156)][_0x2d67bf(0x1ff)](lib[_0x2d67bf(0x12c)],0x1),python[_0x2d67bf(0x156)][_0x2d67bf(0x1ff)](def[_0x2d67bf(0x1c9)],0x2);const _0x3971dd=_0x34cf3b[_0x2d67bf(0x17f)](_0x2d67bf(0x187)),_0x456e1b='board.led_'+_0x3971dd+_0x2d67bf(0x212);return _0x456e1b;};const wait_boton_xrp={'init':function(){const _0x210160=_0x393fe0;this[_0x210160(0x211)](_0x210160(0x187))[_0x210160(0x196)](_0x210160(0x16f)),this[_0x210160(0x136)](!![],null),this[_0x210160(0x183)](!![],null),this[_0x210160(0x146)](_0x210160(0x184)),this[_0x210160(0x162)](''),this[_0x210160(0x1b7)](0xa5);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'wait_boton_xrp':wait_boton_xrp}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['wait_boton_xrp']=function(){const _0xe70900=_0x393fe0;python[_0xe70900(0x156)][_0xe70900(0x1ff)](lib[_0xe70900(0x12c)],0x1),python[_0xe70900(0x156)][_0xe70900(0x1ff)](def[_0xe70900(0x1c9)],0x2);const _0x3008f2='board.wait_for_button()\x0a';return _0x3008f2;};const b_xrp={'init':function(){const _0x4b21f4=_0x393fe0;this['appendDummyInput']('titutlo')['appendField']('Botón\x20de\x20placa'),this['setOutput'](!![],_0x4b21f4(0x1b5)),this[_0x4b21f4(0x146)](_0x4b21f4(0x18f)),this[_0x4b21f4(0x162)](''),this[_0x4b21f4(0x1b7)](0xa5);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'b_xrp':b_xrp}),python[_0x393fe0(0x156)]['forBlock']['b_xrp']=function(){const _0x5de4f2=_0x393fe0;python[_0x5de4f2(0x156)][_0x5de4f2(0x1ff)](lib[_0x5de4f2(0x12c)],0x1),python['pythonGenerator'][_0x5de4f2(0x1ff)](def[_0x5de4f2(0x1c9)],0x2);const _0x466c9a='board.is_button_pressed()';return[_0x466c9a,python[_0x5de4f2(0x128)][_0x5de4f2(0x132)]];};const distancia={'init':function(){const _0x47dfa3=_0x393fe0;this[_0x47dfa3(0x211)](_0x47dfa3(0x1fe))['appendField']('Sensor\x20de\x20distancia'),this['setOutput'](!![],'Number'),this[_0x47dfa3(0x146)](_0x47dfa3(0x142)),this['setHelpUrl'](''),this[_0x47dfa3(0x1b7)](0xa5);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'distancia':distancia}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1c6)]=function(){const _0x4c3a9a=_0x393fe0;python[_0x4c3a9a(0x156)][_0x4c3a9a(0x1ff)](lib[_0x4c3a9a(0x1df)],0x1),python['pythonGenerator'][_0x4c3a9a(0x1ff)](def[_0x4c3a9a(0x1df)],0x2);const _0x45c445=_0x4c3a9a(0x1d9);return[_0x45c445,python[_0x4c3a9a(0x128)][_0x4c3a9a(0x132)]];};const Voltaje={'init':function(){const _0x2999b0=_0x393fe0;this[_0x2999b0(0x211)](_0x2999b0(0x1fe))[_0x2999b0(0x196)](_0x2999b0(0x1a9)),this[_0x2999b0(0x1fd)](!![],_0x2999b0(0x1ec)),this[_0x2999b0(0x146)]('Muestra\x20el\x20voltaje\x20de\x20las\x20baterias'),this[_0x2999b0(0x162)](''),this['setColour'](0xa5);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'Voltaje':Voltaje}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['Voltaje']=function(){const _0x36467f=_0x393fe0;python[_0x36467f(0x156)][_0x36467f(0x1ff)](lib[_0x36467f(0x1a8)],0x1),python[_0x36467f(0x156)]['addImportWithPriority'](lib['adc'],0x1),python['pythonGenerator'][_0x36467f(0x1ff)](lib[_0x36467f(0x166)],0x1);const _0x20ef38=_0x36467f(0x18a);return[_0x20ef38,python[_0x36467f(0x128)]['NONE']];};const sigue_linea={'init':function(){const _0x5153d2=_0x393fe0;this['appendDummyInput']('titulo')[_0x5153d2(0x196)](_0x5153d2(0x1a2))[_0x5153d2(0x196)](new Blockly[(_0x5153d2(0x11e))]([[_0x5153d2(0x1f3),_0x5153d2(0x192)],['Derecho',_0x5153d2(0x121)]]),_0x5153d2(0x1a3)),this[_0x5153d2(0x1fd)](!![],_0x5153d2(0x1ec)),this[_0x5153d2(0x146)](_0x5153d2(0x139)),this[_0x5153d2(0x162)](''),this[_0x5153d2(0x1b7)](0xa5);}};Blockly['common'][_0x393fe0(0x175)]({'sigue_linea':sigue_linea}),python[_0x393fe0(0x156)]['forBlock'][_0x393fe0(0x19a)]=function(_0x19c75f){const _0x41c26d=_0x393fe0;python[_0x41c26d(0x156)][_0x41c26d(0x1ff)](lib[_0x41c26d(0x1cf)],0x1),python['pythonGenerator']['addImportWithPriority'](def['siguelineas'],0x2);const _0x40f1c5=_0x19c75f[_0x41c26d(0x17f)]('ubicacion'),_0x3e05e3='reflectance.get_'+_0x40f1c5+'()';return[_0x3e05e3,python[_0x41c26d(0x128)]['NONE']];};const giroscopio={'init':function(){const _0x226cb2=_0x393fe0;this[_0x226cb2(0x211)]('NAME')['appendField'](_0x226cb2(0x1be))[_0x226cb2(0x196)](new Blockly[(_0x226cb2(0x11e))]([[_0x226cb2(0x1ce),_0x226cb2(0x1d3)],[_0x226cb2(0x12a),'pitch'],[_0x226cb2(0x16a),_0x226cb2(0x16e)]]),_0x226cb2(0x187)),this[_0x226cb2(0x1fd)](!![],_0x226cb2(0x1ec)),this[_0x226cb2(0x146)]('Angulo\x20de\x20giro\x20en\x20cada\x20eje,\x20la\x20posición\x20se\x20establece\x20en\x200\x20al\x20momento\x20de\x20encender.'),this[_0x226cb2(0x162)](''),this[_0x226cb2(0x1b7)](0xa5);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'giroscopio':giroscopio}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x206)]=function(_0x148d48){const _0x27873a=_0x393fe0;python['pythonGenerator'][_0x27873a(0x1ff)](lib['gyro'],0x1),python[_0x27873a(0x156)]['addImportWithPriority'](def[_0x27873a(0x15e)],0x2);const _0x4b8818=_0x148d48[_0x27873a(0x17f)]('NAME');python['pythonGenerator'][_0x27873a(0x1ff)](_0x27873a(0x1e8)+_0x4b8818+'()',0x3);const _0xeda866=_0x27873a(0x180)+_0x4b8818+'()';return[_0xeda866,python[_0x27873a(0x128)][_0x27873a(0x132)]];};const comentario={'init':function(){const _0x550da1=_0x393fe0;this[_0x550da1(0x211)]('n')[_0x550da1(0x196)]('Comentario:\x20')[_0x550da1(0x196)](new Blockly[(_0x550da1(0x12f))](_0x550da1(0x199)),_0x550da1(0x187)),this['setPreviousStatement'](!![],null),this[_0x550da1(0x183)](!![],null),this[_0x550da1(0x146)](_0x550da1(0x123)),this[_0x550da1(0x162)](''),this[_0x550da1(0x1b7)](0xb4);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'comentario':comentario}),python[_0x393fe0(0x156)]['forBlock'][_0x393fe0(0x203)]=function(_0xc8f78e){const _0xdc82c2=_0x393fe0,_0x3aa794=_0xc8f78e[_0xdc82c2(0x17f)]('NAME'),_0x27fa95='';return _0x27fa95;};const delay_seconds={'init':function(){const _0x290b54=_0x393fe0;this['appendValueInput'](_0x290b54(0x14e))[_0x290b54(0x215)](_0x290b54(0x1ec))['appendField']('Esperar'),this['appendDummyInput'](_0x290b54(0x187))[_0x290b54(0x196)](_0x290b54(0x126)),this[_0x290b54(0x136)](!![],null),this[_0x290b54(0x183)](!![],null),this[_0x290b54(0x146)](_0x290b54(0x1c3)),this['setHelpUrl'](''),this[_0x290b54(0x1b7)](0x3c);}};Blockly[_0x393fe0(0x182)]['defineBlocks']({'delay_seconds':delay_seconds}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1b6)]=function(_0x266e07){const _0x3cb571=_0x393fe0;python[_0x3cb571(0x156)][_0x3cb571(0x1ff)](lib['tiempo'],0x1);const _0x338a04=Blockly[_0x3cb571(0x1fc)][_0x3cb571(0x1bc)](_0x266e07,_0x3cb571(0x14e),python[_0x3cb571(0x128)]['ATOMIC']),_0x585428=_0x3cb571(0x122)+_0x338a04+')\x0a';return _0x585428;},Blockly['Blocks'][_0x393fe0(0x1f5)]={'init':function(){const _0x9877eb=_0x393fe0;this[_0x9877eb(0x15d)]('NAME')[_0x9877eb(0x215)](_0x9877eb(0x1b5))['appendField'](_0x9877eb(0x1b1)),this[_0x9877eb(0x136)](!![],null),this[_0x9877eb(0x183)](!![],null),this[_0x9877eb(0x1b7)](0x3c),this['setTooltip'](_0x9877eb(0x120)),this[_0x9877eb(0x162)]('');}},python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x1f5)]=function(_0x2a8f88,_0xf9c2f1){const _0x2463b9=_0x393fe0;python[_0x2463b9(0x156)][_0x2463b9(0x1ff)](lib[_0x2463b9(0x170)],0x1);const _0x290957=Blockly[_0x2463b9(0x1fc)][_0x2463b9(0x1bc)](_0x2a8f88,_0x2463b9(0x187),python['Order'][_0x2463b9(0x1d5)]);var _0x3a6aca=_0x2463b9(0x181)+_0x290957+_0x2463b9(0x1f4);return _0x3a6aca=_0x3a6aca+_0x2463b9(0x176),_0x3a6aca;},Blockly[_0x393fe0(0x21f)]['pestolink_start']={'init':function(){const _0x222a14=_0x393fe0;this['appendDummyInput']()[_0x222a14(0x196)]('Iniciar\x20Pesto\x20link'),this[_0x222a14(0x15d)]('NAME')['setCheck']('String')['appendField'](_0x222a14(0x169)),this['setInputsInline'](!![]),this[_0x222a14(0x136)](!![],null),this[_0x222a14(0x183)](!![],null),this[_0x222a14(0x1b7)](0xf0),this[_0x222a14(0x146)](_0x222a14(0x1c7)),this['setHelpUrl']('');}},python['pythonGenerator']['forBlock'][_0x393fe0(0x1eb)]=function(_0x3bb94b,_0x38cd18){const _0x2ae167=_0x393fe0;python[_0x2ae167(0x156)][_0x2ae167(0x1ff)](lib[_0x2ae167(0x1a8)],0x1),python[_0x2ae167(0x156)][_0x2ae167(0x1ff)](lib['bt'],0x1),python[_0x2ae167(0x156)]['addImportWithPriority'](lib[_0x2ae167(0x170)],0x1),python['pythonGenerator'][_0x2ae167(0x1ff)](lib[_0x2ae167(0x166)],0x1),python[_0x2ae167(0x156)][_0x2ae167(0x1ff)](def['pestolink'],0x2);var _0x3a56db=_0x38cd18[_0x2ae167(0x1bc)](_0x3bb94b,_0x2ae167(0x187),python[_0x2ae167(0x128)][_0x2ae167(0x1d5)]),_0x39f347=_0x2ae167(0x1bb)+_0x3a56db+')\x0a';return _0x39f347;},Blockly[_0x393fe0(0x21f)]['pl_conected']={'init':function(){const _0x212cac=_0x393fe0;this['appendDummyInput']()[_0x212cac(0x196)](_0x212cac(0x125)),this['setOutput'](!![],_0x212cac(0x1b5)),this[_0x212cac(0x1b7)](0xf0),this[_0x212cac(0x146)](_0x212cac(0x167)),this[_0x212cac(0x162)]('');}},python['pythonGenerator']['forBlock'][_0x393fe0(0x1d4)]=function(_0x18d205,_0x16410f){const _0xdbeedd=_0x393fe0;var _0x3b550f=_0xdbeedd(0x1ae);return[_0x3b550f,Blockly[_0xdbeedd(0x1fc)][_0xdbeedd(0x198)]];},Blockly[_0x393fe0(0x21f)]['joy1']={'init':function(){const _0x161b1b=_0x393fe0;this['appendDummyInput']()['appendField'](_0x161b1b(0x1e3)),this[_0x161b1b(0x1fd)](!![],_0x161b1b(0x1ec)),this[_0x161b1b(0x1b7)](0xf0),this[_0x161b1b(0x146)](_0x161b1b(0x1a7)),this[_0x161b1b(0x162)]('');}},python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x145)]=function(_0x499e89,_0x339588){const _0x18dfee=_0x393fe0,_0x2e5146=_0x18dfee(0x21a);return[_0x2e5146,Blockly[_0x18dfee(0x1fc)][_0x18dfee(0x198)]];},Blockly[_0x393fe0(0x21f)][_0x393fe0(0x161)]={'init':function(){const _0x537e7c=_0x393fe0;this[_0x537e7c(0x211)]()[_0x537e7c(0x196)](_0x537e7c(0x14b)),this[_0x537e7c(0x1fd)](!![],_0x537e7c(0x1ec)),this['setColour'](0xf0),this[_0x537e7c(0x146)](_0x537e7c(0x1fa)),this[_0x537e7c(0x162)]('');}},python['pythonGenerator'][_0x393fe0(0x1d2)][_0x393fe0(0x161)]=function(_0xa8c031,_0xda7de1){const _0x292c7c=_0x393fe0,_0x2b13ff=_0x292c7c(0x140);return[_0x2b13ff,Blockly[_0x292c7c(0x1fc)][_0x292c7c(0x198)]];},Blockly[_0x393fe0(0x21f)]['B0']={'init':function(){const _0x21697a=_0x393fe0;this['appendDummyInput']()[_0x21697a(0x196)](_0x21697a(0x131)),this[_0x21697a(0x1fd)](!![],_0x21697a(0x1b5)),this[_0x21697a(0x1b7)](0xf0),this[_0x21697a(0x146)](_0x21697a(0x1d7)),this[_0x21697a(0x162)]('');}},python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['B0']=function(_0x5c9299,_0x28a922){const _0x3d37c9=_0x393fe0,_0x54bd9a=_0x3d37c9(0x201);return[_0x54bd9a,Blockly[_0x3d37c9(0x1fc)]['ORDER_ATOMIC']];},Blockly[_0x393fe0(0x21f)]['B1']={'init':function(){const _0x231162=_0x393fe0;this[_0x231162(0x211)]()[_0x231162(0x196)]('Boton\x201\x20¿Esta\x20presionado?'),this[_0x231162(0x1fd)](!![],'Boolean'),this[_0x231162(0x1b7)](0xf0),this['setTooltip'](_0x231162(0x1d7)),this[_0x231162(0x162)]('');}},python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['B1']=function(_0x38912f,_0x5c9aae){const _0x340740=_0x393fe0,_0x3fe259='pestolink.get_button(1)';return[_0x3fe259,Blockly['Python'][_0x340740(0x198)]];},Blockly[_0x393fe0(0x21f)]['B2']={'init':function(){const _0x821ecc=_0x393fe0;this[_0x821ecc(0x211)]()[_0x821ecc(0x196)]('Boton\x202\x20¿Esta\x20presionado?'),this['setOutput'](!![],_0x821ecc(0x1b5)),this['setColour'](0xf0),this[_0x821ecc(0x146)](_0x821ecc(0x1d7)),this['setHelpUrl']('');}},python['pythonGenerator'][_0x393fe0(0x1d2)]['B2']=function(_0x3783d7,_0x48a1d3){const _0x2040a0=_0x393fe0,_0x233f3f='pestolink.get_button(2)';return[_0x233f3f,Blockly[_0x2040a0(0x1fc)]['ORDER_ATOMIC']];},Blockly[_0x393fe0(0x21f)]['B3']={'init':function(){const _0x5ccbd2=_0x393fe0;this['appendDummyInput']()[_0x5ccbd2(0x196)](_0x5ccbd2(0x12b)),this[_0x5ccbd2(0x1fd)](!![],_0x5ccbd2(0x1b5)),this['setColour'](0xf0),this[_0x5ccbd2(0x146)](_0x5ccbd2(0x1d7)),this[_0x5ccbd2(0x162)]('');}},python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['B3']=function(_0x555ad3,_0x1f9437){const _0x5d3120=_0x393fe0,_0x98e07f=_0x5d3120(0x13d);return[_0x98e07f,Blockly[_0x5d3120(0x1fc)]['ORDER_ATOMIC']];},Blockly[_0x393fe0(0x21f)]['mostrar_link']={'init':function(){const _0x2182a8=_0x393fe0;this[_0x2182a8(0x15d)]('valor')[_0x2182a8(0x215)](_0x2182a8(0x1ec))['appendField'](_0x2182a8(0x17d)),this[_0x2182a8(0x136)](!![],null),this['setNextStatement'](!![],null),this['setColour'](0xf0),this[_0x2182a8(0x146)]('Muestra\x20el\x20valor\x20en\x20PestoLink'),this[_0x2182a8(0x162)]('');}},python['pythonGenerator'][_0x393fe0(0x1d2)][_0x393fe0(0x1d8)]=function(_0x2893f4,_0x1e685c){const _0x58e03c=_0x393fe0;var _0x5f3c9d=_0x1e685c[_0x58e03c(0x1bc)](_0x2893f4,_0x58e03c(0x130),python[_0x58e03c(0x128)][_0x58e03c(0x1d5)]),_0x113a72=_0x58e03c(0x127)+_0x5f3c9d+')\x0a';return _0x113a72;};const wifi_confi={'init':function(){const _0xdaa4ff=_0x393fe0;this[_0xdaa4ff(0x211)](_0xdaa4ff(0x1bd))[_0xdaa4ff(0x196)]('Iniciar\x20servidor\x20wifi')['appendField'](_0xdaa4ff(0x143))[_0xdaa4ff(0x196)](new Blockly[(_0xdaa4ff(0x12f))](_0xdaa4ff(0x1ea)),_0xdaa4ff(0x200))[_0xdaa4ff(0x196)]('Clave:')[_0xdaa4ff(0x196)](new Blockly[(_0xdaa4ff(0x12f))](_0xdaa4ff(0x16c),validarClave),_0xdaa4ff(0x202))['appendField'](_0xdaa4ff(0x1e4))[_0xdaa4ff(0x196)](new Blockly['FieldDropdown']([['PC','0'],[_0xdaa4ff(0x1f0),'1']]),_0xdaa4ff(0x1a5)),this[_0xdaa4ff(0x193)](!![]),this[_0xdaa4ff(0x136)](!![],null),this[_0xdaa4ff(0x183)](!![],null),this[_0xdaa4ff(0x146)]('Configura\x20el\x20nombre\x20y\x20contraseña\x20de\x20la\x20red\x20wifi,\x20se\x20debe\x20decidir\x20el\x20dispositivo\x20para\x20el\x20tipo\x20de\x20activación.'),this[_0xdaa4ff(0x162)](''),this['setColour'](0xb4);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'wifi_confi':wifi_confi});function validarClave(_0x511b22){const _0x22d6b7=_0x393fe0;return _0x511b22[_0x22d6b7(0x210)]>=0x8?_0x511b22:null;}python[_0x393fe0(0x156)][_0x393fe0(0x1d2)][_0x393fe0(0x190)]=function(_0x486e61){const _0xdf8303=_0x393fe0;python['pythonGenerator']['addImportWithPriority'](lib[_0xdf8303(0x18c)],0x1),python[_0xdf8303(0x156)][_0xdf8303(0x1ff)](def[_0xdf8303(0x18c)],0x2);const _0x29b142=_0x486e61['getFieldValue'](_0xdf8303(0x200)),_0x252b43=_0x486e61[_0xdf8303(0x17f)](_0xdf8303(0x202)),_0x79b408=_0x486e61[_0xdf8303(0x17f)](_0xdf8303(0x1a5)),_0x5637c3=_0xdf8303(0x18b)+_0x29b142+_0xdf8303(0x20d)+_0x252b43+'\x27,'+_0x79b408+')\x0a';return _0x5637c3;},Blockly[_0x393fe0(0x21f)]['wifi_confi']=wifi_confi;const leer={'init':function(){const _0x59735f=_0x393fe0;this[_0x59735f(0x211)]('1')[_0x59735f(0x196)](_0x59735f(0x147)),this[_0x59735f(0x211)](_0x59735f(0x187))[_0x59735f(0x196)](_0x59735f(0x1a6)),this[_0x59735f(0x193)](![]),this[_0x59735f(0x136)](!![],null),this[_0x59735f(0x183)](!![],null),this['setTooltip'](_0x59735f(0x148)),this['setHelpUrl'](''),this[_0x59735f(0x1b7)](0xb4);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'leer':leer}),python[_0x393fe0(0x156)]['forBlock'][_0x393fe0(0x1b2)]=function(_0x2df398){const _0x5e943f='w_gamepad.read()\x0a';return _0x5e943f;};const hace={'init':function(){const _0x3d1bc0=_0x393fe0;this[_0x3d1bc0(0x211)](_0x3d1bc0(0x14d))[_0x3d1bc0(0x196)](_0x3d1bc0(0x1f9))[_0x3d1bc0(0x196)](new Blockly[(_0x3d1bc0(0x11e))]([['LEFT','l'],[_0x3d1bc0(0x1f7),'r'],['ARROW_UP','up'],[_0x3d1bc0(0x1da),_0x3d1bc0(0x192)],[_0x3d1bc0(0x1ed),_0x3d1bc0(0x134)],[_0x3d1bc0(0x12e),_0x3d1bc0(0x121)],['Y','y'],['X','x'],['A','a'],['B','b'],[_0x3d1bc0(0x14f),_0x3d1bc0(0x219)],['START','start'],[_0x3d1bc0(0x191),_0x3d1bc0(0x171)],['F1','f1'],['F2','f2'],['F3','f3'],['F4','f4']]),_0x3d1bc0(0x151))[_0x3d1bc0(0x196)](_0x3d1bc0(0x1f1))[_0x3d1bc0(0x196)](new Blockly[(_0x3d1bc0(0x11e))]([[_0x3d1bc0(0x1ab),'P'],[_0x3d1bc0(0x1ba),'R']]),_0x3d1bc0(0x20b)),this['appendStatementInput'](_0x3d1bc0(0x187)),this['setPreviousStatement'](!![],null),this[_0x3d1bc0(0x183)](!![],null),this[_0x3d1bc0(0x146)]('Ejecuta\x20bloque\x20si\x20el\x20mensaje\x20menciona\x20el\x20botón\x20indicado\x20y\x20la\x20acción\x20indicada'),this[_0x3d1bc0(0x162)](''),this[_0x3d1bc0(0x1b7)](0xb4);}};Blockly[_0x393fe0(0x182)][_0x393fe0(0x175)]({'hace':hace}),python[_0x393fe0(0x156)][_0x393fe0(0x1d2)]['hace']=function(_0x59c5ea,_0x31669a){const _0xd828b9=_0x393fe0,_0x240027=_0x59c5ea[_0xd828b9(0x17f)]('btn'),_0x57bcd6=_0x59c5ea[_0xd828b9(0x17f)]('action');let _0x165297=_0x31669a[_0xd828b9(0x20a)](_0x59c5ea,'NAME');!_0x165297['trim']()&&(_0x165297=_0xd828b9(0x1a0));const _0xede9fb=_0xd828b9(0x1dd)+_0x57bcd6+_0x240027+_0xd828b9(0x11c)+_0x165297+'\x0a';return _0xede9fb;};
+//----------------bloques------------------------------------------------
+
+//--------servos del xrp-------------
+
+const servo_onboard = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Servo:')
+      .appendField(new Blockly.FieldDropdown([
+          ['1', '1'],
+          ['2', '2']
+        ]), 'servo');
+    this.appendValueInput('val')
+    .setCheck('Number')
+      .appendField('Grados:');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Mueve un servomotor de 180° a la posición especificada');
+    this.setHelpUrl('');
+    this.setColour(30);
+  }
+};
+Blockly.common.defineBlocks({servo_onboard: servo_onboard});
+                    
+                    
+python.pythonGenerator.forBlock['servo_onboard'] = function(block) {
+  const servo = block.getFieldValue('servo');
+  const value = Blockly.Python.valueToCode(block, 'val', python.Order.ATOMIC);
+  python.pythonGenerator.addImportWithPriority(lib["servo"],1);
+  python.pythonGenerator.addImportWithPriority(`servo${servo} = Servo.get_default_servo(${servo})`,2);
+  const code = `servo${servo}.set_angle(${value})\n`;
+  return code;
+}                     
+
+  //---------variables de motor----------------
+  const motor_var = {
+    init: function() {
+      this.appendDummyInput('in')
+        .appendField('Motor:')
+        .appendField(new Blockly.FieldDropdown([
+            ['Izquierdo', '1'],
+            ['Derecho', '2'],
+            ['Motor 3', '3'],
+            ['Motor 4', '4']
+          ]), 'num')
+        .appendField('Variable:')
+        .appendField(new Blockly.FieldDropdown([
+            ['Velocidad', 'speed'],
+            ['Posición', 'position'],
+            ['Cuenta de enconder', 'position_counts']
+          ]), 'var');
+      this.setOutput(true, null);
+      this.setTooltip('Regresa la variable elegida para el motor elegido.');
+      this.setHelpUrl('');
+      this.setColour(15);
+    }
+  };
+  Blockly.common.defineBlocks({motor_var: motor_var});
+                    
+  python.pythonGenerator.forBlock['motor_var'] = function(block) {
+    const num = block.getFieldValue('num');
+    const dropdown_var = block.getFieldValue('var');
+    // Agregar el código preámbulo a la lista (se asegura de que sea único)
+    python.pythonGenerator.addImportWithPriority(lib["motor"], 1);
+    python.pythonGenerator.addImportWithPriority(`motor${num} = EncodedMotor.get_default_encoded_motor(${num})`, 2);
+    const code = `motor${num}.get_${dropdown_var}()`;
+    return [code, python.Order.NONE];
+  }
+
+//----------------- motor esfuerzo--------------------
+const motor_esfuerzo = {
+  init: function() {
+    this.appendDummyInput('name')
+      .appendField('Motor:')
+      .appendField(new Blockly.FieldDropdown([
+          ['Izquierdo', '1'],
+          ['Derecho', '2'],
+          ['Motor 3', '3'],
+          ['Motor 4', '4']
+        ]), 'motor')
+      .appendField('Esfuerzo:');
+    this.appendValueInput('esfuerzo')
+    .setCheck('Number');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(30);
+  }
+};
+Blockly.common.defineBlocks({motor_esfuerzo: motor_esfuerzo});
+                    
+python.pythonGenerator.forBlock['motor_esfuerzo'] = function(block) {
+  const motor_num = block.getFieldValue('motor');
+  const value_esfuerzo = Blockly.Python.valueToCode(block, 'esfuerzo', python.Order.ATOMIC);
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["motor"], 1);
+  python.pythonGenerator.addImportWithPriority(`motor${motor_num} = EncodedMotor.get_default_encoded_motor(${motor_num})`, 2);
+  const code = `motor${motor_num}.set_effort(${value_esfuerzo})\n`;
+  return code;
+}
+
+// -------------motor velocidad rpm--------------
+const motor_velocidad = {
+  init: function() {
+    this.appendDummyInput('name')
+      .appendField('Motor:')
+      .appendField(new Blockly.FieldDropdown([
+          ['Izquierdo', '1'],
+          ['Derecho', '2'],
+          ['Motor 3', '3'],
+          ['Motor 4', '4']
+        ]), 'motor')
+      .appendField('Velocidad:');
+    this.appendValueInput('velocidad')
+    .setCheck('Number');
+    this.appendEndRowInput('NAME')
+      .appendField('RPM');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(30);
+  }
+};
+Blockly.common.defineBlocks({motor_velocidad: motor_velocidad});
+                    
+python.pythonGenerator.forBlock['motor_velocidad'] = function(block) {
+  const dropdown_motor = block.getFieldValue('motor');
+  const value_velocidad = Blockly.Python.valueToCode(block, 'velocidad', python.Order.ATOMIC);
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["motor"], 1);
+  python.pythonGenerator.addImportWithPriority(`motor${dropdown_motor} = EncodedMotor.get_default_encoded_motor(${dropdown_motor})`, 2);
+  const code = `motor${dropdown_motor}.set_speed(${value_velocidad})\n`;
+  return code;
+}
+ 
+//-----------------motor reversa----------------
+const motor_reversa = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Motor:')
+      .appendField(new Blockly.FieldDropdown([
+          ['Izquierdo', '1'],
+          ['Derecho', '2'],
+          ['Motor 3', '3'],
+          ['Motor 4', '4']
+        ]), 'motor')
+      .appendField('Dirección: ')
+      .appendField(new Blockly.FieldDropdown([
+          ['Reversa', 'True'],
+          ['Adelante', 'False']
+        ]), 'direccion');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(30);
+  }
+};
+Blockly.common.defineBlocks({motor_reversa: motor_reversa});
+   
+python.pythonGenerator.forBlock['motor_reversa'] = function(block) {
+  const dropdown_motor = block.getFieldValue('motor');
+  const dropdown_direccion = block.getFieldValue('direccion');
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["motor"], 1);
+  python.pythonGenerator.addImportWithPriority(`motor${dropdown_motor} = EncodedMotor.get_default_encoded_motor(${dropdown_motor})`, 2);
+  const code = `motor${dropdown_motor}._motor.flip_dir = (${dropdown_direccion})\n`;
+  return code;
+}
+
+//----------------reset encoder--------------------
+const reset_encoder = {
+  init: function() {
+    this.appendEndRowInput('NAME')
+      .appendField('Motor')
+      .appendField(new Blockly.FieldDropdown([
+          ['Izquierdo', '1'],
+          ['Derecho', '2'],
+          ['Motor 3', '3'],
+          ['Motor 4', '4']
+        ]), 'NAME')
+      .appendField('Reiniciar encoder');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(30);
+  }
+};
+Blockly.common.defineBlocks({reset_encoder: reset_encoder});
+                    
+python.pythonGenerator.forBlock['reset_encoder'] = function(block) {
+  const dropdown_name = block.getFieldValue('NAME');
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["motor"], 1);
+  python.pythonGenerator.addImportWithPriority(`motor${dropdown_name} = EncodedMotor.get_default_encoded_motor(${dropdown_name})`, 2);
+  const code = `motor${dropdown_name}.reset_encoder_position()\n`;
+  return code;
+}
+
+
+//----------------avanzar---------------------
+
+const avanzar = {
+  init: function() {
+    this.appendValueInput('distancia')
+    .setCheck('Number')
+      .appendField('Avanzar');
+    this.appendValueInput('esfuerzo')
+    .setCheck('Number')
+      .appendField('cm    ')
+      .appendField('Esfuerzo:');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({avanzar: avanzar});
+                    
+python.pythonGenerator.forBlock['avanzar'] = function(block) {
+  const value_distancia = Blockly.Python.valueToCode(block, 'distancia', python.Order.ATOMIC);
+  const value_esfuerzo = Blockly.Python.valueToCode(block, 'esfuerzo', python.Order.ATOMIC);
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+
+  const code = `differentialDrive.straight(${value_distancia}, ${value_esfuerzo})\n`;
+  return code;
+}
+
+//-------------------girar---------------------
+
+const girar = {
+  init: function() {
+    this.appendValueInput('grados')
+    .setCheck('Number')
+      .appendField('Girar:');
+    this.appendValueInput('esfuerzo')
+    .setCheck('Number')
+      .appendField('Grados     ')
+      .appendField('Esfuerzo:');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({girar: girar});
+                    
+python.pythonGenerator.forBlock['girar'] = function(block) {
+  const value_grados = Blockly.Python.valueToCode(block, 'grados', python.Order.ATOMIC);
+  const value_esfuerzo = Blockly.Python.valueToCode(block, 'esfuerzo', python.Order.ATOMIC);
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  const code = `differentialDrive.turn(${value_grados}, ${value_esfuerzo})\n`;
+  return code;
+}
+
+//-------------------set effort----------------
+
+const set_effort = {
+  init: function() {
+    this.appendValueInput('izq')
+    .setCheck('Number')
+      .appendField('Establecer esfuerzo')
+      .appendField(' Izquierdo:');
+    this.appendValueInput('der')
+    .setCheck('Number')
+      .appendField('Derecho:');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({set_effort: set_effort});
+                    
+python.pythonGenerator.forBlock['set_effort'] = function(block) {
+  const value_izq = Blockly.Python.valueToCode(block, 'izq', python.Order.ATOMIC);
+  const value_der = Blockly.Python.valueToCode(block, 'der', python.Order.ATOMIC);
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  const code = `differentialDrive.set_effort(${value_izq}, ${value_der})\n`;
+  return code;
+}
+
+//----------------------------set speed----------------
+
+const set_speed = {
+  init: function() {
+    this.appendValueInput('izq')
+    .setCheck('Number')
+      .appendField('Establecer velocidad')
+      .appendField(' Izquierdo:');
+    this.appendDummyInput('NAME')
+      .appendField('cm/s   ');
+    this.appendValueInput('der')
+    .setCheck('Number')
+      .appendField('Derecho:');
+    this.appendDummyInput('NAME')
+      .appendField('cm/s   ');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({set_speed: set_speed});
+                    
+python.pythonGenerator.forBlock['set_speed'] = function(block) {
+  const value_izq = Blockly.Python.valueToCode(block, 'izq', python.Order.ATOMIC);
+  const value_der = Blockly.Python.valueToCode(block, 'der', python.Order.ATOMIC);
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  const code = `differentialDrive.set_speed(${value_izq}, ${value_der})\n`;
+  return code;
+}
+
+//----------------------avanzar giro-----------------------
+const avanzar_giro = {
+  init: function() {
+    this.appendValueInput('vel')
+    .setCheck('Number')
+      .appendField('Avanzar')
+      .appendField('Velocidad:');
+    this.appendValueInput('dir')
+    .setCheck('Number')
+      .appendField('Giro:');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Avanza en la dirección que se indique');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({avanzar_giro: avanzar_giro});
+                  
+python.pythonGenerator.forBlock['avanzar_giro'] = function(block) {
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  // TODO: change Order.ATOMIC to the correct operator precedence strength
+  const value_vel = Blockly.Python.valueToCode(block, 'vel', python.Order.ATOMIC);
+
+  // TODO: change Order.ATOMIC to the correct operator precedence strength
+  const value_dir = Blockly.Python.valueToCode(block, 'dir', python.Order.ATOMIC);
+
+  // TODO: Assemble python into the code variable.
+  const code = `differentialDrive.arcade(${value_vel}, ${value_dir})\n`;
+  return code;
+}
+                    
+
+//------------detener motores-------------------
+const stop_motor = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Detener motores');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({stop_motor: stop_motor});
+                    
+python.pythonGenerator.forBlock['stop_motor'] = function() {
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  const code = 'differentialDrive.stop()\n';
+  return code;
+}
+
+//------------------reset encoders
+
+const reset_encoders = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Reiniciar encoders');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({reset_encoders: reset_encoders});
+                    
+python.pythonGenerator.forBlock['reset_encoders'] = function() {
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  const code = 'differentialDrive.reset_encoder_position()\n';
+  return code;
+}
+
+//-------------------encoder-------------------
+const encoder = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Encoder')
+      .appendField(new Blockly.FieldDropdown([
+          ['Izquierdo', 'left'],
+          ['Derecho', 'right']
+        ]), 'NAME');
+    this.setOutput(true, 'Number');
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(15);
+  }
+};
+Blockly.common.defineBlocks({encoder: encoder});
+                    
+python.pythonGenerator.forBlock['encoder'] = function(block){
+  const dropdown_name = block.getFieldValue('NAME');
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["avanzar"], 1);
+  python.pythonGenerator.addImportWithPriority(def["avanzar"], 2);
+  const code = `differentialDrive.get_${dropdown_name}_encoder_position()`;
+  return [code, python.Order.NONE];
+}
+
+  //Web Server
+  var nextFunc = 0;
+  function getFuncName(){
+    nextFunc++;
+    return "func" + nextFunc;
+  }
+
+//------------server foward------------------
+
+const xrp_ws_forward_button = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web forward button")
+    this.appendStatementInput('func')
+      .appendField('Function:');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_forward_button: xrp_ws_forward_button});
+
+python.pythonGenerator.forBlock['xrp_ws_forward_button'] = function(block){
+  var func = Blockly.Python.statementToCode(block, 'func');
+  var funcName = getFuncName();
+  var code = `\ndef ${funcName}():\n${func}\n`
+  code += `webserver.registerForwardButton(${funcName})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//-------------server back-----------------
+const xrp_ws_back_button = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web back button")
+    this.appendStatementInput('func')
+      .appendField('Function:');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_back_button: xrp_ws_back_button});
+
+python.pythonGenerator.forBlock['xrp_ws_back_button'] = function(block){
+  var func = Blockly.Python.statementToCode(block, 'func');
+  var funcName = getFuncName();
+  var code = `\ndef ${funcName}():\n${func}\n`
+  code += `webserver.registerBackwardButton(${funcName})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//----------------server left----------------------
+
+const xrp_ws_left_button = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web left button")
+    this.appendStatementInput('func')
+      .appendField('Function:'); this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_left_button: xrp_ws_left_button});
+
+python.pythonGenerator.forBlock['xrp_ws_left_button'] = function(block){
+  var func = Blockly.Python.statementToCode(block, 'func');
+  var funcName = getFuncName();
+  var code = `\ndef ${funcName}():\n${func}\n`
+  code += `webserver.registerLeftButton(${funcName})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//--------------------server right---------------------
+
+const xrp_ws_right_button = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web right button")
+    this.appendStatementInput('func')
+      .appendField('Function:'); this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_right_button: xrp_ws_right_button});
+
+python.pythonGenerator.forBlock['xrp_ws_right_button'] = function(block){
+  var func = Blockly.Python.statementToCode(block, 'func');
+  var funcName = getFuncName();
+  var code = `\ndef ${funcName}():\n${func}\n`
+  code += `webserver.registerRightButton(${funcName})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//----------------server stop-------------------
+
+const xrp_ws_stop_button = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web stop button")
+    this.appendStatementInput('func')
+      .appendField('Function:'); this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_stop_button: xrp_ws_stop_button});
+
+python.pythonGenerator.forBlock['xrp_ws_stop_button'] = function(block){
+  var func = Blockly.Python.statementToCode(block, 'func');
+  var funcName = getFuncName();
+  var code = `\ndef ${funcName}():\n${func}\n`
+  code += `webserver.registerStopButton(${funcName})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//----------------add button--------------------
+const xrp_ws_add_button = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web add button  Name:")
+      .appendField(new Blockly.FieldTextInput("name"), "TEXT")
+    this.appendStatementInput('func')
+      .appendField('Function:');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_add_button: xrp_ws_add_button});
+
+python.pythonGenerator.forBlock['xrp_ws_add_button'] = function(block){
+  var name = block.getFieldValue("TEXT");
+  var func = Blockly.Python.statementToCode(block, 'func');
+  var funcName = getFuncName();
+  var code = `\ndef ${funcName}():\n${func}\n`
+  code += `webserver.add_button("${name}", ${funcName})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//----------------log data-----------------------------
+
+const xrp_ws_log_data = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Web log data");
+    this.appendValueInput("log_name")
+      .appendField("Label:")
+      .setCheck("String");
+    this.appendValueInput("DATA")
+      .appendField("Data:");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_log_data: xrp_ws_log_data});
+
+python.pythonGenerator.forBlock['xrp_ws_log_data'] = function(block){
+  data = Blockly.Python.valueToCode(block, 'DATA', Blockly.Python.ORDER_ATOMIC);
+  var label  = block.getInputTargetBlock("log_name").getFieldValue("TEXT");
+  var code = `webserver.log_data("${label}", ${data})\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//-----------------start server----------------
+
+const xrp_ws_start_server = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Start web server");
+    this.appendValueInput("server_ssid")
+      .appendField("Name:")
+      .setCheck("String");
+    this.appendValueInput("server_pwd")
+      .appendField("Password:")
+      .setCheck("String");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("Starts a web server from the XRP");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_start_server: xrp_ws_start_server});
+
+python.pythonGenerator.forBlock['xrp_ws_start_server'] = function(block){
+  var ssid = block.getInputTargetBlock("server_ssid").getFieldValue("TEXT");
+  var pwd = block.getInputTargetBlock("server_pwd").getFieldValue("TEXT")
+  var code = `webserver.start_network(ssid="${ssid}", password="${pwd}")\nwebserver.start_server()\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+//-------------server connect---------------
+
+const xrp_ws_connect_server = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("Connect web server");
+    this.appendValueInput("server_ssid")
+      .appendField("Name:")
+      .setCheck("String");
+    this.appendValueInput("server_pwd")
+      .appendField("Password:")
+      .setCheck("String");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(190); // turquoise
+    this.setTooltip("Connects the XRP web server to an existing network");
+    this.setHelpUrl("");
+  }
+}
+Blockly.common.defineBlocks({xrp_ws_connect_server: xrp_ws_connect_server});
+
+python.pythonGenerator.forBlock['xrp_ws_connect_server'] = function(block){
+  var ssid = block.getInputTargetBlock("server_ssid").getFieldValue("TEXT");
+  var pwd = block.getInputTargetBlock("server_pwd").getFieldValue("TEXT")
+  var code = `webserver.connect_to_network(ssid="${ssid}", password="${pwd}")\nwebserver.start_server()\n`
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["server"], 1);
+  python.pythonGenerator.addImportWithPriority(def["server"], 2);
+  return code;
+}
+
+
+  // --------led en placa---------------------
+  
+  const Led_xrp = {
+    init: function() {
+      this.appendDummyInput('value')
+        .appendField('Led en placa')
+        .appendField(new Blockly.FieldDropdown([
+            ['Encender', 'on'],
+            ['Apagar', 'off']
+          ]), 'NAME');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setTooltip('Maneja el led incorporado en la placa del xrp');
+      this.setHelpUrl('');
+      this.setColour(165);
+    }
+  };
+  Blockly.common.defineBlocks({Led_xrp: Led_xrp});
+                      
+  python.pythonGenerator.forBlock['Led_xrp'] = function(block) {
+    // Agregar el código preámbulo a la lista (se asegura de que sea único)
+    python.pythonGenerator.addImportWithPriority(lib["board"], 1);
+    python.pythonGenerator.addImportWithPriority(def["onboard"], 2);
+    const dropdown_name = block.getFieldValue('NAME');
+    const code = `board.led_${dropdown_name}()\n`;
+    return code;
+  }
+  
+  //---------esperar a boton de placa---------
+  
+  const wait_boton_xrp = {
+    init: function() {
+      this.appendDummyInput('NAME')
+        .appendField('Esperar a botón de placa');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setTooltip('Espera a que el botón del xrp sea presionado');
+      this.setHelpUrl('');
+      this.setColour(165);
+    }
+  };
+  Blockly.common.defineBlocks({wait_boton_xrp: wait_boton_xrp});
+  
+  python.pythonGenerator.forBlock['wait_boton_xrp'] = function() {
+    python.pythonGenerator.addImportWithPriority(lib["board"], 1);
+    python.pythonGenerator.addImportWithPriority(def["onboard"], 2);
+    const code = 'board.wait_for_button()\n';
+    return code;
+  }
+  
+  //--------leer boton de xrp-----------------
+  
+  const b_xrp = {
+    init: function() {
+      this.appendDummyInput('titutlo')
+        .appendField('Botón de placa');
+      this.setOutput(true, 'Boolean');
+      this.setTooltip('Valor booleano del botón ubicado en la placa del xrp');
+      this.setHelpUrl('');
+      this.setColour(165);
+    }
+  };
+  Blockly.common.defineBlocks({b_xrp: b_xrp});
+  
+  python.pythonGenerator.forBlock['b_xrp'] = function() {
+    python.pythonGenerator.addImportWithPriority(lib["board"], 1);
+    python.pythonGenerator.addImportWithPriority(def["onboard"], 2);
+    const code = 'board.is_button_pressed()';
+    return [code, python.Order.NONE];
+  }
+  
+  
+  //--------sensor de distancia---------------
+  
+  const distancia = {
+    init: function() {
+      this.appendDummyInput('titulo')
+        .appendField('Sensor de distancia');
+      this.setOutput(true, 'Number');
+      this.setTooltip('Muestra la distancia medida por el sensor ultrasónico conectado al xrp ');
+      this.setHelpUrl('');
+      this.setColour(165);
+    }
+  };
+  Blockly.common.defineBlocks({distancia: distancia});
+                      
+  python.pythonGenerator.forBlock['distancia'] = function() {
+    python.pythonGenerator.addImportWithPriority(lib["distance"], 1);
+    python.pythonGenerator.addImportWithPriority(def["distance"], 2);
+    const code = 'rangefinder.distance()';
+    return [code, python.Order.NONE];
+  }
+
+    //--------voltaje bateria---------------
+  
+    const Voltaje = {
+      init: function() {
+        this.appendDummyInput('titulo')
+          .appendField('Voltaje de bateria');
+        this.setOutput(true, 'Number');
+        this.setTooltip('Muestra el voltaje de las baterias');
+        this.setHelpUrl('');
+        this.setColour(165);
+      }
+    };
+    Blockly.common.defineBlocks({Voltaje: Voltaje});
+                        
+    python.pythonGenerator.forBlock['Voltaje'] = function() {
+      python.pythonGenerator.addImportWithPriority(lib["pin"], 1);
+      python.pythonGenerator.addImportWithPriority(lib["adc"], 1);
+      python.pythonGenerator.addImportWithPriority(lib["math"], 1);
+      const code = '(ADC(Pin(\'BOARD_VIN_MEASURE\')).read_u16())/(1024*64/14)';
+      return [code, python.Order.NONE];
+    }
+  
+  //-----------sigue lineas------------------
+  const sigue_linea = {
+    init: function() {
+      this.appendDummyInput('titulo')
+        .appendField('Seguidor de lineas')
+        .appendField(new Blockly.FieldDropdown([
+            ['Izquierdo', 'left'],
+            ['Derecho', 'right']
+          ]), 'ubicacion');
+          this.setOutput(true, 'Number');
+      this.setTooltip('Valor booleano del sensor sigue líneas');
+      this.setHelpUrl('');
+      this.setColour(165);
+    }
+  };
+  Blockly.common.defineBlocks({sigue_linea: sigue_linea});
+                      
+  python.pythonGenerator.forBlock['sigue_linea'] = function(block) {
+    python.pythonGenerator.addImportWithPriority(lib["siguelinea"], 1);
+    python.pythonGenerator.addImportWithPriority(def["siguelineas"], 2);
+    const ubicacion = block.getFieldValue('ubicacion');
+    const code = `reflectance.get_${ubicacion}()`;
+    return [code, python.Order.NONE];
+  }
+  
+  // ----------giroscopio--------------------
+  const giroscopio = {
+    init: function() {
+      this.appendDummyInput('NAME')
+        .appendField('Giroscopio')
+        .appendField(new Blockly.FieldDropdown([
+            ['Yaw', 'yaw'],
+            ['Pitch', 'pitch'],
+            ['Roll', 'roll']
+          ]), 'NAME');
+      this.setOutput(true, 'Number');
+      this.setTooltip('Angulo de giro en cada eje, la posición se establece en 0 al momento de encender.');
+      this.setHelpUrl('');
+      this.setColour(165);
+    }
+  };
+  Blockly.common.defineBlocks({giroscopio: giroscopio});
+                      
+  python.pythonGenerator.forBlock['giroscopio'] = function(block) {
+    python.pythonGenerator.addImportWithPriority(lib["gyro"], 1);
+    python.pythonGenerator.addImportWithPriority(def["gyro"], 2);
+    const name = block.getFieldValue('NAME');
+    python.pythonGenerator.addImportWithPriority(`imu.reset_${name}()`, 3);
+    const code = `imu.get_${name}()`;
+    return [code, python.Order.NONE];
+  }
+
+  //-----------comentario--------------
+const comentario = {
+  init: function() {
+    this.appendDummyInput('n')
+      .appendField('Comentario: ')
+      .appendField(new Blockly.FieldTextInput('Escriba aqui'), 'NAME');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Comentario sin función alguna');
+    this.setHelpUrl('');
+    this.setColour(180);
+  }
+};
+Blockly.common.defineBlocks({comentario: comentario});
+              
+python.pythonGenerator.forBlock['comentario'] = function(block) {
+  const text_name = block.getFieldValue('NAME');
+
+  // TODO: Assemble python into the code variable.
+  const code = '';
+  return code;
+}
+  
+  //--------------esperar--------------------
+const delay_seconds = {
+  init: function() {
+    this.appendValueInput('val')
+    .setCheck('Number')
+      .appendField('Esperar');
+    this.appendDummyInput('NAME')
+      .appendField('Segundos');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Detiene el programa por la cantidad de segundos establecida.');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({delay_seconds: delay_seconds});
+                    
+python.pythonGenerator.forBlock['delay_seconds'] = function(block) {
+  // Agregar el código preámbulo a la lista (se asegura de que sea único)
+  python.pythonGenerator.addImportWithPriority(lib["tiempo"],1);
+  const time_value = Blockly.Python.valueToCode(block, 'val', python.Order.ATOMIC);
+  const code = `time.sleep(${time_value})\n`;
+  return code;
+}
+
+//-------------------esperar hasta ----------------------------------
+Blockly.Blocks['esperar_hasta'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck("Boolean")
+        .appendField("Esperar hasta: ");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(60);
+ this.setTooltip("Espera hasta que se cumpla la condición, tiene un tiempo de espera 0.01s entre cada revisión de la condición. ");
+ this.setHelpUrl("");
+  }
+};
+
+python.pythonGenerator.forBlock['esperar_hasta'] = function(block, generator) {
+  python.pythonGenerator.addImportWithPriority(lib["tiempo"],1);
+  const condicion = Blockly.Python.valueToCode(block, 'NAME', python.Order.ATOMIC);
+  // TODO: Assemble python into code variable.
+  var code = `while not (${condicion}):\n`;
+  code = code + "  time.sleep(0.01)\n";
+  return code;
+};
+
+//----------------------iniciar pestolink----------------------------
+
+Blockly.Blocks['pestolink_start'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Iniciar Pesto link");
+    this.appendValueInput("NAME")
+        .setCheck("String")
+        .appendField("Nombre: ");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(240);
+ this.setTooltip("'Solo se debe usar una vez'. Inicia la comunicación bluetooth con el nombre indicado");
+ this.setHelpUrl("");
+  }
+};
+
+python.pythonGenerator.forBlock['pestolink_start'] = function(block, generator) {
+  python.pythonGenerator.addImportWithPriority(lib["pin"],1);
+  python.pythonGenerator.addImportWithPriority(lib["bt"],1);
+  python.pythonGenerator.addImportWithPriority(lib["tiempo"],1);
+  python.pythonGenerator.addImportWithPriority(lib["math"],1);
+  python.pythonGenerator.addImportWithPriority(def["pestolink"], 2);
+  var value_name = generator.valueToCode(block, 'NAME', python.Order.ATOMIC);
+  // TODO: Assemble python into code variable.
+  var code = `pestolink = PestoLinkAgent(${value_name})\n`;
+  return code;
+};
+
+//----------------------pestolink conectado-------------------------
+Blockly.Blocks['pl_conected'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("¿Esta PestoLink Conectado?");
+    this.setOutput(true, "Boolean");
+    this.setColour(240);
+ this.setTooltip("Devuelve verdadero si PestoLink tiene una conexión activa");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['pl_conected'] = function(block, generator) {
+  var code = 'pestolink.is_connected()';
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+
+//----------------------joystickX-----------------------------
+Blockly.Blocks['joy1'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("JoyStickX");
+    this.setOutput(true, "Number");
+    this.setColour(240);
+ this.setTooltip("Regresa el valor del JoyStick X");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['joy1'] = function(block, generator) {
+  // TODO: Assemble python into code variable.
+  const code = 'pestolink.get_axis(0)';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+
+//----------------------joystickY-----------------------------
+Blockly.Blocks['joy2'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("JoyStickY");
+    this.setOutput(true, "Number");
+    this.setColour(240);
+ this.setTooltip("Regresa el valor del JoyStick Y");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['joy2'] = function(block, generator) {
+  // TODO: Assemble python into code variable.
+  const code = '-1*pestolink.get_axis(1)';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+//-------------------boton 0--------------------------
+Blockly.Blocks['B0'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Boton 0 ¿Esta presionado?");
+    this.setOutput(true, "Boolean");
+    this.setColour(240);
+ this.setTooltip("regresa true si el boton esta presionado");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['B0'] = function(block, generator) {
+  // TODO: Assemble python into code variable.
+  const code = 'pestolink.get_button(0)';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+
+//-------------------boton 1--------------------------
+Blockly.Blocks['B1'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Boton 1 ¿Esta presionado?");
+    this.setOutput(true, "Boolean");
+    this.setColour(240);
+ this.setTooltip("regresa true si el boton esta presionado");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['B1'] = function(block, generator) {
+  // TODO: Assemble python into code variable.
+  const code = 'pestolink.get_button(1)';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+
+//-------------------boton 2--------------------------
+Blockly.Blocks['B2'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Boton 2 ¿Esta presionado?");
+    this.setOutput(true, "Boolean");
+    this.setColour(240);
+ this.setTooltip("regresa true si el boton esta presionado");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['B2'] = function(block, generator) {
+  // TODO: Assemble python into code variable.
+  const code = 'pestolink.get_button(2)';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+
+//-------------------boton 3--------------------------
+Blockly.Blocks['B3'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Boton 3 ¿Esta presionado?");
+    this.setOutput(true, "Boolean");
+    this.setColour(240);
+ this.setTooltip("regresa true si el boton esta presionado");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['B3'] = function(block, generator) {
+  // TODO: Assemble python into code variable.
+  const code = 'pestolink.get_button(3)';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Python.ORDER_ATOMIC]; // Usa ORDER_ATOMIC para asegurar que se use en una condición
+};
+//------------------telemetria----------
+Blockly.Blocks['mostrar_link'] = {
+  init: function() {
+    this.appendValueInput("valor")
+        .setCheck("Number")
+        .appendField("Mostrar voltaje: ");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(240);
+ this.setTooltip("Muestra el valor en PestoLink");
+ this.setHelpUrl("");
+  }
+};
+python.pythonGenerator.forBlock['mostrar_link'] = function(block, generator) {
+  var value_valor = generator.valueToCode(block, 'valor', python.Order.ATOMIC);
+  // TODO: Assemble python into code variable.
+  var code = `pestolink.telemetryPrintBatteryVoltage(${value_valor})\n`;
+  return code;
+};
+
+//-----------------------------configurar wifi----------------
+
+const wifi_confi = {
+  init: function() {
+    this.appendDummyInput('bloque')
+      .appendField('Iniciar servidor wifi')
+      .appendField('Nombre:')
+      .appendField(new Blockly.FieldTextInput('XRP_Server'), 'name')
+      .appendField('Clave:')
+      .appendField(new Blockly.FieldTextInput('12345678', validarClave), 'pass')
+      .appendField('Dispositivo:')
+      .appendField(new Blockly.FieldDropdown([
+          ['PC', '0'],
+          ['Teléfono', '1']
+        ]), 'dvs');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Configura el nombre y contraseña de la red wifi, se debe decidir el dispositivo para el tipo de activación.');
+    this.setHelpUrl('');
+    this.setColour(180);
+  }
+};
+Blockly.common.defineBlocks({wifi_confi: wifi_confi});
+                    
+
+// Función de validación para la clave
+function validarClave(text) {
+  return text.length >= 8 ? text : null; // Si es menor a 8 caracteres, no permite el cambio
+}
+
+python.pythonGenerator.forBlock['wifi_confi'] = function(block) {
+  python.pythonGenerator.addImportWithPriority(lib["wifi_gamepad"], 1);
+  python.pythonGenerator.addImportWithPriority(def["wifi_gamepad"], 2);
+  const text_name = block.getFieldValue('name');
+  const text_pass = block.getFieldValue('pass');
+  const dropdown_dvs = block.getFieldValue('dvs');
+
+  // TODO: Assemble python into the code variable.
+  const code = `w_gamepad.start_server('${text_name}','${text_pass}',${dropdown_dvs})\n`;
+  return code;
+}
+
+Blockly.Blocks['wifi_confi'] = wifi_confi;
+
+//--------------------------leer wifi--------------------
+
+const leer = {
+  init: function() {
+    this.appendDummyInput('1')
+      .appendField('1. Esperar hasta recibir mensaje');
+    this.appendDummyInput('NAME')
+      .appendField('2. Leer mensaje');
+    this.setInputsInline(false)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Espera hasta que recibe un mensaje, si no se usa no se actualizaran los mensajes');
+    this.setHelpUrl('');
+    this.setColour(180);
+  }
+};
+Blockly.common.defineBlocks({leer: leer});
+                    
+python.pythonGenerator.forBlock['leer'] = function(block) {
+
+  // TODO: Assemble python into the code variable.
+  const code = 'w_gamepad.read()\n';
+  return code;
+}
+
+//------------------funcion----------------------
+const hace = {
+  init: function() {
+    this.appendDummyInput('accion')
+      .appendField('Botón:')
+      .appendField(new Blockly.FieldDropdown([
+          ['LEFT', 'l'],
+          ['RIGHT', 'r'],
+          ['ARROW_UP', 'up'],
+          ['ARROW_LEFT', 'left'],
+          ['ARROW_DOWN', 'down'],
+          ['ARROW_RIGHT', 'right'],
+          ['Y', 'y'],
+          ['X', 'x'],
+          ['A', 'a'],
+          ['B', 'b'],
+          ['SELECT', 'select'],
+          ['START', 'start'],
+          ['HOME', 'home'],
+          ['F1', 'f1'],
+          ['F2', 'f2'],
+          ['F3', 'f3'],
+          ['F4', 'f4']
+        ]), 'btn')
+      .appendField('Acción:')
+      .appendField(new Blockly.FieldDropdown([
+          ['Presionar', 'P'],
+          ['Soltar', 'R']
+        ]), 'action');
+    this.appendStatementInput('NAME');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Ejecuta bloque si el mensaje menciona el botón indicado y la acción indicada');
+    this.setHelpUrl('');
+    this.setColour(180);
+  }
+};
+Blockly.common.defineBlocks({hace: hace});
+                    
+python.pythonGenerator.forBlock['hace'] = function(block,generator) {
+  const dropdown_btn = block.getFieldValue('btn');
+  const dropdown_action = block.getFieldValue('action');
+
+  let statement_name = generator.statementToCode(block, 'NAME');
+
+  if (!statement_name.trim()) { 
+    statement_name = '  pass'; // Si está vacío, agrega 'pass'
+  }
+
+  // TODO: Assemble python into the code variable.
+  const code = `if w_gamepad.see_action('/${dropdown_action}${dropdown_btn}'):\n${statement_name}\n`;
+  return code;
+}
