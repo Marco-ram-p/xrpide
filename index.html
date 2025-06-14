@@ -1,0 +1,577 @@
+<html>
+<head>
+  <title>XRP IDE</title>
+  <script src="js/block1.js"></script>
+  <script src="js/block2.js"></script>
+  <script src="js/block3.js"></script>
+  <script src="js/block4.js"></script>
+  <script src="js/block5.js"></script>
+  <script src="js/block6.js"></script>
+  <script src="js/block7.js"></script>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="main-wrapper">
+      <div class="title-bar">
+          <h1>XRP IDE</h1>
+          <div class="menu-bar">
+              <div class="dropdown">
+                  <button class="dropdown-btn">Archivo</button>
+                  <div class="dropdown-content">
+                      <a href="javascript:void(0)" onclick="newBlockCode()" id="new-code-btn">Nuevo código de bloques</a>
+                      <a href="#" onclick="openFromPC()" id="open-pc-btn">Abrir desde PC</a>
+                      <a href="#" onclick="saveToPC()">Guardar en PC</a>
+                      <div class="dropdown-separator"></div>
+                      <a href="#" onclick="saveToRobot()" id="save-robot-btn">Guardar en robot</a>
+                  </div>
+              </div>
+          </div>
+          <input type="text" id="fileName" placeholder="Nombre del archivo" value="Programa1">
+          <div class="menu-bar">
+              <div class="dropdown">
+                  <button class="dropdown-btn">Herramientas</button>
+                  <div class="dropdown-content">
+                      <!--a href="javascript:void(0)" onclick="openVirtualGamepad()">Gamepad virtual</a>
+                      <a href="javascript:void(0)" onclick="openKeyboardControl()">Control por teclado</a>
+                      <a href="javascript:void(0)" onclick="openLibraryManager()" id="update-libraries-btn">Actualizar librerías</a-->
+                      <a href="javascript:void(0)" onclick="openRobotConfig()" id="config-robot-btn">Configurar robot</a>
+                  </div>
+              </div>
+              <div class="dropdown">
+                  <button class="dropdown-btn">Ejemplos</button>
+                  <div class="dropdown-content">
+                      <a href="javascript:void(0)" onclick="loadExample('btpl')">BT PestoLink</a>
+                      <a href="javascript:void(0)" onclick="loadExample('wgpad')">Wifi gamepad</a>
+                  </div>
+              </div>
+          </div>
+          <button class="help-btn" onclick="showHowToUpload()">Como Grabar programa</button>
+      </div>
+
+      <div class="container">
+          <div class="files-panel">
+              <div class="upload-section">
+                  <div class="connection-buttons">
+                      <button id="connectUSBButton" class="connect-btn" onclick="toggleUSBConnection()">
+                          Conectar por USB
+                      </button>
+                      <button id="connectBTButton" class="connect-btn bluetooth" onclick="toggleBTConnection()" style="visibility: hidden;">
+                          Conectar por Bluetooth
+                      </button>
+                  </div>
+                  <button class="button" onclick="uploadToDevice()">Iniciar programa</button>
+              </div>
+              
+              <div class="files-section">
+                  <h3 style="font-size: 14px;">Programas guardados</h3>
+                  <div class="memory-bar">
+                      <div class="memory-fill" id="memoryFill"></div>
+                  </div>
+                  <div class="memory-text" id="memoryText">0 KB / 2048 KB</div>
+                  <div id="fileList"></div>
+              </div>
+          </div>
+
+          <div class="right-panel">
+              <div class="view-toggle">
+                  <label>
+                      <input type="radio" name="view" value="blocks" checked onclick="toggleView('blocks')"> Ver Bloques
+                  </label>
+                  <label>
+                      <input type="radio" name="view" value="code" onclick="toggleView('code')"> Ver Código
+                  </label>
+              </div>
+              <div id="blocklyDiv"></div>
+              <div id="codeOutput" style="display: none; height: calc(100% - 120px); border: 1px solid #ccc; background: white;"></div>
+              
+              <div style="margin-top: 10px">
+                  <div class="terminal-header">
+                      <button class="button" onclick="clearTerminal()">
+                          Limpiar Terminal
+                      </button>
+                  </div>
+                  <div id="terminal">
+                      > Terminal lista para mostrar mensajes...
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+  <div class="device-selection-modal">
+    <div class="modal-content">
+      <h3>Seleccionar Dispositivo</h3>
+      <div id="deviceList"></div>
+      <div class="modal-buttons">
+        <button class="button" onclick="cancelDeviceSelection()">Cancelar</button>
+        <button class="button" onclick="confirmDeviceSelection()">Continuar</button>
+      </div>
+    </div>
+  </div>
+  <div class="gamepad-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Gamepad Virtual</h3>
+        <div>
+          <button class="theme-btn" onclick="toggleTheme()">🌓</button>
+          <button class="fullscreen-btn" onclick="toggleFullscreen()">⛶</button>
+          <button class="close-btn" onclick="closeVirtualGamepad()">&times;</button>
+        </div>
+      </div>
+      <div class="gamepad-container">
+        <div class="xbox-controller">
+          <div class="buttons-container">
+            <div class="left-side">
+              <div class="dpad">
+                <button class="dpad-up">▲</button>
+                <button class="dpad-right">▶</button>
+                <button class="dpad-down">▼</button>
+                <button class="dpad-left">◀</button>
+                <div class="dpad-center"></div>
+              </div>
+            </div>
+            <div class="right-side">
+              <div class="action-buttons">
+                <button class="btn-y">Y</button>
+                <button class="btn-x">X</button>
+                <button class="btn-b">B</button>
+                <button class="btn-a">A</button>
+              </div>
+            </div>
+          </div>
+          <div class="gamepad-display">Gamepad listo</div>
+          <div class="joysticks-container">
+            <div class="joystick-container">
+              <div class="joystick-border"></div>
+              <div class="joystick" id="joystickLeft"></div>
+            </div>
+            <div class="joystick-container">
+              <div class="joystick-border"></div>
+              <div class="joystick" id="joystickRight"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="keyboard-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Control por Teclado</h3>
+        <div>
+          <button class="fullscreen-btn" onclick="toggleKeyboardFullscreen()">⛶</button>
+          <button class="close-btn" onclick="closeKeyboardModal()">&times;</button>
+        </div>
+      </div>
+      <div class="keyboard-display">
+        <div class="key-info">Presiona cualquier tecla...</div>
+        <div class="last-key">
+          <span class="key-label">Última tecla:</span>
+          <span class="key-value">Ninguna</span>
+        </div>
+        <div class="key-code">
+          <span class="key-label">Código de tecla:</span>
+          <span class="key-value">-</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="library-modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeLibraryModal()">&times;</button>
+        <div class="modal-header">
+            <h3>Administrador de Librerías</h3>
+            <button class="close-btn" onclick="closeLibraryModal()">&times;</button>
+        </div>
+        <div class="library-list">
+            <!-- Libraries will be populated here -->
+        </div>
+    </div>
+  </div>
+  <div class="help-modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeHelpModal()">&times;</button>
+        <div class="modal-header">
+            <h3>Cómo Grabar un Programa</h3>
+        </div>
+        <div class="modal-body">
+            <ol>
+                <li>Conecta tu dispositivo usando el botón "Conectar por USB".</li>
+                <li>Espera a ver una luz parpadeante.</li>
+                <li>si no vez la luz manten presionado el boton de usuario y presiona reset.</li>
+                <li>Presiona el botón "Iniciar programa" para grabar y ejecutar tu código en el dispositivo.</li>
+                <li>Espera a que el proceso de carga termine. Verás los mensajes de progreso en el terminal.</li>
+            </ol>
+            <p>Nota: Asegúrate de que tu dispositivo esté correctamente conectado antes de intentar grabar el programa.</p>
+        </div>
+    </div>
+  </div>
+  <div class="robot-config-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Configuración del Robot</h3>
+            <button class="close-btn" onclick="closeRobotConfig()">&times;</button>
+        </div>
+        <div class="config-options">
+            <div class="config-section">
+              <h4>Método de arranque:</h4>
+              <div class="startup-options">
+                  <label class="config-option">
+                      <input type="radio" name="startup" value="auto" checked>
+                      <span class="option-text">
+                          <strong>Autoarranque</strong>
+                          <span class="description">El programa inicia automáticamente al encender</span>
+                      </span>
+                  </label>
+                  <label class="config-option">
+                      <input type="radio" name="startup" value="button">
+                      <span class="option-text">
+                          <strong>Botón de usuario</strong>
+                          <span class="description">El programa inicia al presionar el botón de usuario</span>
+                      </span>
+                  </label>
+                  <label class="config-option">
+                      <input type="radio" name="startup" value="pc">
+                      <span class="option-text">
+                          <strong>Solo desde PC</strong>
+                          <span class="description">El programa solo inicia desde la computadora</span>
+                      </span>
+                  </label>
+              </div>
+            </div>
+
+            <!--div class="config-section">
+              <h4>Configuración Bluetooth:</h4>
+              <div class="bt-config">
+                <div class="bt-toggle">
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="btEnabled" onchange="toggleBluetooth(this.checked)">
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span>Activar Bluetooth</span>
+                </div>
+                <div class="bt-name">
+                  <span>Nombre del dispositivo:</span>
+                  <input type="text" id="btName" placeholder="XRP Robot" maxlength="20" onchange="updateBluetoothName(this.value)">
+                </div>
+              </div>
+            </div-->
+
+            <div class="config-actions">
+                <button class="button" style="background: #666;" onclick="closeRobotConfig()">Cancelar</button>
+                <button class="button" onclick="saveRobotConfig()">Guardar configuración</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+   <xml id="toolbox" style="display: none">
+    <category name="XRP Sensores" colour="165">
+      <block type="Voltaje"></block>
+      <block type="distancia"></block>
+      <block type="sigue_linea"></block>
+      <block type="giroscopio"></block>
+      <block type="b_xrp"></block>
+      <block type="Led_xrp"></block>
+      <block type="wait_boton_xrp"></block>
+    </category>
+    <category name="XRP Motores" colour="15">
+      <block type="servo_onboard">
+        <value name="val">
+          <shadow type="math_number">
+            <field name="NUM">90</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="motor_var"></block>
+      <block type="motor_esfuerzo">
+        <value name="esfuerzo">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="motor_velocidad">
+        <value name="velocidad">
+          <shadow type="math_number">
+            <field name="NUM">60</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="motor_reversa"></block>
+      <block type="reset_encoder"></block>
+    </category>
+    <category name="Tren de conducción" colour="20">
+      <block type="avanzar">
+        <value name="distancia">
+          <shadow type="math_number">
+            <field name="NUM">20</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+        <value name="esfuerzo">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="girar">
+        <value name="grados">
+          <shadow type="math_number">
+            <field name="NUM">90</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+        <value name="esfuerzo">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="set_effort">
+        <value name="izq">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+        <value name="der">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="set_speed">
+        <value name="izq">
+          <shadow type="math_number">
+            <field name="NUM">5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+        <value name="der">
+          <shadow type="math_number">
+            <field name="NUM">5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="avanzar_giro">
+        <value name="vel">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+        <value name="dir">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="stop_motor"></block>
+      <block type="reset_encoders"></block>
+      <block type="encoder"></block>
+    </category>
+    <category name="Control" colour="60">
+      <block type="comentario"></block>
+      <block type="delay_seconds">
+        <value name="val">
+          <shadow type="math_number">
+            <field name="NUM">0.5</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="esperar_hasta">
+        <value name="NAME">
+          <shadow type="logic_boolean">
+            <field name="BOOL">TRUE</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+    </category>
+    <category name="BT PestoLink" colour="240">
+      <block type="pestolink_start">
+        <value name="NAME">
+          <shadow type="text">
+            <field name="TEXT">MiRobot</field>
+          </shadow>
+        </value>
+      </block>
+      <block type="pl_conected"></block>
+      <block type="mostrar_link">
+        <value name="valor">
+          <shadow type="math_number">
+            <field name="NUM">5.1</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+      <block type="joy1"></block>
+      <block type="joy2"></block>
+      <block type="B0"></block>
+      <block type="B1"></block>
+      <block type="B2"></block>
+      <block type="B3"></block>
+    </category>
+    <category name="Wifi Gamepad" colour="180">
+      <block type="wifi_confi"></block>
+      <block type="leer"></block>
+      <block type="hace"></block>
+    </category>
+    <!--category name="Web server" colour="190">
+      <block type="xrp_ws_forward_button"></block>
+      <block type="xrp_ws_back_button"></block>
+      <block type="xrp_ws_left_button"></block>
+      <block type="xrp_ws_right_button"></block>
+      <block type="xrp_ws_stop_button"></block>
+      <block type="xrp_ws_add_button"></block>
+      <block type="xrp_ws_log_data">
+        <value name="log_name">
+          <shadow type="text">
+            <field name="TEXT"></field> 
+          </shadow>
+        </value>
+      </block>
+      <block type="xrp_ws_start_server">
+        <value name="server_ssid">
+          <shadow type="text">
+            <field name="TEXT">xrp_1</field>
+          </shadow>
+        </value>
+        <value name="server_pwd">
+          <shadow type="text">
+            <field name="TEXT"></field> 
+          </shadow>
+        </value>
+      </block>
+      <block type="xrp_ws_connect_server">
+        <value name="server_ssid">
+          <shadow type="text">
+            <field name="TEXT">xrp_1</field>
+          </shadow>
+        </value>
+        <value name="server_pwd">
+          <shadow type="text">
+            <field name="TEXT"></field> 
+          </shadow>
+        </value>
+      </block>
+    </category-->
+    <category name="L&#xf3;gica" colour="%{BKY_LOGIC_HUE}">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+    </category>
+    <category name="Bucles" colour="%{BKY_LOOPS_HUE}">
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <shadow type="math_number">
+              <field name="NUM">5</field> <!-- Veces por defecto -->
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_whileUntil">
+          <value name="BOOL">
+            <shadow type="logic_boolean">
+              <field name="BOOL">TRUE</field> <!-- Valor por defecto -->
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_for">
+          <value name="FROM">
+            <shadow type="math_number">
+              <field name="NUM">1</field> <!-- Valor inicial por defecto -->
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number">
+              <field name="NUM">10</field> <!-- Valor final por defecto -->
+            </shadow>
+          </value>
+          <value name="BY">
+            <shadow type="math_number">
+              <field name="NUM">1</field> <!-- Incremento por defecto -->
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_forEach"></block>
+        <block type="controls_flow_statements"></block>
+    </category>
+    <category name="Matem&#xe1;ticas" colour="%{BKY_MATH_HUE}">
+        <block type="math_number"></block>
+        <block type="math_arithmetic">
+          <value name="A">
+            <shadow type="math_number">
+              <field name="NUM">0</field> <!-- Valor por defecto -->
+            </shadow>
+          </value>
+          <value name="B">
+            <shadow type="math_number">
+              <field name="NUM">0</field> <!-- Valor por defecto -->
+            </shadow>
+          </value>
+        </block>
+        <block type="math_single"></block>
+        <block type="math_trig"></block>
+        <block type="math_constant"></block>
+        <block type="math_number_property"></block>
+        <block type="math_round"></block>
+        <block type="math_on_list"></block>
+        <block type="math_modulo"></block>
+        <block type="math_constrain"></block>
+        <block type="math_random_int"></block>
+        <block type="math_random_float"></block>
+    </category>
+    <category name="Texto" colour="%{BKY_TEXTS_HUE}">
+      <block type="text_print">
+        <value name="TEXT">
+          <shadow type="text">
+            <field name="TEXT">Hola, mundo!</field> <!-- Valor por defecto -->
+          </shadow>
+        </value>
+      </block>
+        <block type="text"></block>
+        <block type="text_join"></block>
+        <block type="text_append"></block>
+        <block type="text_length"></block>
+        <block type="text_isEmpty"></block>
+        <block type="text_indexOf"></block>
+        <block type="text_charAt"></block>
+        <block type="text_getSubstring"></block>
+        <block type="text_changeCase"></block>
+        <block type="text_trim"></block>    
+    </category>
+    <category name="Listas" colour="%{BKY_LISTS_HUE}">
+        <block type="lists_create_empty"></block>
+        <block type="lists_create_with"></block>
+        <block type="lists_repeat">
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">3</field> <!-- Número de repeticiones predeterminado -->
+            </shadow>
+          </value>
+        </block>
+        <block type="lists_length"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_indexOf"></block>
+        <block type="lists_getIndex"></block>
+        <block type="lists_setIndex"></block>
+        <block type="lists_getSublist"></block>
+        <block type="lists_sort"></block>
+    </category>
+    <category name="Color" colour="%{BKY_COLOUR_HUE}">
+        
+    </category>
+    <category name="Variables" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
+    </category>
+    <category name="Funciones" custom="PROCEDURE" colour="%{BKY_PROCEDURES_HUE}">
+    </category>
+  </xml>
+
+<script src="js/main.js"></script>
+<script src="js/preambulos.js"></script>
+<script src="js/blocks.js"></script>
+<script src="js/librerias.js"></script>
+<script src="js/conexion.js"></script>
+</body>
+</html>
