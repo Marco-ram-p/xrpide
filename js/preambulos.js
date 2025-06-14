@@ -1,1 +1,122 @@
-const a0_0x29a618=a0_0x90e0;(function(_0x1c4d22,_0xc54122){const _0x24ef70=a0_0x90e0,_0x3e6268=_0x1c4d22();while(!![]){try{const _0x104d43=-parseInt(_0x24ef70(0x194))/0x1+-parseInt(_0x24ef70(0x1aa))/0x2*(parseInt(_0x24ef70(0x1e1))/0x3)+-parseInt(_0x24ef70(0x1b5))/0x4+-parseInt(_0x24ef70(0x1d0))/0x5+-parseInt(_0x24ef70(0x1a0))/0x6*(-parseInt(_0x24ef70(0x207))/0x7)+parseInt(_0x24ef70(0x191))/0x8*(parseInt(_0x24ef70(0x1e4))/0x9)+-parseInt(_0x24ef70(0x1bd))/0xa*(-parseInt(_0x24ef70(0x19b))/0xb);if(_0x104d43===_0xc54122)break;else _0x3e6268['push'](_0x3e6268['shift']());}catch(_0x149296){_0x3e6268['push'](_0x3e6268['shift']());}}}(a0_0x4edf,0x8e528));function a0_0x90e0(_0x255280,_0x317ca6){const _0x3e4180=a0_0x4edf();return a0_0x90e0=function(_0x433f72,_0x404a43){_0x433f72=_0x433f72-0x18d;let _0x4edf87=_0x3e4180[_0x433f72];if(a0_0x90e0['gtPXOh']===undefined){var _0x90e0a1=function(_0x75391d){const _0x11ca3c='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x2354e6='',_0x4374df='',_0x1a6289=_0x2354e6+_0x90e0a1;for(let _0x14398d=0x0,_0x52750b,_0x1be1a7,_0x2615fa=0x0;_0x1be1a7=_0x75391d['charAt'](_0x2615fa++);~_0x1be1a7&&(_0x52750b=_0x14398d%0x4?_0x52750b*0x40+_0x1be1a7:_0x1be1a7,_0x14398d++%0x4)?_0x2354e6+=_0x1a6289['charCodeAt'](_0x2615fa+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x52750b>>(-0x2*_0x14398d&0x6)):_0x14398d:0x0){_0x1be1a7=_0x11ca3c['indexOf'](_0x1be1a7);}for(let _0x510083=0x0,_0x289598=_0x2354e6['length'];_0x510083<_0x289598;_0x510083++){_0x4374df+='%'+('00'+_0x2354e6['charCodeAt'](_0x510083)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4374df);};a0_0x90e0['aCskGq']=_0x90e0a1,_0x255280=arguments,a0_0x90e0['gtPXOh']=!![];}const _0x2aeecd=_0x3e4180[0x0],_0x13495c=_0x433f72+_0x2aeecd,_0x253cbc=_0x255280[_0x13495c];if(!_0x253cbc){const _0x610e15=function(_0x1498de){this['Cdjatp']=_0x1498de,this['aTKyOk']=[0x1,0x0,0x0],this['lhydeD']=function(){return'newState';},this['QOHKHe']='\x5cw+\x20*\x5c(\x5c)\x20*{\x5cw+\x20*',this['AtkOvJ']='[\x27|\x22].+[\x27|\x22];?\x20*}';};_0x610e15['prototype']['IRjZsK']=function(){const _0x2171a2=new RegExp(this['QOHKHe']+this['AtkOvJ']),_0x1b2a43=_0x2171a2['test'](this['lhydeD']['toString']())?--this['aTKyOk'][0x1]:--this['aTKyOk'][0x0];return this['SPPoML'](_0x1b2a43);},_0x610e15['prototype']['SPPoML']=function(_0x382461){if(!Boolean(~_0x382461))return _0x382461;return this['bDyuye'](this['Cdjatp']);},_0x610e15['prototype']['bDyuye']=function(_0x359c2e){for(let _0x5f3848=0x0,_0x1dca50=this['aTKyOk']['length'];_0x5f3848<_0x1dca50;_0x5f3848++){this['aTKyOk']['push'](Math['round'](Math['random']())),_0x1dca50=this['aTKyOk']['length'];}return _0x359c2e(this['aTKyOk'][0x0]);},new _0x610e15(a0_0x90e0)['IRjZsK'](),_0x4edf87=a0_0x90e0['aCskGq'](_0x4edf87),_0x255280[_0x13495c]=_0x4edf87;}else _0x4edf87=_0x253cbc;return _0x4edf87;},a0_0x90e0(_0x255280,_0x317ca6);}const a0_0x578f64=(function(){const _0x538680=a0_0x90e0,_0x456c25={'SoPwX':_0x538680(0x1b7),'ECViB':'dggwX'};let _0x14eda3=!![];return function(_0x3aeec3,_0x38b6b0){const _0x2e0874=_0x538680;if(_0x456c25[_0x2e0874(0x1ab)]!==_0x456c25['ECViB']){const _0x18e47f=_0x14eda3?function(){const _0x3823c2=_0x2e0874;if(_0x38b6b0){const _0x10f0b9=_0x38b6b0[_0x3823c2(0x1bf)](_0x3aeec3,arguments);return _0x38b6b0=null,_0x10f0b9;}}:function(){};return _0x14eda3=![],_0x18e47f;}else this[_0x2e0874(0x1d5)+_0x2e0874(0x18e)]=[];};}()),a0_0x1b9957=a0_0x578f64(this,function(){const _0x4d6fbe=a0_0x90e0,_0x477e64={'anqvI':'(((.+)+)+)'+'+$'};return a0_0x1b9957['toString']()[_0x4d6fbe(0x1a3)](_0x477e64[_0x4d6fbe(0x1f6)])[_0x4d6fbe(0x1c9)]()['constructo'+'r'](a0_0x1b9957)['search'](_0x477e64[_0x4d6fbe(0x1f6)]);});a0_0x1b9957(),python[a0_0x29a618(0x1f5)+a0_0x29a618(0x205)]['importsWit'+'hPriority']=python[a0_0x29a618(0x1f5)+'rator'][a0_0x29a618(0x1d5)+'hPriority']||[],python[a0_0x29a618(0x1f5)+'rator'][a0_0x29a618(0x1d7)+'ithPriorit'+'y']=function(_0x345e19,_0x56e010){const _0x4a619f=a0_0x29a618,_0x45f04={'RMwvy':function(_0x264303,_0x168a2e){return _0x264303!==_0x168a2e;},'EwjSZ':'QamRA'},_0x41dd5b=this[_0x4a619f(0x1d5)+_0x4a619f(0x18e)]['some'](_0x449986=>_0x449986[_0x4a619f(0x202)]===_0x345e19);!_0x41dd5b&&(_0x45f04[_0x4a619f(0x204)](_0x45f04[_0x4a619f(0x1e5)],_0x45f04['EwjSZ'])?this['importsWit'+_0x4a619f(0x18e)][_0x4a619f(0x1e9)]({'importCode':_0x1af157,'priority':_0x80cd5e}):this[_0x4a619f(0x1d5)+_0x4a619f(0x18e)]['push']({'importCode':_0x345e19,'priority':_0x56e010}));},python[a0_0x29a618(0x1f5)+a0_0x29a618(0x205)][a0_0x29a618(0x1fc)+'ts']=function(){const _0x2ebb6c=a0_0x29a618;this[_0x2ebb6c(0x1d5)+_0x2ebb6c(0x18e)]=[];},python[a0_0x29a618(0x1f5)+a0_0x29a618(0x205)]['generateCo'+'deWithImpo'+a0_0x29a618(0x1e7)]=function(_0x4f4201){const _0x2721a0=a0_0x29a618;this[_0x2721a0(0x1fc)+'ts']();const _0x1bb9e2=Blockly[_0x2721a0(0x1ee)]['blocklyWor'+'kspaceToCo'+'de'](_0x4f4201);this[_0x2721a0(0x1d5)+_0x2721a0(0x18e)][_0x2721a0(0x1f1)]((_0x49800d,_0x501e80)=>_0x49800d[_0x2721a0(0x1b4)]-_0x501e80['priority']);const _0x28458c=this[_0x2721a0(0x1d5)+_0x2721a0(0x18e)][_0x2721a0(0x1af)](_0x31b88d=>_0x31b88d[_0x2721a0(0x202)])[_0x2721a0(0x19f)]('\x0a');return _0x28458c+'\x0a\x0a'+_0x1bb9e2;},Blockly[a0_0x29a618(0x1ee)][a0_0x29a618(0x198)+a0_0x29a618(0x1c0)+'de']=Blockly[a0_0x29a618(0x1ee)][a0_0x29a618(0x1e3)+a0_0x29a618(0x1b1)],Blockly[a0_0x29a618(0x1ee)][a0_0x29a618(0x1e3)+'oCode']=function(_0x2dd608){const _0x26db16=a0_0x29a618;return python[_0x26db16(0x1f5)+'rator'][_0x26db16(0x1fe)+'deWithImpo'+_0x26db16(0x1e7)](_0x2dd608);};const a0_0x218f08={'board':a0_0x29a618(0x1a2)+a0_0x29a618(0x1b2)+a0_0x29a618(0x1c2),'servo':'from\x20XRPLi'+a0_0x29a618(0x1ec)+a0_0x29a618(0x19c),'distance':'from\x20XRPLi'+a0_0x29a618(0x1d1)+'der\x20import'+a0_0x29a618(0x195)+'er','siguelinea':a0_0x29a618(0x1a2)+a0_0x29a618(0x19a)+a0_0x29a618(0x1a5)+'\x20Reflectan'+'ce','tiempo':a0_0x29a618(0x1a1)+'e','gyro':'from\x20XRPLi'+a0_0x29a618(0x1ce)+a0_0x29a618(0x1f2),'motor':a0_0x29a618(0x1a2)+a0_0x29a618(0x1e0)+'motor\x20impo'+a0_0x29a618(0x1ae)+a0_0x29a618(0x190),'pulsadores_shield':a0_0x29a618(0x1c1)+a0_0x29a618(0x1b3)+'rt\x20Externa'+a0_0x29a618(0x19d),'avanzar':a0_0x29a618(0x1a2)+a0_0x29a618(0x1cb)+a0_0x29a618(0x1bb)+a0_0x29a618(0x1fa)+a0_0x29a618(0x199)+a0_0x29a618(0x193),'server':a0_0x29a618(0x1a2)+a0_0x29a618(0x196)+'r\x20import\x20W'+a0_0x29a618(0x1f8),'pin':a0_0x29a618(0x1a6)+a0_0x29a618(0x1ca)+a0_0x29a618(0x1d2),'adc':a0_0x29a618(0x1a6)+a0_0x29a618(0x1ca)+a0_0x29a618(0x20c),'bt':a0_0x29a618(0x1f4)+'etooth','math':a0_0x29a618(0x1d4)+'h','wifi_gamepad':a0_0x29a618(0x1c1)+'moLib.Wifi'+a0_0x29a618(0x20b)+a0_0x29a618(0x1e8)},a0_0x10f61a={'onboard':a0_0x29a618(0x1b6)+'ard.get_de'+a0_0x29a618(0x1eb)+'d()','distance':a0_0x29a618(0x1ed)+a0_0x29a618(0x1f3)+a0_0x29a618(0x20a)+a0_0x29a618(0x1cf)+'ngefinder('+')','siguelineas':a0_0x29a618(0x1b0)+a0_0x29a618(0x1bc)+a0_0x29a618(0x1fb)+'default_re'+a0_0x29a618(0x1d8)+')','gyro':'imu\x20=\x20IMU.'+a0_0x29a618(0x1ef)+a0_0x29a618(0x1cd)+a0_0x29a618(0x1c6)+'e(1)','i2c_shield':a0_0x29a618(0x1c5)+'\x20=\x20Externa'+a0_0x29a618(0x1ba),'avanzar':a0_0x29a618(0x1b9)+'alDrive\x20=\x20'+'Differenti'+a0_0x29a618(0x200)+a0_0x29a618(0x1db)+a0_0x29a618(0x1b9)+a0_0x29a618(0x1d6),'server':a0_0x29a618(0x1f0)+a0_0x29a618(0x1be)+a0_0x29a618(0x20e)+a0_0x29a618(0x1a9)+a0_0x29a618(0x1c3),'pestolink':'from\x20XRPLi'+a0_0x29a618(0x1f7)+a0_0x29a618(0x1d9)+a0_0x29a618(0x208)+a0_0x29a618(0x18f)+a0_0x29a618(0x197)+a0_0x29a618(0x206),'wifi_gamepad':a0_0x29a618(0x1c8)+a0_0x29a618(0x1b8)+a0_0x29a618(0x1fd)},a0_0x289d4a={'Formato_orden':a0_0x29a618(0x1e6)+'ormato(tex'+a0_0x29a618(0x1c4)+a0_0x29a618(0x192)+a0_0x29a618(0x1a7)+':\x20int)\x20->\x20'+a0_0x29a618(0x1ff)+'_valor\x20=\x20s'+a0_0x29a618(0x1ea)+a0_0x29a618(0x1ac)+'imos\x20el\x20nú'+'mero\x20en\x20ca'+'dena\x0a\x20\x20if\x20'+a0_0x29a618(0x1e2)+'lor)\x20>\x20dig'+a0_0x29a618(0x1c7)+a0_0x29a618(0x18d)+'=\x20str_valo'+a0_0x29a618(0x1a8)+a0_0x29a618(0x201)+a0_0x29a618(0x1f9)+a0_0x29a618(0x1de)+a0_0x29a618(0x203)+'tidos\x0a\x20\x20el'+a0_0x29a618(0x1dc)+a0_0x29a618(0x1ad)+a0_0x29a618(0x1a4)+a0_0x29a618(0x209)+a0_0x29a618(0x1cc)+a0_0x29a618(0x1dd)+'alor\x20\x20#\x20Re'+a0_0x29a618(0x19e)+a0_0x29a618(0x1d3)+a0_0x29a618(0x1df)+a0_0x29a618(0x20d)+'\x20texto\x20+\x20s'+a0_0x29a618(0x1da)};function a0_0x4edf(){const _0x36c922=['C3rYoGOGihn0CG','ywXeCML2zs5Nzq','xsaGiYbuCNvUyW','Aw1WB3j0q29Kzq','AxrVCYbWzxjTAq','uK13DNK','CMf0B3i','A0fNzw50','mJa4nMPKwhnuCG','zNjVBsbWzxn0BW','AxrVCYaTigXLBG','Aw5KzxiUz2v0xW','igLTCg9YDcb3Aq','qurd','yqOGihjLDhvYBG','CI5NzxrFzgvMyq','C3rYx3zHBg9Yia','AfbYAw9YAxr5','BgLUAYbPBxbVCG','tw90B3i','odbKyLP3Beq','ywXVCJOGzMXVyq','rhjPDMu','nJK5otaWBwPcse5V','ifjHBMDLzMLUza','yI53zwjZzxj2zq','Dcbqzxn0B0XPBG','yMXVy2TSEvDVCG','zMzLCMvUDgLHBa','yI5YzwzSzwn0yq','nduZodi3DK9IzgXf','Cg9YDcbtzxj2BW','BeKYqW','BgXLBMfYignVBG','AM9PBG','mta5otHQu0Dus2q','Aw1WB3j0ihrPBq','zNjVBsbyuLbmAq','C2vHCMnO','iJaIicOGkgrPzW','BMnLigLTCg9YDa','zNjVBsbTywnOAq','DcWGzgLNAxrVCW','CLS6zgLNAxrVCW','DwX0x3DLyNnLCG','ndzTqujfyNG','u29qD1G','icmGq29UDMvYDa','CL92ywXVCIa9ia','CNqGrw5JB2rLza','BwfW','CMvMBgvJDgfUyW','B0nVzgu','yI5IB2fYzcbPBq','Bw9mAwiGAw1WBW','ChjPB3jPDhK','mZmWmJe5mNffAw9kDG','yM9HCMqGpsbcBW','ANzKBwq','psb3AwzPx2DHBq','zgLMzMvYzw50Aq','BeKYqYGP','DgLHBf9KCML2zq','zsa9ifjLzMXLyW','ndKWs2jpvMjW','psbxzwjZzxj2zq','yxbWBhK','A3nWywnLvg9dBW','zNjVBsbgDxnHBa','Cg9YDcbcB2fYza','DMvYkcK','Dg86ihn0CIWGDG','AtjJx3nOAwvSza','Ds5JywXPyNjHDa','AxrVCZOkicaGia','D19Nyw1LCgfKia','Dg9tDhjPBMC','BMuGAw1WB3j0ia','yI5KAwzMzxjLBG','khn0CL92ywXVCG','Df9PBxuOkqPPBq','yI5PBxuGAw1WBW','zgvMyxvSDf9Yyq','mJe2mdG0nuLosfjWDa','yI5Yyw5NzwzPBG','ugLU','ignLCM9ZigeGBa','Aw1WB3j0ig1HDa','Aw1WB3j0C1DPDa','ywXFzhjPDMuOkq','ywrKsw1WB3j0vW','zMXLy3rHBMnLka','igLTCg9YDcaQcG','DhjFDMfSB3i','Df9KzwzHDwX0xW','C2u6cIaGicbZDa','ksKGkYbZDhjFDG','zguGBg9ZigtdRwC','ysbPENf1AwvYza','yI5LBMnVzgvKxW','otiYohfUv3fHwG','BgvUkhn0CL92yq','D29YA3nWywnLva','mZKXndfvq0z3rva','rxDQu1O','cMrLzIbUDw1FzG','CNrZ','zMLFz2fTzxbHza','ChvZAa','DhiODMfSB3iPia','zMf1BhrFyM9HCG','yI5Zzxj2BYbPBq','CMfUz2vMAw5Kzq','uhL0Ag9U','z2v0x2rLzMf1Ba','D2vIC2vYDMvYia','C29YDa','CNqGsu1v','CIa9ifjHBMDLzG','Aw1WB3j0igjSDq','ChL0Ag9Ur2vUzq','yw5XDKK','yI5KzwzHDwX0CW','zwjZzxj2zxi','yxiGC2KGzxHJzq','igLTCg9YDcbeAq','DgfUy2uUz2v0xW','CMvZzxrjBxbVCG','zxbHzcGP','z2vUzxjHDgvdBW'];a0_0x4edf=function(){return _0x36c922;};return a0_0x4edf();}
+
+
+  // ----------- codigos preambulo-------------------------------------------
+
+/*
+  // preanbulos sin prioridad
+  // Crear una lista global para almacenar el código preámbulo
+python.pythonGenerator.imports_ = python.pythonGenerator.imports_ || new Set();
+
+// Crear una nueva función para agregar el código preámbulo
+python.pythonGenerator.generateCodeWithImports = function(workspace) {
+  // Obtener el código generado por los bloques
+  const blocksCode = Blockly.Python.workspaceToCode(workspace);
+
+  // Combinar los imports únicos al inicio con el código de los bloques
+  const importsCode = Array.from(this.imports_).join('\n');
+  return `${importsCode}\n\n${blocksCode}`;
+};
+
+*/
+
+// Crear una lista global para almacenar las importaciones con prioridad
+python.pythonGenerator.importsWithPriority = python.pythonGenerator.importsWithPriority || [];
+
+// Función para agregar una importación con prioridad
+python.pythonGenerator.addImportWithPriority = function(importCode, priority) {
+  // Verificar si ya existe el código de importación
+  const exists = this.importsWithPriority.some(
+    (item) => item.importCode === importCode
+  );
+
+  // Agregarlo si no existe
+  if (!exists) {
+    this.importsWithPriority.push({ importCode, priority });
+  }
+};
+
+// Función para reiniciar las importaciones antes de generar código
+python.pythonGenerator.resetImports = function() {
+  this.importsWithPriority = [];
+};
+
+// Función para generar el código con las importaciones ordenadas por prioridad
+python.pythonGenerator.generateCodeWithImports = function(workspace) {
+  // Reiniciar las importaciones antes de generar código
+  this.resetImports();
+
+  // Obtener el código de los bloques sin recursión
+  const blocksCode = Blockly.Python.blocklyWorkspaceToCode(workspace);
+
+  // Ordenar las importaciones por prioridad (menor número = más alta prioridad)
+  this.importsWithPriority.sort((a, b) => a.priority - b.priority);
+
+  // Combinar las importaciones únicas en el orden correcto
+  const importsCode = this.importsWithPriority
+    .map((item) => item.importCode)
+    .join('\n');
+
+  // Retornar las importaciones seguidas del código generado
+  return `${importsCode}\n\n${blocksCode}`;
+};
+
+// Guardar la función original para evitar recursión
+Blockly.Python.blocklyWorkspaceToCode = Blockly.Python.workspaceToCode;
+
+// Sobrescribir `workspaceToCode` para llamar a la nueva función
+Blockly.Python.workspaceToCode = function(workspace) {
+  return python.pythonGenerator.generateCodeWithImports(workspace);
+};
+
+//--------------------------codigos para importar librerias--------------------------
+const lib = {
+  "board":"from XRPLib.board import Board",
+  "servo":"from XRPLib.servo import Servo",
+  "distance":"from XRPLib.rangefinder import Rangefinder",
+  "siguelinea":"from XRPLib.reflectance import Reflectance",
+  "tiempo":"import time",
+  "gyro":"from XRPLib.imu import IMU",
+  "motor":"from XRPLib.encoded_motor import EncodedMotor",
+  "pulsadores_shield":"from FusalmoLib import ExternalI2C",
+  "avanzar":"from XRPLib.differential_drive import DifferentialDrive",
+  "server":"from XRPLib.webserver import Webserver",
+  "pin":"from machine import Pin",
+  "adc":"from machine import ADC",
+  "bt":"import bluetooth",
+  "math":"import math",
+  "wifi_gamepad":"from FusalmoLib.Wifi import wifi_gamepad" 
+}
+
+// codigos para definiciones y variables
+
+const def = {
+  "onboard":"board = Board.get_default_board()",
+  "distance":"rangefinder = Rangefinder.get_default_rangefinder()",
+  "siguelineas":"reflectance = Reflectance.get_default_reflectance()",
+  "gyro":"imu = IMU.get_default_imu()\nimu.calibrate(1)",
+  "i2c_shield":"i2c_shield = ExternalI2C()",
+  "avanzar":"differentialDrive = DifferentialDrive.get_default_differential_drive()",
+  "server":"webserver = Webserver.get_default_webserver()",
+  "pestolink":"from XRPLib.defaults import *\nfrom pestolink import PestoLinkAgent",
+  "wifi_gamepad":"w_gamepad = wifi_gamepad()"
+}
+
+// funciones utiles
+const fun = {
+  "Formato_orden":
+`
+def num_formato(texto: str, valor: float, digitos: int) -> str:
+  str_valor = str(valor)  # Convertimos el número en cadena
+  if len(str_valor) > digitos:
+    str_valor = str_valor[:digitos]  # Truncar si excede los dígitos permitidos
+  else:
+    str_valor = "0" * (digitos - len(str_valor)) + str_valor  # Rellenar con ceros a la izquierda
+  return texto + str_valor`
+}
+
+/* gerarquia 
+
+  librerias -> 1
+  Definiciones -> 2
+  set_devise ->3
+*/
