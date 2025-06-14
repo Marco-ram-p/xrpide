@@ -570,152 +570,164 @@ const workspace = Blockly.inject('blocklyDiv', {
                 break;
               case 'wgpad':
                 exampleXml = `<xml xmlns="https://developers.google.com/blockly/xml">
-                  <block type="wifi_confi" id="n^?/,Zv]bAcAuwKj}H=(" x="56" y="5">
-                    <field name="name">XRP_Server</field>
-                    <field name="pass">12345678</field>
-                    <field name="dvs">1</field>
-                    <next>
-                      <block type="controls_whileUntil" id="#a1QUKBr8:DxPzpo2LnX">
-                        <field name="MODE">WHILE</field>
-                        <value name="BOOL">
-                          <shadow type="logic_boolean" id="AKNTont%gGqtH9??y3sc">
-                            <field name="BOOL">TRUE</field>
+  <block type="wifi_confi" id="n^?/,Zv]bAcAuwKj}H=(" x="56" y="47">
+    <field name="name">XRP_Server3</field>
+    <field name="pass">12345678</field>
+    <field name="dvs">1</field>
+    <next>
+      <block type="controls_whileUntil" id="#a1QUKBr8:DxPzpo2LnX">
+        <field name="MODE">WHILE</field>
+        <value name="BOOL">
+          <shadow type="logic_boolean" id="AKNTont%gGqtH9??y3sc">
+            <field name="BOOL">TRUE</field>
+          </shadow>
+        </value>
+        <statement name="DO">
+          <block type="leer" id="93JcgQGkPlt$.tFt%S(T">
+            <next>
+              <block type="hace" id="SqrrS!;LR4QH3I*nslV^">
+                <field name="btn">up</field>
+                <field name="action">P</field>
+                <statement name="NAME">
+                  <block type="set_effort" id="Uyez1}O5_[PvW?}m3fcO">
+                    <value name="izq">
+                      <shadow type="math_number" id="rd9sbj3yKWngIr-5z|nu">
+                        <field name="NUM">0.5</field>
+                      </shadow>
+                    </value>
+                    <value name="der">
+                      <shadow type="math_number" id="ApVv@4e-4-0kfg|)xjQ*">
+                        <field name="NUM">0.5</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="hace" id="JP,|h/JP#~W1+6uIH{^D">
+                    <field name="btn">up</field>
+                    <field name="action">R</field>
+                    <statement name="NAME">
+                      <block type="set_effort" id="CQs~Ie,d6f(-T6|$jPvE">
+                        <value name="izq">
+                          <shadow type="math_number" id="FZ6,glYvDmTI}9E1Om:g">
+                            <field name="NUM">0</field>
                           </shadow>
                         </value>
-                        <statement name="DO">
-                          <block type="leer" id="93JcgQGkPlt$.tFt%S(T">
+                        <value name="der">
+                          <shadow type="math_number" id="nzcITP;ML8Sev{Tq!B$L">
+                            <field name="NUM">0</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="hace" id="uWbqshM%PW2F!6-3pNRV">
+                        <field name="btn">left</field>
+                        <field name="action">P</field>
+                        <statement name="NAME">
+                          <block type="set_effort" id="zQ.@gMt5,n}Tj.-6b6g~">
+                            <value name="izq">
+                              <shadow type="math_number" id="IXv=4UCE{9vHUX8FZ5bL">
+                                <field name="NUM">-0.5</field>
+                              </shadow>
+                            </value>
+                            <value name="der">
+                              <shadow type="math_number" id="fN]EviCmJ(Fndw._V$Q4">
+                                <field name="NUM">0.5</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="hace" id="xO3+ml+1spXdlOWG!1$r">
+                            <field name="btn">left</field>
+                            <field name="action">R</field>
+                            <statement name="NAME">
+                              <block type="set_effort" id="6ZzV8o$8W3fs*yfPT,~^">
+                                <value name="izq">
+                                  <shadow type="math_number" id="/lZ,3{]!\`e%XUN$(8?E=">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                                <value name="der">
+                                  <shadow type="math_number" id="U~fiS*7Z@}ju2B@g.2Zl">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </statement>
                             <next>
-                              <block type="hace" id="SqrrS!;LR4QH3I*nslV^">
-                                <field name="btn">up</field>
+                              <block type="hace" id="V}{886c1*VG{+@YTrk5S">
+                                <field name="btn">right</field>
                                 <field name="action">P</field>
                                 <statement name="NAME">
-                                  <block type="set_effort" id="Uyez1}O5_[PvW?}m3fcO">
+                                  <block type="set_effort" id="GEWVW.|g8,\`VkO$$AA=Fz">
                                     <value name="izq">
-                                      <shadow type="math_number" id="rd9sbj3yKWngIr-5z|nu">
+                                      <shadow type="math_number" id="J=Id#gf59rowBesQ)PK2">
                                         <field name="NUM">0.5</field>
                                       </shadow>
                                     </value>
                                     <value name="der">
-                                      <shadow type="math_number" id="ApVv@4e-4-0kfg|)xjQ*">
-                                        <field name="NUM">0.5</field>
+                                      <shadow type="math_number" id="Ex,kw-RAo)5Vg|JNhc}j">
+                                        <field name="NUM">-0.5</field>
                                       </shadow>
                                     </value>
                                   </block>
                                 </statement>
                                 <next>
-                                  <block type="hace" id="JP,|h/JP#~W1+6uIH{^D">
-                                    <field name="btn">up</field>
+                                  <block type="hace" id="/^vC@%m(i01),.vN5MFj">
+                                    <field name="btn">right</field>
                                     <field name="action">R</field>
                                     <statement name="NAME">
-                                      <block type="set_effort" id="CQs~Ie,d6f(-T6|$jPvE">
+                                      <block type="set_effort" id="K}P=[ki3_}!pxGdcS~;$">
                                         <value name="izq">
-                                          <shadow type="math_number" id="FZ6,glYvDmTI}9E1Om:g">
+                                          <shadow type="math_number" id="p:Ors{v:(!F[928%yiQ|">
                                             <field name="NUM">0</field>
                                           </shadow>
                                         </value>
                                         <value name="der">
-                                          <shadow type="math_number" id="nzcITP;ML8Sev{Tq!B$L">
+                                          <shadow type="math_number" id="Igr0miB^|fs.euMv~,Bx">
                                             <field name="NUM">0</field>
                                           </shadow>
                                         </value>
                                       </block>
                                     </statement>
                                     <next>
-                                      <block type="hace" id="uWbqshM%PW2F!6-3pNRV">
-                                        <field name="btn">left</field>
+                                      <block type="hace" id="Eu/I8wG0JhD0w+}$5!NO">
+                                        <field name="btn">down</field>
                                         <field name="action">P</field>
                                         <statement name="NAME">
-                                          <block type="set_effort" id="zQ.@gMt5,n}Tj.-6b6g~">
+                                          <block type="set_effort" id="t^kIT2N[{9qUMid+an@V">
                                             <value name="izq">
-                                              <shadow type="math_number" id="IXv=4UCE{9vHUX8FZ5bL">
+                                              <shadow type="math_number" id="LnXNc\`y!?gj]dcjLX?$6">
                                                 <field name="NUM">-0.5</field>
                                               </shadow>
                                             </value>
                                             <value name="der">
-                                              <shadow type="math_number" id="fN]EviCmJ(Fndw._V$Q4">
-                                                <field name="NUM">0.5</field>
+                                              <shadow type="math_number" id="\`lcfedo,t-h|Y}f?pr4b">
+                                                <field name="NUM">-0.5</field>
                                               </shadow>
                                             </value>
                                           </block>
                                         </statement>
                                         <next>
-                                          <block type="hace" id="xO3+ml+1spXdlOWG!1$r">
-                                            <field name="btn">left</field>
+                                          <block type="hace" id="fU7Y1Lp(pXdLC;,iag|N">
+                                            <field name="btn">down</field>
                                             <field name="action">R</field>
                                             <statement name="NAME">
-                                              <block type="set_effort" id="6ZzV8o$8W3fs*yfPT,~^">
+                                              <block type="set_effort" id="Y4Y}FkW!gpb8qWGoT3c#">
                                                 <value name="izq">
-                                                  <shadow type="math_number" id="/lZ,3{]!\`e%XUN$(8?E=">
+                                                  <shadow type="math_number" id="JpVEo$[p,H*#^L\`inSyB">
                                                     <field name="NUM">0</field>
                                                   </shadow>
                                                 </value>
                                                 <value name="der">
-                                                  <shadow type="math_number" id="U~fiS*7Z@}ju2B@g.2Zl">
+                                                  <shadow type="math_number" id="1()N^TEM(D|i|LK=927(">
                                                     <field name="NUM">0</field>
                                                   </shadow>
                                                 </value>
                                               </block>
                                             </statement>
-                                            <next>
-                                              <block type="hace" id="V}{886c1*VG{+@YTrk5S">
-                                                <field name="btn">right</field>
-                                                <field name="action">P</field>
-                                                <statement name="NAME">
-                                                  <block type="set_effort" id="GEWVW.|g8\`VkO$$AA=Fz">
-                                                    <value name="izq">
-                                                      <shadow type="math_number" id="J=Id#gf59rowBesQ)PK2">
-                                                        <field name="NUM">0.5</field>
-                                                      </shadow>
-                                                    </value>
-                                                    <value name="der">
-                                                      <shadow type="math_number" id="Ex,kw-RAo)5Vg|JNhc}j">
-                                                        <field name="NUM">-0.5</field>
-                                                      </shadow>
-                                                    </value>
-                                                  </block>
-                                                </statement>
-                                                <next>
-                                                  <block type="hace" id="/^vC@%m(i01),.vN5MFj">
-                                                    <field name="btn">right</field>
-                                                    <field name="action">R</field>
-                                                    <statement name="NAME">
-                                                      <block type="set_effort" id="K}P=[ki3_}!pxGdcS~;$">
-                                                        <value name="izq">
-                                                          <shadow type="math_number" id="p:Ors{v:(!F[928%yiQ|">
-                                                            <field name="NUM">0</field>
-                                                          </shadow>
-                                                        </value>
-                                                        <value name="der">
-                                                          <shadow type="math_number" id="Igr0miB^|fs.euMv~,Bx">
-                                                            <field name="NUM">0</field>
-                                                          </shadow>
-                                                        </value>
-                                                      </block>
-                                                    </statement>
-                                                    <next>
-                                                      <block type="hace" id="Eu/I8wG0JhD0w+}$5!NO">
-                                                        <field name="btn">down</field>
-                                                        <field name="action">P</field>
-                                                        <statement name="NAME">
-                                                          <block type="set_effort" id="t^kIT2N[{9qUMid+an@V">
-                                                            <value name="izq">
-                                                              <shadow type="math_number" id="LnXNc\`y!?gj]dcjLX?$6">
-                                                                <field name="NUM">-0.5</field>
-                                                              </shadow>
-                                                            </value>
-                                                            <value name="der">
-                                                              <shadow type="math_number" id="\`lcfedo,t-h|Y}f?pr4b">
-                                                                <field name="NUM">-0.5</field>
-                                                              </shadow>
-                                                            </value>
-                                                          </block>
-                                                        </statement>
-                                                      </block>
-                                                    </next>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
                                           </block>
                                         </next>
                                       </block>
@@ -725,11 +737,19 @@ const workspace = Blockly.inject('blocklyDiv', {
                               </block>
                             </next>
                           </block>
-                        </statement>
+                        </next>
                       </block>
                     </next>
                   </block>
-                </xml>`
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>`
               break;
             // Add other examples here with their corresponding XML
             default:
