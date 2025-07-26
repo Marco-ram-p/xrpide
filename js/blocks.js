@@ -944,7 +944,262 @@ python.pythonGenerator.forBlock['esperar_hasta'] = function(block, generator) {
   code = code + "  time.sleep(0.01)\n";
   return code;
 };
+// --------------------PS2 iniciar-------------------------------------
 
+const iniciar = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Iniciar control en modo: ')
+      .appendField(new Blockly.FieldDropdown([
+          ['Externo', 'e'],
+          ['Local', 'l']
+        ]), 'NAME');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({iniciar: iniciar});
+                    
+python.pythonGenerator.forBlock['iniciar'] = function(block) {
+  const dropdown_name = block.getFieldValue('NAME');
+  if (dropdown_name=='e'){
+    python.pythonGenerator.addImportWithPriority(lib["PS2_1"],1);
+  }else if(dropdown_name=='l'){
+    python.pythonGenerator.addImportWithPriority(lib["PS2_2"],1);
+  }
+  
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad = PS2('${dropdown_name}')\n`;
+  return code;
+}
+
+//---------------------PS2 actualizar---------------------------------
+
+const actualizar = {
+  init: function() {
+    this.appendEndRowInput('NAME')
+      .appendField('Actualizar control');
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({actualizar: actualizar});
+                    
+python.pythonGenerator.forBlock['actualizar'] = function(block) {
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.update()\n`;
+  return code;
+}
+
+//---------------------PS2 boton--------------------------------------
+
+const pad = {
+  init: function() {
+    this.appendDummyInput('option')
+      .appendField('Bontón')
+      .appendField(new Blockly.FieldDropdown([
+          ['⬆ Arriva', '0'],
+          ['⬅ Izquierda', '1'],
+          ['⬇ Abajo', '2'],
+          ['⮕ Derecha', '3'],
+          ['▲ Triángulo','4'],
+          ['◼ Cuadro','5'],
+          ['✖ Cruz','6'],
+          ['⬤ Circulo','7']
+        ]), 'NAME');
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('regresa un valor bool del botón seleccionado');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({pad: pad});
+                    
+python.pythonGenerator.forBlock['pad'] = function(block) {
+  const pad = block.getFieldValue('NAME');
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.button(${pad})`;
+  // TODO: Change Order.NONE to the correct operator precedence strength
+  return [code, python.Order.NONE];
+}
+
+//--------------------------PS2 frontal---------------------------------
+
+const Fontal = {
+  init: function() {
+    this.appendDummyInput('front')
+      .appendField('Botón')
+      .appendField(new Blockly.FieldDropdown([
+          ['L1', '8'],
+          ['L2', '9'],
+          ['L3', '10'],
+          ['R1', '11'],
+          ['R2', '12'],
+          ['R3', '13']
+        ]), 'b');
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({Fontal: Fontal});
+                    
+python.pythonGenerator.forBlock['Fontal'] = function(block) {
+  const front = block.getFieldValue('b');
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.button(${front})`;
+  // TODO: Change Order.NONE to the correct operator precedence strength
+  return [code, python.Order.NONE];
+}
+
+//----------------------- PS2 funcion-------------------------------------
+
+const Funcion = {
+  init: function() {
+    this.appendDummyInput('f')
+      .appendField('Función')
+      .appendField(new Blockly.FieldDropdown([
+          ['▶ Start', '14'],
+          ['▆ Select', '15']
+        ]), 'NAME');
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('regresa un valor bool del botón seleccionado');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({Funcion: Funcion});
+                    
+python.pythonGenerator.forBlock['Funcion'] = function(block) {
+  const func = block.getFieldValue('NAME');
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.button(${func})`;
+  // TODO: Change Order.NONE to the correct operator precedence strength
+  return [code, python.Order.NONE];
+}
+
+//-------------------------joystick analogo-----------------------
+
+const analog = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Modo análogo activado');
+    this.setInputsInline(true)
+    this.setOutput(true, 'Boolean');
+    this.setTooltip('Es vedarero solo si el control tiene activado el modo analogico');
+    this.setHelpUrl('');
+    this.setColour(60);
+  }
+};
+Blockly.common.defineBlocks({analog: analog});
+                    
+python.pythonGenerator.forBlock['analog'] = function(block) {
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.button(16)`;
+  // TODO: Change Order.NONE to the correct operator precedence strength
+  return [code, python.Order.NONE];
+}
+
+//-----------------------joystick izquierdo--------------------
+
+const joystick_izquierdo = {
+  init: function() {
+    this.appendDummyInput('joy')
+      .appendField('Joystick izquierdo')
+      .appendField(new Blockly.FieldDropdown([
+          ['⬌ Eje X', '0'],
+          ['⬍ Eje Y', '1']
+        ]), 'NAME');
+    this.setInputsInline(true)
+    this.setOutput(true, 'Number');
+    this.setTooltip('regresa un valor entre 0 y 1.');
+    this.setHelpUrl('');
+    this.setColour(120);
+  }
+};
+Blockly.common.defineBlocks({joystick_izquierdo: joystick_izquierdo});
+                    
+python.pythonGenerator.forBlock['joystick_izquierdo'] = function(block) {
+  const ji = block.getFieldValue('NAME');
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.joystick(${ji})`;
+  // TODO: Change Order.NONE to the correct operator precedence strength
+  return [code, python.Order.NONE];
+}
+
+//-----------------------joystick derecho-------------------------------
+
+const joystick_derecho = {
+  init: function() {
+    this.appendDummyInput('joy')
+      .appendField('Joystick derecho')
+      .appendField(new Blockly.FieldDropdown([
+          ['⬌ Eje X', '2'],
+          ['⬍ Eje Y', '3']
+        ]), 'NAME');
+    this.setInputsInline(true)
+    this.setOutput(true, 'Number');
+    this.setTooltip('regresa un valor entre 0 y 1.');
+    this.setHelpUrl('');
+    this.setColour(120);
+  }
+};
+Blockly.common.defineBlocks({joystick_derecho: joystick_derecho});
+                    
+python.pythonGenerator.forBlock['joystick_derecho'] = function(block) {
+  const jd = block.getFieldValue('NAME');
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.joystick(${jd})`;
+  // TODO: Change Order.NONE to the correct operator precedence strength
+  return [code, python.Order.NONE];
+}
+
+//----------------------servo--------------------
+
+const servo = {
+  init: function() {
+    this.appendDummyInput('NAME')
+      .appendField('Servo: ')
+      .appendField(new Blockly.FieldDropdown([
+          ['16', '16'],
+          ['17', '17'],
+          ['18', '18'],
+          ['19', '19']
+        ]), 'servo')
+      .appendField('Angulo: ')
+      .appendField(new Blockly.FieldNumber(90, 0, 180, 1), 'angle');
+    this.setInputsInline(true)
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('');
+    this.setHelpUrl('');
+    this.setColour(225);
+  }
+};
+Blockly.common.defineBlocks({servo: servo});
+                    
+python.pythonGenerator.forBlock['servo'] = function(block) {
+  const dropdown_servo = block.getFieldValue('servo');
+  const number_angle = block.getFieldValue('angle');
+
+  // TODO: Assemble python into the code variable.
+  const code = `Gamepad.servo(${dropdown_servo},${number_angle})\n`;
+  return code;
+}
 //----------------------iniciar pestolink----------------------------
 
 Blockly.Blocks['pestolink_start'] = {
