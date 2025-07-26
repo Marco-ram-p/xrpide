@@ -1,13 +1,12 @@
 <html>
 <head>
   <title>XRP IDE</title>
-  <script src="js/block1.js"></script>
-  <script src="js/block2.js"></script>
-  <script src="js/block3.js"></script>
-  <script src="js/block4.js"></script>
-  <script src="js/block5.js"></script>
-  <script src="js/block6.js"></script>
-  <script src="js/block7.js"></script>
+  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <script src="https://unpkg.com/blockly/python_compressed"></script>
+  <script src="https://unpkg.com/blockly/blocks_compressed"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/mode-python.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/theme-eclipse.js"></script>
 
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -32,9 +31,9 @@
               <div class="dropdown">
                   <button class="dropdown-btn">Herramientas</button>
                   <div class="dropdown-content">
-                      <!--a href="javascript:void(0)" onclick="openVirtualGamepad()">Gamepad virtual</a>
+                      <a href="javascript:void(0)" onclick="openVirtualGamepad()">Gamepad virtual</a>
                       <a href="javascript:void(0)" onclick="openKeyboardControl()">Control por teclado</a>
-                      <a href="javascript:void(0)" onclick="openLibraryManager()" id="update-libraries-btn">Actualizar librerías</a-->
+                      <a href="javascript:void(0)" onclick="openLibraryManager()" id="update-libraries-btn">Actualizar librerías</a>
                       <a href="javascript:void(0)" onclick="openRobotConfig()" id="config-robot-btn">Configurar robot</a>
                   </div>
               </div>
@@ -46,7 +45,7 @@
                   </div>
               </div>
           </div>
-          <button class="help-btn" onclick="showHowToUpload()">Como Grabar programa</button>
+          <!--button class="help-btn" onclick="showHowToUpload()">Como Grabar programa</button-->
       </div>
 
       <div class="container">
@@ -56,7 +55,7 @@
                       <button id="connectUSBButton" class="connect-btn" onclick="toggleUSBConnection()">
                           Conectar por USB
                       </button>
-                      <button id="connectBTButton" class="connect-btn bluetooth" onclick="toggleBTConnection()" style="visibility: hidden;">
+                      <button id="connectBTButton" class="connect-btn bluetooth" onclick="toggleBTConnection()">
                           Conectar por Bluetooth
                       </button>
                   </div>
@@ -199,9 +198,9 @@
         </div>
         <div class="modal-body">
             <ol>
-                <li>Conecta tu dispositivo usando el botón "Conectar por USB".</li>
-                <li>Espera a ver una luz parpadeante.</li>
-                <li>si no vez la luz manten presionado el boton de usuario y presiona reset.</li>
+                <li>Conecta tu dispositivo usando el botón "Conectar por USB" o "Conectar por Bluetooth".</li>
+                <li>Crea tu programa usando los bloques disponibles en el panel izquierdo.</li>
+                <li>Asigna un nombre a tu programa en el campo de texto superior.</li>
                 <li>Presiona el botón "Iniciar programa" para grabar y ejecutar tu código en el dispositivo.</li>
                 <li>Espera a que el proceso de carga termine. Verás los mensajes de progreso en el terminal.</li>
             </ol>
@@ -230,7 +229,7 @@
                       <input type="radio" name="startup" value="button">
                       <span class="option-text">
                           <strong>Botón de usuario</strong>
-                          <span class="description">El programa inicia al presionar el botón de usuario</span>
+                          <span class="description">El programa inicia al presionar el botón</span>
                       </span>
                   </label>
                   <label class="config-option">
@@ -243,7 +242,7 @@
               </div>
             </div>
 
-            <!--div class="config-section">
+            <div class="config-section">
               <h4>Configuración Bluetooth:</h4>
               <div class="bt-config">
                 <div class="bt-toggle">
@@ -258,7 +257,7 @@
                   <input type="text" id="btName" placeholder="XRP Robot" maxlength="20" onchange="updateBluetoothName(this.value)">
                 </div>
               </div>
-            </div-->
+            </div>
 
             <div class="config-actions">
                 <button class="button" style="background: #666;" onclick="closeRobotConfig()">Cancelar</button>
@@ -268,7 +267,7 @@
     </div>
   </div>
 
-   <xml id="toolbox" style="display: none">
+  <xml id="toolbox" style="display: none">
     <category name="XRP Sensores" colour="165">
       <block type="Voltaje"></block>
       <block type="distancia"></block>
@@ -385,6 +384,22 @@
           </shadow>
         </value>
       </block>
+    </category>
+    <category name="XRP Expansion" colour="100">
+      <category name="PS2 gamepad" colour="60">
+        <block type="iniciar"></block>
+        <block type="actualizar"></block>
+        <block type="pad"></block>
+        <block type="Fontal"></block>
+        <block type="Funcion"></block>
+        <block type="analog"></block>
+        <block type="joystick_izquierdo"></block>
+        <block type="joystick_derecho"></block>
+      </category>
+      <category name="Servo" colour="100">
+        <block type="servo"></block>
+      </category>
+      <!--block type="Voltaje"></block-->
     </category>
     <category name="BT PestoLink" colour="240">
       <block type="pestolink_start">
@@ -568,7 +583,7 @@
     </category>
   </xml>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 <script src="js/preambulos.js"></script>
 <script src="js/blocks.js"></script>
 <script src="js/librerias.js"></script>
