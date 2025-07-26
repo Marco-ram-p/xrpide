@@ -84,7 +84,9 @@ const lib = {
   "adc":"from machine import ADC",
   "bt":"import bluetooth",
   "math":"import math",
-  "wifi_gamepad":"from FusalmoLib.Wifi import wifi_gamepad" 
+  "wifi_gamepad":"from FusalmoLib.Wifi import wifi_gamepad",
+  "PS2_1":"from FusalmoLib.Expansion import *",
+  "PS2_2":"from FusalmoLib.Expansion2 import *"
 }
 
 // codigos para definiciones y variables
